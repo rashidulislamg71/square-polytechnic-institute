@@ -1,0 +1,26 @@
+
+{
+    "homeHeroSlides": [
+      {
+        "image": "/images/homePage_images/home_hero_img/bg_2.png",
+        "title": "স্বপ্ন দেখুন আজ থেকেই!",
+        "subtitle": "Square Polytechnic Institute"
+      },
+      {
+        "image": "/images/homePage_images/home_hero_img/bg_1.png",
+        "title": "আপনার ক্যারিয়ার শুরু হোক আমাদের সাথে",
+        "subtitle": "Best Technical Education"
+      },
+      {
+        "image": "/images/homePage_images/home_hero_img/bg_4.png",
+        "title": "শেখার নতুন ঠিকানা",
+        "subtitle": "Join Us Today"
+      },
+      {
+        "image": "/images/homePage_images/home_hero_img/bg_3.png",
+        "title": "জ্ঞান অর্জনের পথ সহজ করুন",
+        "subtitle": "Your Future Starts Here"
+      }
+    ]
+  }
+  

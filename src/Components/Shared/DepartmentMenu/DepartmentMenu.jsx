@@ -1,0 +1,70 @@
+import React from "react";
+import { NavLink } from "react-router-dom";
+import "./DepartmentMenu.css";
+import { BsStars } from "react-icons/bs";
+
+const DepartmentMenu = () => {
+  const departmentMenu = [
+   
+    {
+      id: 1,
+      text: "ইলেকট্রিক্যাল",
+      url: "/electrical_page",
+    },
+    {
+      id: 2,
+      text: "কম্পিউটার",
+      url: "/computer_page",
+    },
+    {
+      id: 3,
+      text: "সিভিল",
+      url: "/civil_page",
+    },
+    {
+      id: 4,
+      text: "টেক্সটাইল",
+      url: "/textile_page",
+    },
+    {
+      id: 5,
+      text: "মেকানিক্যাল",
+      url: "/mechanical_page",
+    },
+  ];
+
+  return (
+    <div>
+      <div className="mt-10 lg:border py-4 lg:mt-16">
+        <ul className="flex flex-wrap items-center lg:justify-evenly  gap-4">
+          {departmentMenu.map((item) => {
+            return (
+              <li key={item.id} className=" drop-shadow-[0_2px_2px_rgba(52,73,94,1)] bg-[#27ae60] py-1 px-4 flex items-center font-bold  text-[16px] lg:text-[18px] cursor-pointer ">
+                <NavLink
+                    to={item.url}
+                  className={({ isActive }) =>
+                    isActive
+                      ? (`text-[#10573f]  `)
+                      : (" text-[#ecf0f1] hover:text-[#2c3e50]")
+                  }
+                >
+                  <p>{item.text}</p>
+                </NavLink>
+
+
+                   {/* Star animation */}
+                <div>
+                  <div className="star-anim">
+                    <span className="star animate-star"><BsStars/></span>
+                  </div>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default DepartmentMenu;

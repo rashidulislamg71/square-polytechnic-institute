@@ -1,0 +1,27 @@
+
+
+  @keyframes star3 {
+    0% {
+     opacity: 0;
+    }
+    50% {
+     opacity: 1;
+     color: rgb(252, 252, 252);
+    }
+    100% {
+     opacity: 0;
+    }
+  }
+  
+  .star-anim .star {
+    position: absolute;
+    z-index: 0;
+    opacity: 1;
+    top: 17px;
+    color: rgb(120, 121, 121);
+  }
+  
+  .star-anim .animate-star{
+    animation: star3 2s ease-in-out 1s infinite;
+  }
+  

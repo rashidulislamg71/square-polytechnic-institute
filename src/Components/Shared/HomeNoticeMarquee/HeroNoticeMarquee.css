@@ -1,0 +1,31 @@
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 15px 20px;
+  background: #1abc9c;
+  font-size: 17px;
+  color: #fffefed2;
+  font-weight: bold;
+  margin-bottom: -6px;
+}
+
+.marquee-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 25s linear infinite;
+  align-items: center;
+}
+
+.notice-item {
+  white-space: nowrap;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(1%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

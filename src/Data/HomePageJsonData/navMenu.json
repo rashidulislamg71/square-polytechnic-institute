@@ -1,0 +1,59 @@
+
+{ "navMenuData":[
+    {
+      "id": 1,
+      "text": "হোম",
+      "link": "/",
+      "icon": "FaHome"
+    },
+    {
+      "id": 2,
+      "text": "ডিপার্টমেন্টস্",
+      "link": "/departments",
+      "icon": "FaBuilding"
+    },
+    {
+      "id": 3,
+      "text": "ক্যাম্পাস",
+      "link": "/campus",
+      "icon": "FaBookOpen"
+    },
+    {
+      "id": 4,
+      "text": "সাফল্য & ইভেন্ট",
+      "link": "/successEvent",
+      "icon": "IoIosSchool"
+    },
+    {
+      "id": 5,
+      "text": "আমাদের সম্পর্কে",
+      "link": "/about",
+      "icon": "IoMdPeople"
+    },
+    {
+      "id": 6,
+      "text": "নোটিশ",
+      "link": "/notice",
+      "icon": "IoMdNotifications"
+    },
+    {
+      "id": 7,
+      "text": "রেজাল্ট",
+      "link": "/result",
+      "icon": "PiStudentBold"
+    },
+    {
+      "id": 8,
+      "text": "যোগাযোগ",
+      "link": "/contuctUs",
+      "icon": "MdConnectWithoutContact"
+    },
+    {
+      "id": 9,
+      "text": "Student Corner",
+      "link": "/studentCorner",
+      "icon": "LiaChalkboardTeacherSolid"
+    }
+  ]
+}
+  

@@ -1,0 +1,31 @@
+.wrapper {
+  mask-image: linear-gradient(to right, transparent, rgb(172, 172, 172) 10%, rgb(180, 180, 180) 90%, transparent);
+}
+
+
+@media (max-width: 768px) {
+  .wrapper {
+    mask-image: none;
+  }
+}
+
+.runer {
+  animation: scroll 100s linear infinite;
+}
+
+.wrapper:hover .runer {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); 
+  }
+}
+
+.runer li {
+  flex-shrink: 0;
+}

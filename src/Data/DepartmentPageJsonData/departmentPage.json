@@ -1,0 +1,50 @@
+{
+  "departmentInfo": {
+    "id": "department",
+    "title": "আমাদের ডিপার্টমেন্ট সমুহ",
+    "departments": [
+      
+      {
+        "id": 1,
+        "name": "ইলেকট্রিক্যাল ইঞ্জিনিয়ারিং",
+        "shortName": "ET",
+        "image": "/images/Departments_img/electircal.jpg",
+        "description": "ইলেকট্রিক্যাল সিস্টেম, পাওয়ার জেনারেশন সেক্টরে ক্যারিয়ার গড়ার নির্ভরযোগ্য পথ এবং স্মার্ট গ্রিড ও রিনিউএবল এনার্জির জন্য দক্ষতা অর্জন।",
+        "url" : "/electrical_page"
+      },
+      {
+        "id": 2,
+        "name": "কম্পিউটার টেকনোলজি",
+        "shortName": "CST",
+        "image": "/images/Departments_img/computer.png",
+        "description": "প্রোগ্রামিং, ওয়েব ডেভেলপমেন্ট, সাইবার সিকিউরিটি  ও সফটওয়্যার তৈরি ইত্যাদি প্রযুক্তি শেখার মাধ্যমে স্মার্ট ক্যারিয়ার গড়ে তুলুন।",
+        "url" : "/computer_page"
+      },
+      {
+        "id": 3,
+        "name": "সিভিল ইঞ্জিনিয়ারিং",
+        "shortName": "CT",
+        "image": "/images/Departments_img/civil.png",
+        "description": "প্ল্যানিং, ডিজাইন ও কনস্ট্রাকশনের মাধ্যমে টেকসই অবকাঠামো নির্মাণ ও ভবিষ্যতের নির্মাণ প্রকল্পে নেতৃত্ব দিতে নিজেকে প্রস্তুত করুন।",
+        "url" : "/civil_page"
+      },
+      
+      {
+        "id": 4,
+        "name": "টেক্সটাইল টেকনোলজি",
+        "shortName": "TT",
+        "image": "/images/Departments_img/textile.jpeg",
+        "description": "টেক্সটাইল সেক্টরে আধুনিক প্রযুক্তি ও ডিজাইনের মাধ্যমে গ্লোবাল টেক্সটাইল ইন্ডাস্ট্রির জন্য প্রস্তুত করুন নিজেকে।",
+        "url" : "/textile_page"
+      },
+      {
+        "id": 5,
+        "name": "মেকানিক্যাল টেকনোলজি",
+        "shortName": "MT",
+        "image": "/images/Departments_img/mechnical.jpg",
+        "description": "ইন্ডাস্ট্রিয়াল মেশিন, প্রোডাকশন ও অটোমেশন প্রযুক্তিতে আধুনিক ও বাস্তবভিত্তিক শিক্ষার নিশ্চয়তা।",
+        "url" : "/mechanical_page"
+      }
+    ]
+  }
+}
