@@ -6,7 +6,7 @@ import student1 from "../../../assets/images/StudentTestimonial/student1.jpeg";
 import student2 from "../../../assets/images/StudentTestimonial/student2.jpeg";
 import student3 from "../../../assets/images/StudentTestimonial/student.jpeg";
 
-import studentsData from "../../../Data/TestimonialJsonData/StudentsData.json";
+import studentsData from "../../../Data/TestimonialJsonData/studentsData.json";
 
 const images = {
   "student1.jpeg": student1,
