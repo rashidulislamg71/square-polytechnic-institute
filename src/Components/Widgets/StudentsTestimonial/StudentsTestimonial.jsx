@@ -2,9 +2,9 @@ import React from "react";
 import StudentsTestimonialCard from "./GuardiansTestimonial";
 import "./index.css";
 
-import student1 from "../../../assets/images/studentTestimonial/student1.jpeg";
-import student2 from "../../../assets/images/studentTestimonial/student2.jpeg";
-import student3 from "../../../assets/images/studentTestimonial/student.jpeg";
+import student1 from "../../../assets/images/StudentTestimonial/student1.jpeg";
+import student2 from "../../../assets/images/StudentTestimonial/student2.jpeg";
+import student3 from "../../../assets/images/StudentTestimonial/student.jpeg";
 
 import studentsData from "../../../Data/TestimonialJsonData/StudentsData.json";
 
