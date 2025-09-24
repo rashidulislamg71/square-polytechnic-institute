@@ -13,7 +13,7 @@ import whyReadDiplomaData from "../../../../Data/HomePageJsonData/whyReadDiploma
 // WhyReadDiploma Component
 // Props: diplomaInfo (from JSON or API)
 const WhyReadDiploma = () => {
-const {diplomaInfo} = whyReadDiplomaData; 
+  const { diplomaInfo } = whyReadDiplomaData;
 
   // Optional: icon mapping for each section
   const icons = [FaGraduationCap, FaTools, FaRocket, FaBriefcase];
@@ -23,6 +23,7 @@ const {diplomaInfo} = whyReadDiplomaData;
       className="w-full lg:w-4/5 mx-auto text-justify space-y-12 py-12"
       aria-label="Why Read Diploma Section"
     >
+      <SectionTitle />
       {/* Section Title */}
       <header>
         <SectionTitle

@@ -3,14 +3,34 @@ import React from "react";
 import AllDepartment from "../../Components/Shared/AllDepartment/AllDepartment";
 import HeroSection from "../../Components/Shared/HeroSection/HeroSection";
 import deptHero from "../../assets/images/Departments_img/department_banner.png";
+import LabInfoParents from "../../Components/Shared/LabInfo/LabInfoPreante";
+import SectionTitle from "../../Components/Shared/Titles/SectionTitle/SectionTitle";
 
 const DepartmentPage = () => {
   return (
     <main>
       <section>
-        <HeroSection title={"আমাদের ডিপার্টমেন্ট"} extraText={"আমাদের ইন্সটিটিউটে বর্তমানে ৫টি বিভাগ চালু আছে... প্রতিটি বিভাগেই রয়েছে আধুনিক ল্যাব, দক্ষ শিক্ষক, আর হাতে-কলমে শিক্ষা।"} bgImage={deptHero} />
+        <HeroSection
+          title={"আমাদের ডিপার্টমেন্ট"}
+          extraText={
+            "আমাদের ইন্সটিটিউটে বর্তমানে ৫টি বিভাগ চালু আছে... প্রতিটি বিভাগেই রয়েছে আধুনিক ল্যাব, দক্ষ শিক্ষক, আর হাতে-কলমে শিক্ষা।"
+          }
+          bgImage={deptHero}
+        />
       </section>
-      <AllDepartment />
+      <div>
+        <section>
+          <AllDepartment />
+        </section>
+
+        <section>
+          <div className="pt-15 mb-[-50px]">
+            <SectionTitle title={"আমাদের ল্যাব ফেসিলিটি"} />
+          </div>
+          <LabInfoParents />
+          
+        </section>
+      </div>
     </main>
   );
 };

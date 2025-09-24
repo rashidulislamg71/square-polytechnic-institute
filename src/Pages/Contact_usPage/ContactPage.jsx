@@ -131,6 +131,7 @@ const ContactPage = () => {
             </div>
           </div>
         </section>
+        <GoogleMap />
 
         {/* Google Map Section */}
         <section aria-label="Google Map Location">
