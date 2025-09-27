@@ -1,4 +1,3 @@
-
 import HomeHeroSlider from "../../Components/SectionComponents/HomePageSections/HomeHeroSlider/HomeHeroSlider";
 import InstituteFeaturesCard from "../../Components/UI/Cards/InstituteFeaturesCard/InstituteFeaturesCard";
 import Notice from "../../Components/SectionComponents/HomePageSections/Notice/Notice";
@@ -11,18 +10,17 @@ import StudentsTestimonial from "../../Components/Widgets/StudentsTestimonial/St
 import GeneralParagraphText from "../../Components/Shared/GeneralParagraphText/GeneralParagraphText";
 import InstituteInfo from "../../Components/SectionComponents/HomePageSections/InstituteInfo/InstituteInfo";
 import WhyReadDiploma from "../../Components/SectionComponents/HomePageSections/WhyReadDiploma/WhyReadDiploma";
-// json Data 
+// json Data
 import instituteFeaturesData from "../../Data/HomePageJsonData/instituteFeatures.json";
 import instituteInfoData from "../../Data/HomePageJsonData/instituteInfo.json";
+import HostelSection from "../../Components/SectionComponents/HomePageSections/Hostel/Hostel";
 
 const HomePage = () => {
-const{ features} =  instituteFeaturesData.instituteFeaturesInfo;
-const { instituteInfo } = instituteInfoData;
+  const { features } = instituteFeaturesData.instituteFeaturesInfo;
+  const { instituteInfo } = instituteInfoData;
 
   return (
     <main className="home-page">
- 
-
       {/* Hero Section */}
       <header className="-mt-10">
         <HomeHeroSlider />
@@ -38,18 +36,18 @@ const { instituteInfo } = instituteInfoData;
         <AllDepartment />
       </section>
 
-      {/* Institute Info + Map */}
+      {/* Institute Info  */}
       <section
         className="w-full px-4 lg:px-12 py-16 bg-white"
         aria-label="Institute Info"
       >
         <h2 className="text-center mb-12">
-        <SectionTitle title={"ইন্সটিটিউট সম্পর্কে"} />
+          <SectionTitle title={"ইন্সটিটিউট সম্পর্কে"} />
         </h2>
 
         <div className="flex flex-col lg:flex-row gap-8 items-start">
           <article className="lg:w-1/2 flex flex-col gap-6 text-justify">
-          <InstituteInfo instituteInfo={instituteInfo}  />
+            <InstituteInfo instituteInfo={instituteInfo} />
           </article>
 
           <aside className="lg:w-1/2 w-full h-[300px] lg:h-[350px]">
@@ -95,6 +93,10 @@ const { instituteInfo } = instituteInfoData;
         {/* <div className="mt-12">
           <Video src={sampleVideo} controls autoPlay muted loop />
         </div> */}
+      </section>
+
+      <section>
+        <HostelSection />
       </section>
 
       {/* Why Read Diploma */}

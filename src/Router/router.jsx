@@ -21,6 +21,7 @@ import CivilPage from "../Pages/DepartmentPages/CivilPage/CivilPage";
 import ElectricalPage from "../Pages/DepartmentPages/ElectricalPage/ElectricalPage";
 import AdmissionPage from "../Pages/AdmissionPage/AdmissionPage";
 import AllTestimonialPage from "../Pages/AllTestimonialPage/AllTestimonialPage";
+import HostelPage from "../Pages/HostelPage/HostelPage";
 
 const router = createBrowserRouter([
     {
@@ -92,6 +93,10 @@ const router = createBrowserRouter([
         {
           path: "/all_testimonial",
           element: <AllTestimonialPage />
+        },
+        {
+          path: "/hostel",
+          element: <HostelPage />
         },
         {
           path: "*",

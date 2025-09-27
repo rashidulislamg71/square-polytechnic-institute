@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ModalPopup from "../../UI/ModalPopup/ModalPopup";
 
-const AboutLabImage = ({ labImage1, labImage2 }) => {
+const AboutLabImage = ({ image1, image2 }) => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
@@ -10,24 +10,27 @@ const AboutLabImage = ({ labImage1, labImage2 }) => {
       <div className="relative pb-2 max-w-[450px] h-[350px] md:h-[450px] m-auto flex ">
         <div className="flex items-end">
           <img
-            onClick={() => setSelectedImage(labImage1)}
+            onClick={() => setSelectedImage(image1)}
             className=" shadow-2xl cursor-pointer rounded-2xl w-[180px] h-[180px] md:w-[270px] md:h-[220px] transition-transform hover:scale-105"
-            src={labImage1}
+            src={image1}
             alt="Lab 1"
           />
         </div>
         <div className="flex absolute top-16 right-0 ">
           <img
-            onClick={() => setSelectedImage(labImage2)}
+            onClick={() => setSelectedImage(image2)}
             className=" cursor-pointer drop-shadow-2xl  rounded-2xl w-[200px] h-[180px] md:w-[280px] md:h-[240px]  transition-transform hover:scale-105"
-            src={labImage2}
+            src={image2}
             alt="Lab 2"
           />
         </div>
       </div>
 
       {/* Reusable Modal*/}
-      <ModalPopup isOpen={!!selectedImage} onClose={() => setSelectedImage(null)}>
+      <ModalPopup
+        isOpen={!!selectedImage}
+        onClose={() => setSelectedImage(null)}
+      >
         {selectedImage && (
           <img
             src={selectedImage}

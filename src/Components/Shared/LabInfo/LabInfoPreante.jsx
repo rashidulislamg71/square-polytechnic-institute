@@ -68,8 +68,8 @@ const LabInfoParents = () => {
           {/* Image side */}
           <div className="w-full md:w-5/12 lg:w-4/12">
             <AboutLabImage
-              labImage1={lab.images[0]}
-              labImage2={lab.images[1]}
+              image1={lab.images[0]}
+              image2={lab.images[1]}
             />
           </div>
 

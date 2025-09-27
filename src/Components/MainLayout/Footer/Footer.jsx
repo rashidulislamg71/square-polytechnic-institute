@@ -6,6 +6,8 @@ import Email from "../../UI/Email/Email";
 import { SocialIcons } from "../../Icons/SocialMediaIcons/SocialMediaIcons";
 import { FaEnvelope, FaPhone } from "react-icons/fa";
 import FooterLink from "../../UI/FooterLink/FooterLink";
+import {InstituteAddress } from "../../UI/InstituteAddress/InstituteAddress";
+import { FaLocationDot } from "react-icons/fa6";
 
 const QUICK_LINKS = [
   { to: "/", label: "হোম" },
@@ -47,12 +49,15 @@ export default function Footer() {
           <h3 className="text-lg font-semibold text-green-600 mb-2">
             Contact Us
           </h3>
-          <p className="text-sm text-gray-400 mb-3">
-            গাড়িদাহ, শেরপুর (পল্লী উন্নয়ন একাডেমি (RDA)), বগুড়া
-          </p>
+
+          
+          <div className="mb-3 flex gap-1 items-center ">
+           <span className="text-orange-400">    <FaLocationDot /></span>
+           <InstituteAddress className ={"text-sm text-white"} />
+          </div>
 
           <div className="flex flex-col  gap-2 text-sm">
-            <div className="flex items-center gap-2 text-green-400 hover:text-green-300 transition">
+            <div className="flex items-center gap-2 text-orange-400 hover:text-green-300 transition">
               <FaPhone />
               <ContactNumber
                 fontSize="sm"
@@ -65,7 +70,7 @@ export default function Footer() {
                 number="01760-998165"
               />
             </div>
-            <div className="flex items-center gap-2 text-green-400 hover:text-green-300 transition">
+            <div className="flex items-center gap-2 text-orange-400 hover:text-green-300 transition">
               <FaEnvelope />
               <Email email="squarepoly@gmail.com" color="white" />
             </div>
