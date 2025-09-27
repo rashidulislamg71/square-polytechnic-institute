@@ -3,8 +3,11 @@ import React from "react";
 import AllDepartment from "../../Components/Shared/AllDepartment/AllDepartment";
 import HeroSection from "../../Components/Shared/HeroSection/HeroSection";
 import deptHero from "../../assets/images/Departments_img/department_banner.png";
-import LabInfoParents from "../../Components/Shared/LabInfo/LabInfoPreante";
+import LabInfoParents from "../../Components/SectionComponents/DepartmentPageSections/LabInfo/LabInfoPreante";
 import SectionTitle from "../../Components/Shared/Titles/SectionTitle/SectionTitle";
+
+import AboutSyllabus from "../../Components/SectionComponents/DepartmentPageSections/AboutSyllabus/AboutSyllabus";
+import IndustrialTrainin from "../../Components/Shared/IndustryInternshipTraining/IndustrialTraining";
 
 const DepartmentPage = () => {
   return (
@@ -28,7 +31,13 @@ const DepartmentPage = () => {
             <SectionTitle title={"আমাদের ল্যাব ফেসিলিটি"} />
           </div>
           <LabInfoParents />
-          
+        </section>
+
+        <section>
+          <AboutSyllabus />
+        </section>
+        <section>
+          <IndustrialTrainin />
         </section>
       </div>
     </main>

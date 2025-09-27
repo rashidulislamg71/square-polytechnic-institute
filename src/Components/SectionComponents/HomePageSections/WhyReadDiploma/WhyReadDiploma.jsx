@@ -23,7 +23,6 @@ const WhyReadDiploma = () => {
       className="w-full lg:w-4/5 mx-auto text-justify space-y-12 py-12"
       aria-label="Why Read Diploma Section"
     >
-      <SectionTitle />
       {/* Section Title */}
       <header>
         <SectionTitle

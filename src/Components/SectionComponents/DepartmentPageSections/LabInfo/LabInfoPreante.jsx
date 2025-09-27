@@ -2,16 +2,16 @@ import AboutLabImage from "./AboutLabImage";
 import AboutLabText from "./AboutLabText";
 
 
-import electrical1 from "../../../assets/images/Departments_img/civil.png";
-import electrical2 from "../../../assets/images/Departments_img/electircal.jpg";
-import computer1 from "../../../assets/images/Departments_img/computer.png";
-import computer2 from "../../../assets/images/Departments_img/textile.jpeg";
-import civil1 from "../../../assets/images/Departments_img/civil.png";
-import civil2 from "../../../assets/images/Departments_img/electircal.jpg";
-import textile1 from "../../../assets/images/Departments_img/civil.png";
-import textile2 from "../../../assets/images/Departments_img/mechnical.jpg";
-import mechanical1 from "../../../assets/images/Departments_img/mechnical.jpg";
-import mechanical2 from "../../../assets/images/Departments_img/electircal.jpg";
+import electrical1 from "../../../../assets/images/Departments_img/civil.png";
+import electrical2 from "../../../../assets/images/Departments_img/electircal.jpg";
+import computer1 from "../../../../assets/images/Departments_img/computer.png";
+import computer2 from "../../../../assets/images/Departments_img/textile.jpeg";
+import civil1 from "../../../../assets/images/Departments_img/civil.png";
+import civil2 from "../../../../assets/images/Departments_img/electircal.jpg";
+import textile1 from "../../../../assets/images/Departments_img/civil.png";
+import textile2 from "../../../../assets/images/Departments_img/mechnical.jpg";
+import mechanical1 from "../../../../assets/images/Departments_img/mechnical.jpg";
+import mechanical2 from "../../../../assets/images/Departments_img/electircal.jpg";
 
 const labData = [
   {

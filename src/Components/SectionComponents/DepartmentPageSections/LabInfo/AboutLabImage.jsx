@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ModalPopup from "../../UI/ModalPopup/ModalPopup";
+import ModalPopup from "../../../UI/ModalPopup/ModalPopup";
 
 const AboutLabImage = ({ image1, image2 }) => {
   const [selectedImage, setSelectedImage] = useState(null);

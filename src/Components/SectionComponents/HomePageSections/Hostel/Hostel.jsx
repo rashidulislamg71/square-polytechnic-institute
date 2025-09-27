@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 import ActionButton from "../../../UI/ActionButton/ActionButton";
 import SectionTitle from "../../../Shared/Titles/SectionTitle/SectionTitle";
-import AboutLabImage from "../../../Shared/LabInfo/AboutLabImage";
+import AboutLabImage from "../../../SectionComponents/DepartmentPageSections/LabInfo/AboutLabImage";
 
 import hostelImage1 from "../../../../assets/images/Hostel_image/hostel.jpeg";
 import hostelImage2 from "../../../../assets/images/Hostel_image/hostelb.jpeg";
