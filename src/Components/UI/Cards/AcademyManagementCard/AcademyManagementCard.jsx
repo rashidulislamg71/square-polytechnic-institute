@@ -1,6 +1,7 @@
 import React from "react";
-import { FaEnvelope, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
-import GeneralIcons from "../../../Icons/GeneralIcons/GeneralIcons"; // Assuming you have this component
+
+import { AnyEmail } from "../../Email/Email";
+import { AnyContactNumber } from "../../ContactNumber/ContactNumber";
 
 const AcademyManagementCard = ({ image, name, designation, phone, email }) => {
   return (
@@ -19,18 +20,8 @@ const AcademyManagementCard = ({ image, name, designation, phone, email }) => {
         </div>
 
         <div className="text-gray-600 text-[15px] space-y-1">
-          <GeneralIcons
-            icon={FaPhone}
-            label={phone}
-            iconSize={14}
-            textSize={14}
-          />
-          <GeneralIcons
-            icon={FaEnvelope}
-            label={email}
-            iconSize={14}
-            textSize={14}
-          />
+          <AnyContactNumber number={phone} className="text-[14px]" iconClass = "text-[14px]" />
+          <AnyEmail email={email} className="text-[14px]" iconClass="text-[14px] "  />
         </div>
       </div>
     </div>

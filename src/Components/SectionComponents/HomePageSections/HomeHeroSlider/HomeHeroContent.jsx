@@ -1,5 +1,5 @@
 import { FaSquarePhone } from "react-icons/fa6";
-import { ContactNumber } from "./../../../UI/ContactNumber/ContactNumber";
+import { FixedNumbers } from "./../../../UI/ContactNumber/ContactNumber";
 import ActionButton from "../../../UI/ActionButton/ActionButton";
 import {
   InstituteAddress,
@@ -13,15 +13,13 @@ import {
 const BannerText = {
   title: "প্রযুক্তির পথে আপনার প্রথম পদক্ষেপ!",
   description: [
-    "আধুনিক প্রযুক্তি শিক্ষা ও হাতে-কলমে প্রশিক্ষণের মাধ্যমে দক্ষ প্রকৌশলী গড়ে তোলার লক্ষ্যেই আমাদের যাত্রা।",
-    "স্কয়ার পলিটেকনিক ইনস্টিটিউট-এ আপনি পাবেন বাস্তবভিত্তিক ক্লাস, অভিজ্ঞ শিক্ষক, উন্নত ল্যাব, এবং ক্যারিয়ার গড়ার অমূল্য সুযোগ।",
-    "আপনার স্বপ্নের ভবিষ্যৎ শুরু হোক এখান থেকেই!",
+    "আধুনিক প্রযুক্তি শিক্ষা ও হাতে-কলমে প্রশিক্ষণের মাধ্যমে দক্ষ প্রকৌশলী গড়ে তোলার লক্ষ্যেই আমাদের যাত্রা। স্কয়ার পলিটেকনিক ইনস্টিটিউট-এ আপনি পাবেন বাস্তবভিত্তিক ক্লাস, অভিজ্ঞ শিক্ষক, উন্নত ল্যাব, এবং ক্যারিয়ার গড়ার অমূল্য সুযোগ। আপনার স্বপ্নের ভবিষ্যৎ শুরু হোক এখান থেকেই!"
   ],
 };
 
 /**
  * HomeHeroContent Component
- * ✅ Displays hero banner with background image, institute info, contact & CTA buttons.
+ *Displays hero banner with background image, institute info, contact & CTA buttons.
  *
  * Props:
  * @param {string} sliderImage - Background banner image
@@ -34,7 +32,7 @@ export const HomeHeroContent = ({ sliderImage, index }) => {
       <img
         src={sliderImage}
         alt={`স্কয়ার পলিটেকনিক ইনস্টিটিউট ব্যানার ${index + 1}`} // ✅ SEO friendly ALT
-        className="w-full h-full object-cover transition-opacity duration-2000 ease-in-out brightness-75 blur-[3px]"
+        className="w-full h-full object-cover transition-opacity duration-2000 ease-in-out brightness-90  "
         loading="lazy" // ✅ SEO optimization (lazy loading)
       />
 
@@ -48,33 +46,17 @@ export const HomeHeroContent = ({ sliderImage, index }) => {
           </h1>
           <div className="text-[#e5ebea] text-[14px] sm:text-[16px] md:text-[18px] leading-relaxed">
             {BannerText.description.map((line, i) => (
-              <p key={i} className="">
+              <p key={i}>
                 {line}
               </p>
             ))}
             <p className="pt-4 ">
-              আমাদের সম্পর্কে জানতে বা যেকোনো তথ্যের জন্য সরাসরি যোগাযোগ করুন 👇
+              আমাদের সম্পর্কে জানতে বা যেকোনো তথ্যের জন্য সরাসরি যোগাযোগ করুন।
             </p>
           </div>
           {/* Contact Numbers */}
-          <div className="flex items-center flex-wrap gap-3 mt-3 text-[16px] sm:text-[18px] font-semibold text-white">
-            <span className="text-green-600">
-              <FaSquarePhone />
-            </span>
-            <ContactNumber
-              href="tel:+8801760998164"
-              fontSize="lg"
-              color="green"
-              number="01760-998164"
-            />
-            |
-            <ContactNumber
-              href="tel:+8801718043487"
-              fontSize="lg"
-              color="green"
-              number="01718-043487"
-            />
-          </div>
+          <FixedNumbers className={"text-green-400 text-sm md:text-lg"} />
+       
 
           {/* Divider */}
           <hr className="my-3 border-gray-500" />

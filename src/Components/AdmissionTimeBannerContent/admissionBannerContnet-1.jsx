@@ -1,8 +1,8 @@
 import { FaSquarePhone } from "react-icons/fa6";
 
 import school from "../../assets/images/education_icon_img/school.png";
-import { ContactNumber } from "../UI/ContactNumber/ContactNumber";
 import ActionButton from "../UI/ActionButton/ActionButton";
+import { FixedNumbers } from "../UI/ContactNumber/ContactNumber";
 
 export const AdmissionBannerContent_1 = ({ sliderImage, index }) => {
   return (
@@ -40,22 +40,8 @@ export const AdmissionBannerContent_1 = ({ sliderImage, index }) => {
             </div>
 
             <div className="flex items-center mb-1 gap-2 mt-2 text-[16px] sm:text-[18px] font-semibold text-white">
-              <span className="text-green-600">
-                <FaSquarePhone />
-              </span>
-              <ContactNumber
-                href="+8801760998164"
-                fontSize="lg"
-                color="green"
-                number="01760-998164"
-              />
-              |
-              <ContactNumber
-                href="+8801718043487"
-                fontSize="lg"
-                color="green"
-                number="01718-043487"
-              />
+
+             <FixedNumbers />
             </div>
             <span className="text-gray-400 fade-up">
               <hr />

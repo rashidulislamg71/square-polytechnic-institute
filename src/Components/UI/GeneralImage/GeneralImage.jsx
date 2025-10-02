@@ -1,9 +1,44 @@
 import React, { useState } from "react";
-import ModalPopup from "../../../UI/ModalPopup/ModalPopup";
+import ModalPopup from "../../UI/ModalPopup/ModalPopup";
 
-const AboutLabImage = ({ image1, image2 }) => {
+// Single Big size image for a sections
+// Single Big size image for a section
+export const SingleBigImage = ({
+  image,
+  alt = "Section Image",
+  className = "",
+}) => {
   const [selectedImage, setSelectedImage] = useState(null);
+  return (
+    <div>
+      <img
+        onClick={()=>setSelectedImage(image)}
+        src={image}
+        alt={alt}
+        className={` w-full md:w-[450px] lg:w-[560px] h-[280px] md:h-[350px] lg:h-[370px]  rounded 
+        border-b-8 border-green-500 shadow-xl object-cover 
+        hover:scale-105 hover:shadow-2xl transition-transform duration-500 ${className}`}
+      />
 
+      {/* Reusable Modal*/}
+      <ModalPopup
+        isOpen={!!selectedImage}
+        onClose={() => setSelectedImage(null)}
+      >
+        {selectedImage && (
+          <img
+            src={selectedImage}
+            alt="Enlarged Lab"
+            className="max-w-[800px] max-h-[600px] rounded shadow-2xl"
+          />
+        )}
+      </ModalPopup>
+    </div>
+  );
+};
+
+export const DoubleMediumImage = ({ image1, image2 }) => {
+  const [selectedImage, setSelectedImage] = useState(null);
   return (
     <div>
       {/* Images */}
@@ -35,12 +70,10 @@ const AboutLabImage = ({ image1, image2 }) => {
           <img
             src={selectedImage}
             alt="Enlarged Lab"
-            className="max-w-[90vw] max-h-[90vh] rounded-2xl shadow-2xl"
+            className="max-w-[800px] max-h-[600px] rounded shadow-2xl"
           />
         )}
       </ModalPopup>
     </div>
   );
 };
-
-export default AboutLabImage;

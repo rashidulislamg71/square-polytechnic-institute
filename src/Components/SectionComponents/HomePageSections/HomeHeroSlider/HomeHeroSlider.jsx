@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-fade";
@@ -7,7 +6,6 @@ import heroImage1 from "../../../../assets/images/home_hero_img/bg_1.png";
 import heroImage2 from "../../../../assets/images/home_hero_img/bg_7.png";
 import heroImage3 from "../../../../assets/images/home_hero_img/bg_3.png";
 import heroImage4 from "../../../../assets/images/home_hero_img/bg_4.png";
-
 
 import { Autoplay, EffectFade } from "swiper/modules";
 import { AdmissionBannerContent_1 } from "../../../AdmissionTimeBannerContent/admissionBannerContnet-1";
@@ -32,12 +30,12 @@ const HomeHeroSlider = () => {
         {admission
           ? images.map((img, index) => (
               <SwiperSlide key={index}>
-                <AdmissionBannerContent_1 sliderImage={img} index = {index} />
+                <AdmissionBannerContent_1 sliderImage={img} index={index} />
               </SwiperSlide>
             ))
           : images.map((img, index) => (
               <SwiperSlide key={index}>
-                <HomeHeroContent sliderImage = {img} index={index} />
+                <HomeHeroContent sliderImage={img} index={index} />
               </SwiperSlide>
             ))}
       </Swiper>

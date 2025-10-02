@@ -1,12 +1,12 @@
 // src/components/Footer/Footer.js
 import React from "react";
 import Logo from "../../UI/SPILogo/SPILogo";
-import { ContactNumber } from "../../UI/ContactNumber/ContactNumber";
-import Email from "../../UI/Email/Email";
+import { FixedNumbers } from "../../UI/ContactNumber/ContactNumber";
+import { FixedEmail } from "../../UI/Email/Email";
 import { SocialIcons } from "../../Icons/SocialMediaIcons/SocialMediaIcons";
-import { FaEnvelope, FaPhone } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
 import FooterLink from "../../UI/FooterLink/FooterLink";
-import {InstituteAddress } from "../../UI/InstituteAddress/InstituteAddress";
+import { InstituteAddress } from "../../UI/InstituteAddress/InstituteAddress";
 import { FaLocationDot } from "react-icons/fa6";
 
 const QUICK_LINKS = [
@@ -28,7 +28,7 @@ const EXTRA_LINKS = [
   { to: "/teacher-feedback", label: "শিক্ষকদের মতামত" },
 ];
 
-export default function Footer() {
+const Footer = () => {
   return (
     <footer
       className="bg-gray-900 text-gray-200 mt-16 rounded-t-3xl shadow-2xl"
@@ -46,33 +46,19 @@ export default function Footer() {
             আমরা শিক্ষার্থীদের গড়ে তুলছি আগামী দিনের দক্ষ প্রযুক্তিবিদ হিসেবে।
           </p>
 
-          <h3 className="text-lg font-semibold text-green-600 mb-2">
+          <h3 className="text-lg font-semibold text-orange-400 mb-2">
             Contact Us
           </h3>
 
-          
-          <div className="mb-3 flex gap-1 items-center ">
-           <span className="text-orange-400">    <FaLocationDot /></span>
-           <InstituteAddress className ={"text-sm text-white"} />
+          <div className="flex flex-col gap-1">
+            <div className="flex gap-1 items-center ">
+            <FaLocationDot className="text-green-600 text-[17px]" />
+            <InstituteAddress className={"text-sm text-white"} />
           </div>
-
-          <div className="flex flex-col  gap-2 text-sm">
-            <div className="flex items-center gap-2 text-orange-400 hover:text-green-300 transition">
-              <FaPhone />
-              <ContactNumber
-                fontSize="sm"
-                color="white"
-                number="01760-998164"
-              />|
-              <ContactNumber
-                fontSize="sm"
-                color="white"
-                number="01760-998165"
-              />
-            </div>
-            <div className="flex items-center gap-2 text-orange-400 hover:text-green-300 transition">
-              <FaEnvelope />
-              <Email email="squarepoly@gmail.com" color="white" />
+            <FixedNumbers iconClass="text-sm text-orange-400" />
+            <div className="flex items-center gap-2">
+              <FaEnvelope className="text-green-600 text-[14px] " />
+              <FixedEmail className="text-white" />
             </div>
           </div>
         </div>
@@ -123,4 +109,6 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

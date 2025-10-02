@@ -1,36 +1,44 @@
-const fontSizes = {
-  sm: "text-sm",
-  base: "text-base",
-  lg: "text-lg",
-  xl: "text-xl",
-  custom: "text-[16px]",
-};
+import { FaSquarePhone } from "react-icons/fa6";
+import GeneralIcons from "../../Icons/GeneralIcons/GeneralIcons";
+import { FaPhone } from "react-icons/fa";
 
-const colors = {
-  gray: "text-gray-500",
-  red: "text-red-500",
-  green: "text-green-500",
-  blue: "text-blue-500",
-  black: "text-black",
-  white: "text-white",
-};
-
-export const ContactNumber = ({
-  number,
-  fontSize = "custom", // default 16px
-  color = "gray", // default gray
-}) => {
-  const fontClass = fontSizes[fontSize] || fontSizes.custom;
-  const colorClass = colors[color] || colors.gray;
-
+export const AnyContactNumber = ({ number = "", className = "", iconClass = "" }) => {
   return (
     <div>
-      <a
-        href={`tel:${number}`}
-        className={`${colorClass} ${fontClass} hover:text-blue-500 font-semibold`}
-      >
+      <span className={` ${iconClass}`}>
+        <FaPhone />
+      </span>
+      <a className={`${className}`} href={`tel:+88${number}`}>
         {number}
       </a>
+    </div>
+  );
+};
+
+export const FixedNumbers = ({
+  className ="",
+}) => {
+  return (
+    <div className="flex items-center gap-2">
+     
+      <GeneralIcons icon={FaSquarePhone}/>
+      <div className="flex gap-1 items-center">
+        <a
+          title="Director Eng. Asadul Islam"
+          className={`hover:text-green-300 transition ${className}`}
+          href="tel:+8801760998164"
+        >
+          01760-998164
+        </a>
+        <span className="text-green-400">|</span>
+        <a
+          title="Principal Eng. S.M. Mehedi Hassan"
+          className={`hover:text-green-300 transition ${className}`}
+          href="tel:+8801712371281"
+        >
+          01712-371281
+        </a>
+      </div>
     </div>
   );
 };

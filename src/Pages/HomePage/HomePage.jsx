@@ -8,16 +8,17 @@ import ActionButton from "../../Components/UI/ActionButton/ActionButton";
 import SectionTitle from "../../Components/Shared/Titles/SectionTitle/SectionTitle";
 import StudentsTestimonial from "../../Components/Widgets/StudentsTestimonial/StudentsTestimonial";
 import GeneralParagraphText from "../../Components/Shared/GeneralParagraphText/GeneralParagraphText";
-import InstituteInfo from "../../Components/SectionComponents/HomePageSections/InstituteInfo/InstituteInfo";
+
 import WhyReadDiploma from "../../Components/SectionComponents/HomePageSections/WhyReadDiploma/WhyReadDiploma";
 // json Data
 import instituteFeaturesData from "../../Data/HomePageJsonData/instituteFeatures.json";
-import instituteInfoData from "../../Data/HomePageJsonData/instituteInfo.json";
+
 import HostelSection from "../../Components/SectionComponents/HomePageSections/Hostel/Hostel";
+import IndustrialTraining from "../../Components/Shared/IndustryInternshipTraining/IndustrialTraining";
+import AboutInstituteAndMap from "../../Components/Shared/AboutInstituteAndMap/AboutInstituteAndMap";
 
 const HomePage = () => {
   const { features } = instituteFeaturesData.instituteFeaturesInfo;
-  const { instituteInfo } = instituteInfoData;
 
   return (
     <main className="home-page">
@@ -27,7 +28,10 @@ const HomePage = () => {
       </header>
 
       {/* Notice Section */}
-      <section aria-label="Institute Notices">
+      <section
+        className="px-4 md:px-10 lg:px-20"
+        aria-label="Institute Notices"
+      >
         <Notice />
       </section>
 
@@ -37,23 +41,11 @@ const HomePage = () => {
       </section>
 
       {/* Institute Info  */}
-      <section
-        className="w-full px-4 lg:px-12 py-16 bg-white"
-        aria-label="Institute Info"
-      >
+      <section className="w-full  py-15 bg-white" aria-label="Institute Info">
         <h2 className="text-center mb-12">
           <SectionTitle title={"ইন্সটিটিউট সম্পর্কে"} />
         </h2>
-
-        <div className="flex flex-col lg:flex-row gap-8 items-start">
-          <article className="lg:w-1/2 flex flex-col gap-6 text-justify">
-            <InstituteInfo instituteInfo={instituteInfo} />
-          </article>
-
-          <aside className="lg:w-1/2 w-full h-[300px] lg:h-[350px]">
-            <GoogleMap className="w-full h-full rounded-xl shadow-lg" />
-          </aside>
-        </div>
+        <AboutInstituteAndMap />
       </section>
 
       {/* Institute Features */}
@@ -97,6 +89,10 @@ const HomePage = () => {
 
       <section>
         <HostelSection />
+      </section>
+      {/* Industrial Training and Internship */}
+      <section>
+        <IndustrialTraining />
       </section>
 
       {/* Why Read Diploma */}

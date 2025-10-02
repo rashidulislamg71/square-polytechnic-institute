@@ -8,6 +8,7 @@ import SectionTitle from "../../Components/Shared/Titles/SectionTitle/SectionTit
 
 import AboutSyllabus from "../../Components/SectionComponents/DepartmentPageSections/AboutSyllabus/AboutSyllabus";
 import IndustrialTrainin from "../../Components/Shared/IndustryInternshipTraining/IndustrialTraining";
+import CareerAndHigherStudy from "../../Components/SectionComponents/DepartmentPageSections/CareerAndHigherStudy/CareerAndHigherStudy";
 
 const DepartmentPage = () => {
   return (
@@ -36,8 +37,14 @@ const DepartmentPage = () => {
         <section>
           <AboutSyllabus />
         </section>
-        <section>
+
+        <section  className="pt-15 px-4 md:px-10 lg:px-20 bg-gray-50">
           <IndustrialTrainin />
+        </section>
+
+        {/* Career and higher study secation */}
+        <section className="pt-15 px-4 md:px-10 lg:px-20">
+          <CareerAndHigherStudy />
         </section>
       </div>
     </main>

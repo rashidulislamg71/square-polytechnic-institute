@@ -1,7 +1,3 @@
-import AboutLabImage from "./AboutLabImage";
-import AboutLabText from "./AboutLabText";
-
-
 import electrical1 from "../../../../assets/images/Departments_img/civil.png";
 import electrical2 from "../../../../assets/images/Departments_img/electircal.jpg";
 import computer1 from "../../../../assets/images/Departments_img/computer.png";
@@ -12,6 +8,10 @@ import textile1 from "../../../../assets/images/Departments_img/civil.png";
 import textile2 from "../../../../assets/images/Departments_img/mechnical.jpg";
 import mechanical1 from "../../../../assets/images/Departments_img/mechnical.jpg";
 import mechanical2 from "../../../../assets/images/Departments_img/electircal.jpg";
+import ActionButton from "../../../UI/ActionButton/ActionButton";
+import PeragraphText from "../../../Shared/PeragraphText/PeragraphText";
+import SubTitle from "../../../Shared/Titles/SubTitle/SubTitle";
+import { DoubleMediumImage } from "../../../UI/GeneralImage/GeneralImage";
 
 const labData = [
   {
@@ -58,7 +58,7 @@ const labData = [
 
 const LabInfoParents = () => {
   return (
-    <div className="px-4 md:px-6 lg:px-10">
+    <section>
       {labData.map((lab, index) => (
         <div
           key={lab.id}
@@ -67,23 +67,22 @@ const LabInfoParents = () => {
         >
           {/* Image side */}
           <div className="w-full md:w-5/12 lg:w-4/12">
-            <AboutLabImage
-              image1={lab.images[0]}
-              image2={lab.images[1]}
-            />
+            <DoubleMediumImage image1={lab.images[0]} image2={lab.images[1]} />
           </div>
 
           {/* Text side */}
           <div className="w-full md:w-7/12 lg:w-6/12">
-            <AboutLabText
-              title={lab.title}
-              description={lab.description}
-              linkUrl={lab.linkUrl}
-            />
+            <div className="border-b-3 border-orange-400 mb-3">
+              <SubTitle subTitle={lab.title} className="text-[24px]" />
+            </div>
+            <PeragraphText peraText1={lab.description} />
+            <div className="mt-4">
+              <ActionButton text={"আরও জানুন..."} link={lab.linkUrl} />
+            </div>
           </div>
         </div>
       ))}
-    </div>
+    </section>
   );
 };
 

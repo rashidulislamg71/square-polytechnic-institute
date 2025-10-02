@@ -10,32 +10,33 @@ import { SocialIconAndName } from "../../Components/Icons/SocialMediaIcons/Socia
 import Img from "../../assets/images/2.jpg";
 import AcademyManagementCard from "../../Components/UI/Cards/AcademyManagementCard/AcademyManagementCard";
 import GoogleMap from "../../Components/Shared/GoogleMap/GoogleMap";
+import { FixedEmail } from "./../../Components/UI/Email/Email";
 
+const managementTeam = [
+  {
+    name: "Md. Rashidul Islam Rashed",
+    designation: "Accountant",
+    phone: "01849-267660",
+    email: "jrashidulislam02103@gmail.com",
+    image: Img,
+  },
+  {
+    name: "Engr. S. M. Mehedi Hasan",
+    designation: "Principal",
+    phone: "01849-267660",
+    email: "principal@squarepoly.edu.bd",
+    image: Img,
+  },
+  {
+    name: "Engr. Md. Asadul Islam",
+    designation: "Vice Principal",
+    phone: "01849-267660",
+    email: "vp@squarepoly.edu.bd",
+    image: Img,
+  },
+];
 const ContactPage = () => {
   // Management team data (name, designation, phone, email, image)
-  const managementTeam = [
-    {
-      name: "Md. Rashidul Islam Rashed",
-      designation: "Accountant",
-      phone: "01849-267660",
-      email: "jrashidulislam02103@gmail.com",
-      image: Img,
-    },
-    {
-      name: "Engr. S. M. Mehedi Hasan",
-      designation: "Principal",
-      phone: "01849-267660",
-      email: "principal@squarepoly.edu.bd",
-      image: Img,
-    },
-    {
-      name: "Engr. Md. Asadul Islam",
-      designation: "Vice Principal",
-      phone: "01849-267660",
-      email: "vp@squarepoly.edu.bd",
-      image: Img,
-    },
-  ];
 
   return (
     <main className="bg-gray-50 mt-[-30px]">
@@ -86,14 +87,7 @@ const ContactPage = () => {
                 <FaEnvelope />
               </div>
               <h3 className="font-semibold text-gray-800">ইমেইল</h3>
-              <p className="text-gray-600">
-                <a
-                  href="mailto:squarepoly@gmail.com"
-                  className="hover:text-blue-600"
-                >
-                  squarepoly@gmail.com
-                </a>
-              </p>
+              <FixedEmail />
             </div>
 
             {/* Address Card */}
@@ -131,7 +125,6 @@ const ContactPage = () => {
             </div>
           </div>
         </section>
-        <GoogleMap />
 
         {/* Google Map Section */}
         <section aria-label="Google Map Location">
@@ -139,7 +132,7 @@ const ContactPage = () => {
         </section>
 
         {/* Management Team Section */}
-        <section aria-label="Management Team">
+        <section className="px-4 md:px-10 lg:px-20" aria-label="Management Team">
           <CoontentTitle title="প্রশাসনিক যোগাযোগ" />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {managementTeam.map((member, index) => (

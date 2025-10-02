@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 import ActionButton from "../../../UI/ActionButton/ActionButton";
 import SectionTitle from "../../../Shared/Titles/SectionTitle/SectionTitle";
-import AboutLabImage from "../../../SectionComponents/DepartmentPageSections/LabInfo/AboutLabImage";
+import { DoubleMediumImage } from "../../../UI/GeneralImage/GeneralImage";
 
 import hostelImage1 from "../../../../assets/images/Hostel_image/hostel.jpeg";
 import hostelImage2 from "../../../../assets/images/Hostel_image/hostelb.jpeg";
@@ -79,7 +79,7 @@ const HostelSection = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Left - Image */}
           <div className="flex-1 w-full lg:w-1/2 mt-[-80px] md:mt-[-40px]  ">
-            <AboutLabImage image1={hostelImage1} image2={hostelImage2} />
+            <DoubleMediumImage image1={hostelImage1} image2={hostelImage2} />
           </div>
 
           {/* Right - Features */}
