@@ -7,9 +7,11 @@ import campus_img3 from "../../assets/images/Campus_images/campus3.jpeg";
 import campus_img4 from "../../assets/images/Campus_images/campus4.jpeg";
 import SectionTitle from "./../../Components/Shared/Titles/SectionTitle/SectionTitle";
 
-import GeneralParagraphText from './../../Components/Shared/GeneralParagraphText/GeneralParagraphText';
+import GeneralParagraphText from "./../../Components/Shared/GeneralParagraphText/GeneralParagraphText";
 import CampusTourSection from "../../Components/SectionComponents/CampusPageSections/CampusTourSecation/CampusTourSection";
 import CampusFeaturesSection from "../../Components/SectionComponents/CampusPageSections/CampusFeaturesSection/CampusFeaturesSection";
+import HostelSection from './../../Components/SectionComponents/HomePageSections/Hostel/Hostel';
+import CampusGallery from "../../Components/SectionComponents/CampusPageSections/CampusGallery/CampusGallery";
 
 const slidesData = [
   {
@@ -38,16 +40,23 @@ const slidesData = [
   },
 ];
 
-
 const CampusPage = () => {
   return (
     <div className="mt-[-25px]">
       <HeroSlider slides={slidesData} />
-     
-        <CampusTourSection />
+      <CampusTourSection />
       <section>
         <CampusFeaturesSection />
       </section>
+
+    <section>
+      <CampusGallery />
+    </section>
+
+
+
+
+      <HostelSection />
     </div>
   );
 };
