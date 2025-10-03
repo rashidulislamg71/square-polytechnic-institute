@@ -5,7 +5,6 @@ const PeragraphText = ({peraText1, peraText2=""})=>{
         <div className="text-justify">
             <p className="text-gray-700 text-[16px]">{peraText1}</p>
             <p className="text-gray-700 text-[16px] ">{peraText2}</p>
-            <p className="text-gray-700 text-[16px] ">{peraText2}</p>
         </div>
     )
 };

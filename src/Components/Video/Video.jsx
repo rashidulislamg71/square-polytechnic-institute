@@ -47,13 +47,13 @@
 
 // export default AutoPlayVideo;
 
-const Video = () => {
+const Video = ({width = "100%", height = "500"}) => {
   return (
     <div className="flex justify-center w-full">
       {/* YouTube Embed */}
       <iframe
-        width="100%"
-        height="500"
+        width= {width}
+        height= {height}
         src="https://www.youtube.com/embed/fGP6ppLtLQI"
         title="Square Polytechnic Institue Campus Video Tour"
         frameBorder="0"

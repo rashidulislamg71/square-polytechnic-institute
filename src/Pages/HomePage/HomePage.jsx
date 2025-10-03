@@ -41,7 +41,7 @@ const HomePage = () => {
       </section>
 
       {/* Institute Info  */}
-      <section className="w-full  py-15 bg-white" aria-label="Institute Info">
+      <section className="w-full   py-15 bg-white" aria-label="Institute Info">
         <h2 className="text-center mb-12">
           <SectionTitle title={"ইন্সটিটিউট সম্পর্কে"} />
         </h2>
@@ -91,7 +91,7 @@ const HomePage = () => {
         <HostelSection />
       </section>
       {/* Industrial Training and Internship */}
-      <section>
+      <section className="px-4 md:px-10 lg:px-20">
         <IndustrialTraining />
       </section>
 
