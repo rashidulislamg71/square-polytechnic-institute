@@ -5,15 +5,14 @@ import campus_img1 from "../../assets/images/Campus_images/campus1.jpeg";
 import campus_img2 from "../../assets/images/Campus_images/campus2.jpeg";
 import campus_img3 from "../../assets/images/Campus_images/campus3.jpeg";
 import campus_img4 from "../../assets/images/Campus_images/campus4.jpeg";
-import SectionTitle from "./../../Components/Shared/Titles/SectionTitle/SectionTitle";
-
-import GeneralParagraphText from "./../../Components/Shared/GeneralParagraphText/GeneralParagraphText";
+import StudentsTestimonial from "../../Components/Widgets/StudentsTestimonial/StudentsTestimonial";
 import CampusTourSection from "../../Components/SectionComponents/CampusPageSections/CampusTourSecation/CampusTourSection";
 import CampusFeaturesSection from "../../Components/SectionComponents/CampusPageSections/CampusFeaturesSection/CampusFeaturesSection";
-import HostelSection from './../../Components/SectionComponents/HomePageSections/Hostel/Hostel';
-import CampusGallery from "../../Components/SectionComponents/CampusPageSections/CampusGallery/CampusGallery";
+import HostelSection from "../../Components/SectionComponents/HomePageSections/Hostel/Hostel";
+import CampusGallerySection from "../../Components/SectionComponents/CampusPageSections/CampusGallerySection/CampusGallerySection";
+import StudentsLifeAndActivites from "../../Components/SectionComponents/CampusPageSections/StudentsLifeAndActivitesSection/StudentsLifeAndActivitesSection";
 
-const slidesData = [
+const heroSlidesData = [
   {
     image: campus_img1,
     title: "Welcome to Square Polytechnic",
@@ -43,20 +42,27 @@ const slidesData = [
 const CampusPage = () => {
   return (
     <div className="mt-[-25px]">
-      <HeroSlider slides={slidesData} />
+      <HeroSlider slides={heroSlidesData} />
       <CampusTourSection />
       <section>
         <CampusFeaturesSection />
       </section>
 
-    <section>
-      <CampusGallery />
-    </section>
+      <section>
+        <CampusGallerySection />
+      </section>
 
+      <section>
+        <StudentsLifeAndActivites />
+      </section>
 
+      <section>
+        <HostelSection />
+      </section>
 
-
-      <HostelSection />
+      <section>
+        <StudentsTestimonial />
+      </section>
     </div>
   );
 };
