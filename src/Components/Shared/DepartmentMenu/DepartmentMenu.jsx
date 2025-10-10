@@ -5,7 +5,6 @@ import { BsStars } from "react-icons/bs";
 
 const DepartmentMenu = () => {
   const departmentMenu = [
-   
     {
       id: 1,
       text: "ইলেকট্রিক্যাল",
@@ -36,26 +35,30 @@ const DepartmentMenu = () => {
   return (
     <div>
       <div className="mt-10 lg:border py-4 lg:mt-16">
-        <ul className="flex flex-wrap items-center lg:justify-evenly  gap-4">
+        <ul className="flex flex-wrap items-center justify-center lg:justify-evenly  gap-4">
           {departmentMenu.map((item) => {
             return (
-              <li key={item.id} className=" drop-shadow-[0_2px_2px_rgba(52,73,94,1)] bg-[#27ae60] py-1 px-4 flex items-center font-bold  text-[16px] lg:text-[18px] cursor-pointer ">
+              <li
+                key={item.id}
+                className=" drop-shadow-[0_2px_2px_rgba(52,73,94,1)] bg-orange-400 py-1 px-4 flex items-center font-bold  text-[16px] lg:text-[18px] cursor-pointer "
+              >
                 <NavLink
-                    to={item.url}
+                  to={item.url}
                   className={({ isActive }) =>
                     isActive
-                      ? (`text-[#10573f]  `)
-                      : (" text-[#ecf0f1] hover:text-[#2c3e50]")
+                      ? `text-[#10573f]  `
+                      : " text-[#ecf0f1] hover:text-[#2c3e50]"
                   }
                 >
                   <p>{item.text}</p>
                 </NavLink>
 
-
-                   {/* Star animation */}
+                {/* Star animation */}
                 <div>
                   <div className="star-anim">
-                    <span className="star animate-star"><BsStars/></span>
+                    <span className="star animate-star">
+                      <BsStars />
+                    </span>
                   </div>
                 </div>
               </li>

@@ -93,11 +93,9 @@ function StudentsLifeAndActivites() {
       <GeneralParagraphText
         text={`স্কয়ার পলিটেকনিকের শিক্ষার্থীদের জীবন হলো **সৃষ্টিশীল ও গতিশীল**। ক্লাস, ল্যাবের পাশাপাশি তারা অংশ নেয় **ইন্ডাস্ট্রি ভিজিট** ও **প্রজেক্ট ভিত্তিক কাজে**, যা তাদের বাস্তব দক্ষতা ও অভিজ্ঞতা অর্জনে সাহায্য করে। এছাড়াও, শিক্ষার্থীদের মানসিক ও শারীরিক সুস্থতা নিশ্চিত করতে খেলাধুলা ও সাংস্কৃতিক কার্যক্রমে মেতে ওঠার কিছু **প্রাণবন্ত মুহূর্ত**।`}
       />
-
       <ImageGallery images={studentLifeAndActivitesImageGallery} />
-
       <div className="text-center mt-10">
-        <ActionButton link={"/successEvent"} text={"আরও দেখুন..."} />
+        <ActionButton link={"/galleryEvent"} text={"আরও দেখুন..."} />
       </div>
     </section>
   );

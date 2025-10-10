@@ -2,10 +2,10 @@
 import React from "react";
 import ActionButton from "../../UI/ActionButton/ActionButton";
 
-const HeroSection = ({ title, subtitle, extraText, buttonText, buttonLink, bgImage }) => {
+const HeroSection = ({ title, subtitle, extraText, buttonText, buttonLink, className = "bg-center", bgImage }) => {
   return (
     <section
-      className="relative bg-cover bg-top h-[40vh] md:h-[60vh] flex mt-[-20px] items-center justify-center text-center text-white  opacity-90"
+      className={`relative bg-cover bg-center h-[40vh] md:h-[60vh] lg:h-[80vh] flex mt-[-25px] items-center justify-center text-center text-white  opacity-90 ${className} `}
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       {/* Overlay */}

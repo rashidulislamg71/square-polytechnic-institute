@@ -10,7 +10,7 @@ import DepartmentPage from "../Pages/DepartmentPage/DepartmentPage";
 
 import NoticePage from "../Pages/NoticePage/NoticePage";
 import CampusPage from "../Pages/CampusPage/CampusPage";
-import SuccessEventPage from "../Pages/SuccessEventPage/SuccessEventPage";
+import SuccessEventPage from "../Pages/GalleryAndEventsPage/GalleryAndEventsPage";
 import StudentCornerPage from "../Pages/StudentCornerPage/StudentCornerPage";
 import ContactPage from "../Pages/Contact_usPage/ContactPage";
 import ResultPage from "../Pages/ResultPage/ResultPage";
@@ -22,6 +22,7 @@ import ElectricalPage from "../Pages/DepartmentPages/ElectricalPage/ElectricalPa
 import AdmissionPage from "../Pages/AdmissionPage/AdmissionPage";
 import AllTestimonialPage from "../Pages/AllTestimonialPage/AllTestimonialPage";
 import HostelPage from "../Pages/HostelPage/HostelPage";
+import GalleryAndEventsPage from "../Pages/GalleryAndEventsPage/GalleryAndEventsPage";
 
 const router = createBrowserRouter([
     {
@@ -41,8 +42,8 @@ const router = createBrowserRouter([
           element: <CampusPage />,
         },
         {
-          path: "/successEvent",
-          element: <SuccessEventPage />
+          path: "/galleryEvent",
+          element: <GalleryAndEventsPage />
         },
         {
           path: "/about",

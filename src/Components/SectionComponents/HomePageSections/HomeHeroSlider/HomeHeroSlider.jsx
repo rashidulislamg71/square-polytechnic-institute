@@ -9,7 +9,7 @@ import heroImage4 from "../../../../assets/images/home_hero_img/bg_4.png";
 
 import { Autoplay, EffectFade } from "swiper/modules";
 import { AdmissionBannerContent_1 } from "../../../AdmissionTimeBannerContent/admissionBannerContnet-1";
-import { useAdmissionStatus } from "../../../../hook/useAdmissionStatus";
+import { useAdmissionStatus } from "../../../../hooks/useAdmissionStatus";
 import { HomeHeroContent } from "./HomeHeroContent";
 
 const images = [heroImage1, heroImage2, heroImage3, heroImage4];

@@ -39,7 +39,8 @@ const WhyReadDiploma = () => {
           return (
             <article
               key={section.id}
-              className="bg-white p-6 rounded-2xl flex flex-col lg:flex-row items-start gap-4 border-l-4 border-[#27ae60] shadow-sm hover:shadow-md transition-shadow duration-300"
+              className="bg-white p-4  flex flex-col lg:flex-row 
+              items-start gap-4 border-l-5 border-orange-400 shadow-sm hover:shadow-md transition-shadow duration-300"
             >
               {/* Icon */}
               <div className="text-green-600 text-3xl lg:text-4xl mt-1 flex-shrink-0">

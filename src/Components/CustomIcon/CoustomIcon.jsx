@@ -1,39 +1,39 @@
 
 
-import {
-    FaUniversity,
-    FaSchool,
-    FaGraduationCap,
-    FaChalkboardTeacher,
-    FaDesktop,
-    FaFlask,
-    FaUserGraduate,
-    FaHandshake,
-    FaBed,
-    FaTrophy,
-    FaDollarSign,
-    FaFutbol,
-    FaMedal,
-  } from "react-icons/fa";
+// import {
+//     FaUniversity,
+//     FaSchool,
+//     FaGraduationCap,
+//     FaChalkboardTeacher,
+//     FaDesktop,
+//     FaFlask,
+//     FaUserGraduate,
+//     FaHandshake,
+//     FaBed,
+//     FaTrophy,
+//     FaDollarSign,
+//     FaFutbol,
+//     FaMedal,
+//   } from "react-icons/fa";
   
-  const iconMapping = {
-    FaUniversity,
-    FaSchool,
-    FaGraduationCap,
-    FaChalkboardTeacher,
-    FaDesktop,
-    FaFlask,
-    FaUserGraduate,
-    FaHandshake,
-    FaBed,
-    FaTrophy,
-    FaDollarSign,
-    FaFutbol,
-    FaMedal,
-  };
+//   const iconMapping = {
+//     FaUniversity,
+//     FaSchool,
+//     FaGraduationCap,
+//     FaChalkboardTeacher,
+//     FaDesktop,
+//     FaFlask,
+//     FaUserGraduate,
+//     FaHandshake,
+//     FaBed,
+//     FaTrophy,
+//     FaDollarSign,
+//     FaFutbol,
+//     FaMedal,
+//   };
   
   const CustomIcon = ({ iconName, className }) => {
-    const IconComponent = iconMapping[iconName];
+    const IconComponent = iconName;
     return IconComponent ? <IconComponent className={className} /> : null;
   };
   

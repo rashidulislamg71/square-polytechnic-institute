@@ -5,12 +5,12 @@ import campus_img1 from "../../assets/images/Campus_images/campus1.jpeg";
 import campus_img2 from "../../assets/images/Campus_images/campus2.jpeg";
 import campus_img3 from "../../assets/images/Campus_images/campus3.jpeg";
 import campus_img4 from "../../assets/images/Campus_images/campus4.jpeg";
-import StudentsTestimonial from "../../Components/Widgets/StudentsTestimonial/StudentsTestimonial";
 import CampusTourSection from "../../Components/SectionComponents/CampusPageSections/CampusTourSecation/CampusTourSection";
 import CampusFeaturesSection from "../../Components/SectionComponents/CampusPageSections/CampusFeaturesSection/CampusFeaturesSection";
 import HostelSection from "../../Components/SectionComponents/HomePageSections/Hostel/Hostel";
 import CampusGallerySection from "../../Components/SectionComponents/CampusPageSections/CampusGallerySection/CampusGallerySection";
 import StudentsLifeAndActivites from "../../Components/SectionComponents/CampusPageSections/StudentsLifeAndActivitesSection/StudentsLifeAndActivitesSection";
+import StudentsTestimonialSection from './../../Components/Widgets/StudentsTestimonial/StudentsTestimonialSection';
 
 const heroSlidesData = [
   {
@@ -61,7 +61,7 @@ const CampusPage = () => {
       </section>
 
       <section>
-        <StudentsTestimonial />
+        <StudentsTestimonialSection />
       </section>
     </div>
   );

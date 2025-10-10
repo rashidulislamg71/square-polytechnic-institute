@@ -21,11 +21,10 @@ function StudentsTestimonial() {
   return (
     <div className="wrapper px-0 overflow-hidden block select-none py-7 bg-green-100 ">
       <ul className="runer flex gap-5 [min-width:max-content]">
-        {testimonials.map((student, index) => {
-          const image = images[student.image]; // Import থেকে নেওয়া image
-
+        {testimonials.map((student) => {
+          const image = images[student.image]; 
           return (
-            <li key={index} className="list-none flex-shrink-0">
+            <li key={student.id} className="list-none flex-shrink-0">
               <StudentsTestimonialCard
                 image={image}
                 name={student.name}

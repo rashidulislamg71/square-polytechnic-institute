@@ -97,7 +97,7 @@ const CampusGallerySection = () => {
 
       <ImageGallery images={campusGalleryImages} />
       <div className="text-center mt-10">
-        <ActionButton link={"/successEvent"} text={"আরও দেখুন..."} />
+        <ActionButton link={"/galleryEvent"} text={"আরও দেখুন..."} />
       </div>
     </section>
   );

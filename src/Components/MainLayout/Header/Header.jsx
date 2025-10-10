@@ -83,7 +83,7 @@ const Header = () => {
             </div>
 
             {/* Instagram  */}
-            <div>
+            {/* <div>
               <a
                 href="#"
                 target="_blank"
@@ -93,7 +93,7 @@ const Header = () => {
                 <FaInstagramSquare className="text-xl text-pink-600" />
                 <span className="hidden md:block">Instagram</span>
               </a>
-            </div>
+            </div> */}
           </div>
           {/* admission button  */}
           <div className="ml-10">

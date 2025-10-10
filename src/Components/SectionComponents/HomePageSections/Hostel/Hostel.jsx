@@ -17,8 +17,6 @@ import hostelImage1 from "../../../../assets/images/Hostel_image/hostel.jpeg";
 import hostelImage2 from "../../../../assets/images/Hostel_image/hostelb.jpeg";
 import GeneralParagraphText from "../../../Shared/GeneralParagraphText/GeneralParagraphText";
 import SubTitle from "../../../Shared/Titles/SubTitle/SubTitle";
-
-const HostelSection = () => {
   const features = [
     {
       id: 1,
@@ -62,6 +60,7 @@ const HostelSection = () => {
     },
   ];
 
+const HostelSection = () => {
   return (
     <section className="py-16 bg-gray-50" id="hostel">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,7 +70,6 @@ const HostelSection = () => {
           <GeneralParagraphText
             text={`স্কয়ার পলিটেকনিক ইন্সটিটিউট শিক্ষার্থীদের জন্য নিশ্চিত করে **নিরাপদ, আধুনিক এবং সম্পূর্ণ আরামদায়ক** আবাসনের ব্যবস্থা। আমাদের হোস্টেল পরিবেশ এমনভাবে ডিজাইন করা হয়েছে, যেখানে প্রতিটি শিক্ষার্থী নিরিবিলি পরিবেশে **মনোযোগ সহকারে পড়াশোনা** করতে পারবে। এটি শুধু থাকার জায়গা নয়, এটি একটি **শিক্ষার্থীদের দ্বিতীয় বাড়ি (Second Home)**, যা পড়াশোনা, বিশ্রাম ও ব্যক্তিগত বিকাশের এক নিখুঁত পরিবেশ তৈরি করে।`}
           />
-          
         </div>
 
         {/* Flex Layout */}

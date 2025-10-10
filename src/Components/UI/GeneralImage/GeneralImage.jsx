@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import ModalPopup from "../../UI/ModalPopup/ModalPopup";
+import ImageGallery from "../../Shared/ImageGallery/ImageGallery";
 
 // Single Big size image for a sections
-// Single Big size image for a section
 export const SingleBigImage = ({
   image,
   alt = "Section Image",
@@ -12,7 +12,7 @@ export const SingleBigImage = ({
   return (
     <div>
       <img
-        onClick={()=>setSelectedImage(image)}
+        onClick={() => setSelectedImage(image)}
         src={image}
         alt={alt}
         className={` w-full md:w-[450px] lg:w-[560px] h-[280px] md:h-[350px] lg:h-[370px]  rounded 

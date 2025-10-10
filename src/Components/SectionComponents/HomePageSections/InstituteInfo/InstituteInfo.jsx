@@ -15,12 +15,12 @@ const instituteInfo = {
   title: "ইন্সটিটিউট পরিচিতি",
   welcomeMessage: "স্কয়ার পলিটেকনিক ইন্সটিটিউট আপনাকে স্বাগতম!!",
   description:
-    "স্কয়ার পলিটেকনিক ইনস্টিটিউট গণপ্রজাতন্ত্রী বাংলাদেশ সরকারের শিক্ষা মন্ত্রণালয়াধীন কারিগরি শিক্ষা অধিদপ্তরের একটি কারিগরি বেসরকারি শিক্ষা প্রতিষ্ঠান। দেশের কারিগরি শিক্ষায় দক্ষ জনশক্তি তৈরি করার লক্ষ্যে ২০১৬ সালে প্রতিষ্ঠিত হয় স্কয়ার পলিটেকনিক ইনস্টিটিউট। এটি বগুড়া জেলা শেরপুর উপজেলা গাড়ীদহ বাসস্ট্যান্ড, পল্লী উন্নয়ন একাডেমী দক্ষিণ পাশে অবস্থিত।",
+    "স্কয়ার পলিটেকনিক ইন্সটিটিউট গণপ্রজাতন্ত্রী বাংলাদেশ সরকারের শিক্ষা মন্ত্রণালয়াধীন কারিগরি শিক্ষা অধিদপ্তরের একটি কারিগরি বেসরকারি শিক্ষা প্রতিষ্ঠান। দেশের কারিগরি শিক্ষায় দক্ষ জনশক্তি তৈরি করার লক্ষ্যে ২০১৬ সালে প্রতিষ্ঠিত হয় স্কয়ার পলিটেকনিক ইনস্টিটিউট। এটি বগুড়া জেলা শেরপুর উপজেলা গাড়ীদহ বাসস্ট্যান্ড, পল্লী উন্নয়ন একাডেমী দক্ষিণ পাশে অবস্থিত।",
   details: [
     { label: "প্রতিষ্ঠিত", value: "2016" },
     {
       label: "অবস্থান",
-      value: "গাড়ীদহ, শেরপুর, বগুড়া (পল্লী উন্নয়ন একাডেমির দক্ষিণ পাশে (RDA))",
+      value: "গাড়িদহ বাস স্ট্যান্ড, শেরপুর, বগুড়া (পল্লী উন্নয়ন একাডেমি দক্ষিণ পাশে (RDA))",
     },
     { label: "প্রতিষ্ঠান কোড", value: "20294" },
     { label: "EIIN নম্বর", value: "139309" },
@@ -55,7 +55,9 @@ const InstituteInfo = () => {
     // Wrapper section with flex layout and vertical gap
     <section className="flex flex-col gap-3">
       {/* Welcome message as subtitle */}
-      <SubTitle subTitle={instituteInfo.welcomeMessage} />
+     <div className="border-b-3 border-amber-500">
+       <SubTitle subTitle={instituteInfo.welcomeMessage} />
+     </div>
 
       {/* Description paragraph */}
       <PeragraphText
@@ -69,7 +71,7 @@ const InstituteInfo = () => {
       {/* Action button for more details */}
       <div className="mt-2">
         <ActionButton
-          text="Read More..."
+          text="আরও জানুন..."
           link="/about"
           bg_color="bg-[#27ae60] hover:bg-green-600"
           aria-label="Read more about the Institute"
