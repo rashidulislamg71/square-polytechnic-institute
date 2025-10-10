@@ -13,6 +13,7 @@ import HostelSection from "../../Components/SectionComponents/HomePageSections/H
 import IndustrialTraining from "../../Components/Shared/IndustryInternshipTraining/IndustrialTraining";
 import AboutInstituteAndMap from "../../Components/Shared/AboutInstituteAndMap/AboutInstituteAndMap";
 import StudentsTestimonialSection from "../../Components/Widgets/StudentsTestimonial/StudentsTestimonialSection";
+import InstituteFeatures from "../../Components/Shared/InstituteFeatures/InstituteFeatures";
 
 const HomePage = () => {
   const { features } = instituteFeaturesData.instituteFeaturesInfo;
@@ -50,7 +51,7 @@ const HomePage = () => {
         </h2>
 
         <div className="flex flex-wrap justify-center gap-6">
-          {features &&
+          {/* {features &&
             features.slice(0, 4).map((feature) => (
               <article className=" md:w-[360px] lg:w-[490px]" key={feature.id}>
                 <InstituteFeaturesCard
@@ -59,7 +60,8 @@ const HomePage = () => {
                   description={feature.description}
                 />
               </article>
-            ))}
+            ))} */}
+            <InstituteFeatures />
         </div>
         <div className="flex justify-center mt-15">
           <ActionButton link="features" />
