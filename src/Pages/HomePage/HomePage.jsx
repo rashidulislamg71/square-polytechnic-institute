@@ -40,30 +40,16 @@ const HomePage = () => {
 
       {/* Institute Info  */}
       <section className="w-full   py-15 bg-white" aria-label="Institute Info">
-        
         <AboutInstituteAndMap />
       </section>
 
       {/* Institute Features */}
-      <section className=" py-15  bg-gray-100" aria-label="Institute Features">
-        <h2 className="text-center  mx-auto">
-          <SectionTitle title={"বিশেষ সুবিধা ও বৈশিষ্ট্য"} />
-        </h2>
-
-        <div className="flex flex-wrap justify-center gap-6">
-          {/* {features &&
-            features.slice(0, 4).map((feature) => (
-              <article className=" md:w-[360px] lg:w-[490px]" key={feature.id}>
-                <InstituteFeaturesCard
-                  icon={feature.icon}
-                  title={feature.title}
-                  description={feature.description}
-                />
-              </article>
-            ))} */}
-            <InstituteFeatures />
-        </div>
-        <div className="flex justify-center mt-15">
+      <section
+        className=" py-16 px-4 md:px-10 lg:px-20 bg-gray-100"
+        aria-label="Institute Features"
+      >
+          <InstituteFeatures />
+        <div className="text-center mt-10 md:mt-15 ">
           <ActionButton link="features" />
         </div>
       </section>

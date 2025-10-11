@@ -2,15 +2,16 @@ import { GiTargetShot } from "react-icons/gi";
 import { IoTelescopeSharp } from "react-icons/io5";
 import SubTitle from "../../../Shared/Titles/SubTitle/SubTitle";
 import GeneralIcons from "../../../Icons/GeneralIcons/GeneralIcons";
+import SectionTitle from "./../../../Shared/Titles/SectionTitle/SectionTitle";
 
 const instituteContent = {
   visionIcon: IoTelescopeSharp,
-  visionTitle: "ভিশন (Vision) — ভবিষ্যতের আকাঙ্ক্ষা",
+  visionTitle: "ভিশন — ভবিষ্যৎ পরিকল্পনা",
   visionText: `দক্ষতা ও উদ্ভাবনের শীর্ষে অবস্থান করে একটি বিশ্বমানের কারিগরি শিক্ষা প্রতিষ্ঠান হিসেবে নিজেদের প্রতিষ্ঠা করা।
 আমরা এমন এক প্রজন্মের প্রযুক্তিনির্ভর, সৃজনশীল ও নৈতিকতা-সম্পন্ন পেশাদার তৈরি করতে চাই, যারা চতুর্থ শিল্প বিপ্লবের নেতৃত্ব দেবে এবং জাতীয় ও বৈশ্বিক শিল্পক্ষেত্রে ইতিবাচক পরিবর্তন আনবে।`,
 
   missionIcon: GiTargetShot,
-  missionTitle: "মিশন (Mission) — বর্তমানের প্রতিশ্রুতি",
+  missionTitle: "মিশন  — প্রতিশ্রুতি",
   missionPoints: [
     {
       id: 1,
@@ -42,53 +43,55 @@ const instituteContent = {
 const MissionAndVission = ({ className = "" }) => {
   return (
     <section
-      className={`w-full md:max-w-3xl mx-auto mt-[-10px] md:mt-0 p-0 md:p-5 bg-white md:rounded-lg md:shadow-md ${className}`}
+      className={`py-16 w-full md:max-w-3xl mx-auto p-0 md:p-5 bg-white md:rounded-lg md:shadow-md ${className}`}
     >
-      {/* Vision Section */}
-      <div className="mb-6">
-        <div className="flex items-center gap-2 mb-2">
-          <GeneralIcons
-            icon={instituteContent.visionIcon}
-            className="text-3xl text-blue-600"
-          />
-          <SubTitle
-            subTitle={instituteContent.visionTitle}
-            className="text-[20px]"
-          />
-        </div>
-        <p className="mb-4 whitespace-pre-line text-gray-700 leading-relaxed">
-          {instituteContent.visionText}
-        </p>
-      </div>
-
-      <hr className="my-6 border-gray-300" />
-
-      {/* Mission Section */}
-      <div>
-        <div className="flex items-center gap-2 mb-3">
-          <GeneralIcons
-            icon={instituteContent.missionIcon}
-            className="text-3xl text-green-600"
-          />
-          <SubTitle
-            subTitle={instituteContent.missionTitle}
-            className="text-[20px]"
-          />
+      <SectionTitle title={"আমাদের লক্ষ্য ও উদ্দেশ্য"} />
+      <div className="mt-[-10px] md:mt-0">
+         {/* Vision Section */}
+        <div className="mb-6">
+          <div className="flex items-center gap-2 mb-2">
+            <GeneralIcons
+              icon={instituteContent.visionIcon}
+              className="text-3xl text-blue-600"
+            />
+            <SubTitle
+              subTitle={instituteContent.visionTitle}
+              className="text-[20px]"
+            />
+          </div>
+          <p className="mb-4 whitespace-pre-line text-gray-700 leading-relaxed">
+            {instituteContent.visionText}
+          </p>
         </div>
 
-        <ul className="space-y-3">
-          {instituteContent.missionPoints.map((point) => (
-            <li
-              key={point.id}
-              className="border-l-4
+        <hr className="my-6 border-gray-300" />
+
+        {/* Mission Section */}
+          <div className="flex items-center gap-2 mb-3">
+            <GeneralIcons
+              icon={instituteContent.missionIcon}
+              className="text-3xl text-green-600"
+            />
+            <SubTitle
+              subTitle={instituteContent.missionTitle}
+              className="text-[20px]"
+            />
+          </div>
+
+          <ul className="space-y-3">
+            {instituteContent.missionPoints.map((point) => (
+              <li
+                key={point.id}
+                className="border-l-4
              border-green-500 pl-4"
-            >
-              <div className=" font-bold text-green-700">{point.title}</div>
-              <div className="text-sm text-gray-600">{point.description}</div>
-            </li>
-          ))}
-        </ul>
-      </div>
+              >
+                <div className=" font-bold text-green-700">{point.title}</div>
+                <div className="text-sm text-gray-600">{point.description}</div>
+              </li>
+            ))}
+          </ul>
+        </div>
+     
     </section>
   );
 };
