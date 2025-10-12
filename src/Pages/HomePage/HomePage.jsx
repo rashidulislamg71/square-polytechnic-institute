@@ -6,17 +6,16 @@ import Video from "../../Components/Video/Video";
 import ActionButton from "../../Components/UI/ActionButton/ActionButton";
 import SectionTitle from "../../Components/Shared/Titles/SectionTitle/SectionTitle";
 import WhyReadDiploma from "../../Components/SectionComponents/HomePageSections/WhyReadDiploma/WhyReadDiploma";
-// json Data
-import instituteFeaturesData from "../../Data/HomePageJsonData/instituteFeatures.json";
 
 import HostelSection from "../../Components/SectionComponents/HomePageSections/Hostel/Hostel";
 import IndustrialTraining from "../../Components/Shared/IndustryInternshipTraining/IndustrialTraining";
 import AboutInstituteAndMap from "../../Components/Shared/AboutInstituteAndMap/AboutInstituteAndMap";
 import StudentsTestimonialSection from "../../Components/Widgets/StudentsTestimonial/StudentsTestimonialSection";
 import InstituteFeatures from "../../Components/Shared/InstituteFeatures/InstituteFeatures";
+// import sampleVideo from "../../Assets/Videos/sampleVideo.mp4";
+import ScholarshipSection from './../../Components/Shared/ScholarshipSection/ScholarshipSection';
 
 const HomePage = () => {
-  const { features } = instituteFeaturesData.instituteFeaturesInfo;
 
   return (
     <main className="home-page">
@@ -70,6 +69,11 @@ const HomePage = () => {
         </div> */}
       </section>
 
+<section>
+  <ScholarshipSection />
+</section>
+
+      {/* Hostel Section */}
       <section>
         <HostelSection />
       </section>

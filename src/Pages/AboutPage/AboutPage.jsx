@@ -7,6 +7,7 @@ import DepartmentMenu from "../../Components/Shared/DepartmentMenu/DepartmentMen
 import InstituteAboutInfo from "../../Components/SectionComponents/AboutPageSections/InstituteAboutInfo/InstituteAboutInfo";
 import VisionMissionCard from "../../Components/SectionComponents/AboutPageSections/MissionAndVission/MissionAndVission";
 import LeadersSpeechSection from "../../Components/SectionComponents/AboutPageSections/LeadersSpeech/LeadersSpeechSection";
+import ScholarshipSection from "./../../Components/Shared/ScholarshipSection/ScholarshipSection";
 
 const AboutPage = () => {
   return (
@@ -40,7 +41,9 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-
+<section>
+  <ScholarshipSection />
+</section>
       {/*Department Menu Section */}
       <section className="py-16">
         <DepartmentMenu />

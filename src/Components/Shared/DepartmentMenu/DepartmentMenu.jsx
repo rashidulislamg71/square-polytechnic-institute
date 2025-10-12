@@ -2,8 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./DepartmentMenu.css";
 import { BsStars } from "react-icons/bs";
-
-const DepartmentMenu = () => {
   const departmentMenu = [
     {
       id: 1,
@@ -31,16 +29,16 @@ const DepartmentMenu = () => {
       url: "/mechanical_page",
     },
   ];
-
+const DepartmentMenu = () => {
   return (
-    <div>
-      <div className="mt-10 lg:border py-4 lg:mt-16">
+      <div >
         <ul className="flex flex-wrap items-center justify-center lg:justify-evenly  gap-4">
           {departmentMenu.map((item) => {
             return (
               <li
                 key={item.id}
-                className=" drop-shadow-[0_2px_2px_rgba(52,73,94,1)] bg-orange-400 py-1 px-4 flex items-center font-bold  text-[16px] lg:text-[18px] cursor-pointer "
+                className=" drop-shadow-[0_2px_2px_rgba(52,73,94,1)] bg-orange-400 
+                py-1 px-4 flex items-center font-bold  text-[16px] lg:text-lg cursor-pointer "
               >
                 <NavLink
                   to={item.url}
@@ -54,19 +52,16 @@ const DepartmentMenu = () => {
                 </NavLink>
 
                 {/* Star animation */}
-                <div>
                   <div className="star-anim">
                     <span className="star animate-star">
                       <BsStars />
                     </span>
-                  </div>
                 </div>
               </li>
             );
           })}
         </ul>
       </div>
-    </div>
   );
 };
 
