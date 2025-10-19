@@ -2,7 +2,7 @@ import HomeHeroSlider from "../../Components/SectionComponents/HomePageSections/
 import InstituteFeaturesCard from "../../Components/UI/Cards/InstituteFeaturesCard/InstituteFeaturesCard";
 import Notice from "../../Components/SectionComponents/HomePageSections/Notice/Notice";
 import AllDepartment from "../../Components/Shared/AllDepartment/AllDepartment";
-import Video from "../../Components/Video/Video";
+
 import ActionButton from "../../Components/UI/ActionButton/ActionButton";
 import SectionTitle from "../../Components/Shared/Titles/SectionTitle/SectionTitle";
 import WhyReadDiploma from "../../Components/SectionComponents/HomePageSections/WhyReadDiploma/WhyReadDiploma";
@@ -12,11 +12,11 @@ import IndustrialTraining from "../../Components/Shared/IndustryInternshipTraini
 import AboutInstituteAndMap from "../../Components/Shared/AboutInstituteAndMap/AboutInstituteAndMap";
 import StudentsTestimonialSection from "../../Components/Widgets/StudentsTestimonial/StudentsTestimonialSection";
 import InstituteFeatures from "../../Components/Shared/InstituteFeatures/InstituteFeatures";
-// import sampleVideo from "../../Assets/Videos/sampleVideo.mp4";
-import ScholarshipSection from './../../Components/Shared/ScholarshipSection/ScholarshipSection';
+import campusVideo from "../../assets/video/spi_campus_video.mp4";
+import ScholarshipSection from "./../../Components/Shared/ScholarshipSection/ScholarshipSection";
+import VideoPlayer from "../../Components/Video/Video";
 
 const HomePage = () => {
-
   return (
     <main className="home-page">
       {/* Hero Section */}
@@ -47,7 +47,7 @@ const HomePage = () => {
         className=" py-16 px-4 md:px-10 lg:px-20 bg-gray-100"
         aria-label="Institute Features"
       >
-          <InstituteFeatures />
+        <InstituteFeatures />
         <div className="text-center mt-10 md:mt-15 ">
           <ActionButton link="features" />
         </div>
@@ -58,20 +58,24 @@ const HomePage = () => {
         className="px-[15px] lg:px-[50px] py-[60px]"
         aria-label="Campus Videos"
       >
-        <div>
-          <SectionTitle title={"এক নজরে ক্যাম্পাস ট্যুর"} />
-        </div>
-        <Video />
+        <SectionTitle title={"এক নজরে ক্যাম্পাস ট্যুর"} />
 
         {/* Local Video */}
-        {/* <div className="mt-12">
-          <Video src={sampleVideo} controls autoPlay muted loop />
-        </div> */}
+        <div className="mt-12">
+          <VideoPlayer
+            type="local"
+            src={campusVideo}
+            title="Campus Tour Video"
+            controls
+            poster="/images/campus-preview.jpg"
+            
+          />
+        </div>
       </section>
 
-<section>
-  <ScholarshipSection />
-</section>
+      <section>
+        <ScholarshipSection />
+      </section>
 
       {/* Hostel Section */}
       <section>

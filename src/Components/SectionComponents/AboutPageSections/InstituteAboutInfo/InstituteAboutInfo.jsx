@@ -62,7 +62,7 @@ function InstituteAboutInfo() {
               subTitle={item.title}
               description={item.description}
               isDescriptionArray={item.details}
-              parentClassName="w-[350px] lg:w-[380px] h-[200px] border-t-3 border-amber-400"
+              parentClassName="w-[350px] lg:w-[380px] h-[220px] border-t-3 border-amber-400"
               iconTitleClassName="flex gap-2"
               descriptionClassName="text-[16px] "
             />

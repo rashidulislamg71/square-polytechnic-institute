@@ -1,0 +1,46 @@
+import React from "react";
+import SubTitle from "../../Shared/Titles/SubTitle/SubTitle";
+import GeneralParagraphText from "../../Shared/GeneralParagraphText/GeneralParagraphText";
+import { FaGraduationCap, FaPlaneDeparture } from "react-icons/fa";
+import { FaReadme } from "react-icons/fa6";
+
+import DepartmentAboutsIcon from "./DepartmentAboutsIcon";
+import Card from "./Card";
+import TitleAndIconUI from "./TitleAndIconUI.jsX";
+
+function HigherStudySection({ data }) {
+  if (!data) return null;
+
+  const { title, description, bangladesh, abroad } = data;
+
+  return (
+    <section>
+      {/* Icon & title */}
+
+      <TitleAndIconUI title={title} icon={FaGraduationCap} />
+
+      {/* Description */}
+      <div className="mt-10 max-w-3xl mx-auto ">
+        <GeneralParagraphText text={description} />
+      </div>
+
+      {/* Two Columns */}
+      <div className="flex flex-col md:flex-row gap-8 md:gap-15 mt-4">
+        {/*In bangladesh  */}
+        <Card
+          icon={FaReadme}
+          title={bangladesh.title}
+          items={bangladesh.points}
+        />
+        {/*Others Countrys  */}
+        <Card
+          icon={FaPlaneDeparture}
+          title={abroad.title}
+          items={abroad.points}
+        />
+      </div>
+    </section>
+  );
+}
+
+export default HigherStudySection;

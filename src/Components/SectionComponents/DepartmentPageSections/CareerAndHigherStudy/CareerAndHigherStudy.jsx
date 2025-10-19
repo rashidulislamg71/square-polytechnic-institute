@@ -50,7 +50,7 @@ const CareerAndHigherStudy = () => {
           </div>
 
           <PeragraphText peraText1={data.paragraph} />
-          <GeneralList items={data.careerList} />
+          <GeneralList items={data.careerList} idColon="true" />
           {/* Departments Links */}
           <div className="mt-2">
             <h4 className="font-semibold text-gray-800">

@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap");
+@import url("https://fonts.cdnfonts.com/css/solaimanlipi");
 
 @layer base {
   *,
@@ -11,37 +12,32 @@
   }
 
   html {
-    font-family: "Tiro Bangla", Arial, Helvetica, sans-serif;
+    font-family: "SolaimanLipi", "Tiro Bangla", Arial, sans-serif;
   }
   body {
     max-width: 1535px;
     min-width: 320px;
     width: 100%;
-    overflow-x: hidden;
     margin: 0 auto;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bold;
+  }
+
+  small {
+    font-size: 0.75rem;
+    color: rgb(85, 85, 85);
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Tiro Bangla", Arial, Helvetica, sans-serif;
-  font-weight: bold;
-}
-
-
-small {
-  font-size: 12px;
-  color: rgb(85, 85, 85);
-}
-
-
-
-
-/* Define your custom keyframes */
+/* Animations */
 @keyframes fade-up {
   0% {
     opacity: 0;
@@ -52,18 +48,18 @@ small {
     transform: translateY(0);
   }
 }
-
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
+  0%,
+  100% {
+    transform: translateY(0);
   }
   50% {
     transform: translateY(-15px);
   }
 }
-
 @keyframes pulse-scale {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
@@ -71,7 +67,6 @@ small {
   }
 }
 
-/* Define your animation utilities as custom classes */
 .fade-up {
   animation: fade-up 1s ease forwards;
 }
@@ -81,5 +76,3 @@ small {
 .pulse-scale {
   animation: pulse-scale 2s infinite;
 }
-
-/* Add any other global styles below */

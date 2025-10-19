@@ -1,5 +1,6 @@
-import Video from "../../../Video/Video";
 import SectionTitle from "../../../Shared/Titles/SectionTitle/SectionTitle";
+import VideoPlayer from "../../../Video/Video";
+import campusVideo from "../../../../assets/video/spi_campus_video.mp4";
 import PeragraphText from "./../../../Shared/PeragraphText/PeragraphText";
 
 const aboutCampus = [
@@ -27,7 +28,17 @@ const CampusTourSection = () => {
 
         {/* Right Column: Video */}
         <div className="md:flex-1">
-          <Video height={"300"} />
+          <VideoPlayer
+            type="local"
+            src={campusVideo}
+            title="Campus Tour Video"
+            aspectRatio="16/9"
+            autoPlay
+            muted
+            loop
+            controls
+            poster="/images/campus-preview.jpg"
+          />
         </div>
       </div>
     </section>
