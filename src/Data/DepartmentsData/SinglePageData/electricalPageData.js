@@ -1,139 +1,148 @@
+// electricalDepartmentData_refined.js
 
+import React from "react";
+import electricalBg from "@assets/images/Departments_img/electircal.jpg";
 
 const electricalDepartmentData = {
-    id: "electrical",
-    title: "ইলেকট্রিক্যাল ইঞ্জিনিয়ারিং",
+  id: "electrical",
+  title: "ইলেকট্রিক্যাল ইঞ্জিনিয়ারিং",
 
-    heroSection: {
-        title: "বিদ্যুৎ ও প্রযুক্তির শক্তিতে আলোকিত ভবিষ্যৎ",
-        tagline: "আপনি কি হতে চান বিদ্যুৎ ব্যবস্থার নেপথ্যের প্রকৌশলী? আজই শুরু করুন আপনার ইলেকট্রিক্যাল জার্নি!",
-        background: "/images/Departments_img/electrical_hero.jpg",
-        ctaButtons: [
-            { text: "ভর্তি করুন এখনই", link: "/admission" },
-            { text: "সিলেবাস দেখুন", link: "/syllabus/electrical" },
-        ],
+  // 1️⃣ Hero Section
+  heroSection: {
+    title: "বিদ্যুৎ প্রযুক্তির দক্ষ হাতে আলোকিত ভবিষ্যৎ",
+    tagline:
+      "দেশের শিল্প ও প্রযুক্তি উন্নয়নে ইলেকট্রিক্যাল ইঞ্জিনিয়ারিং হচ্ছে সাফল্যের চালিকাশক্তি!",
+    background: electricalBg,
+    ctaButtons: [
+      { text: "সরাসরি ভর্তি হোন", link: "/admission", btnBgColor: "bg-green-600" },
+      { text: "ডাউনলোড সিলেবাস", link: "/syllabus/electrical", btnBgColor: "bg-orange-500" },
+    ],
+  },
+
+  // 2️⃣ About Department
+  aboutDepartment: {
+    title: "ইলেকট্রিক্যাল ইঞ্জিনিয়ারিং: শক্তি ও প্রযুক্তির সমন্বয়",
+    description: `ইলেকট্রিক্যাল ইঞ্জিনিয়ারিং বিভাগটি বিদ্যুৎ উৎপাদন, সঞ্চালন, বিতরণ এবং ইলেকট্রনিক ডিভাইসের ডিজাইন ও কন্ট্রোল নিয়ে কাজ করে।
+      এখানে শিক্ষার্থীদের বাস্তবভিত্তিক ট্রেনিং ও হাতে-কলমে ল্যাব অভিজ্ঞতার মাধ্যমে দক্ষ টেকনিশিয়ান ও প্রকৌশলী হিসেবে গড়ে তোলা হয়।`,
+  },
+
+  aboutDepartmentVideo: {
+    url: "https://www.youtube.com/embed/9mDqVZpDytU",
+  },
+
+  // 3️⃣ Why Choose This Department
+  whyChooseThisDepartment: {
+    title: "কেন বেছে নেবেন ইলেকট্রিক্যাল ইঞ্জিনিয়ারিং?",
+    points: [
+      "Power System, Control System ও Electrical Machines-এর উপর আধুনিক প্রশিক্ষণ।",
+      "Solar, Renewable Energy ও Smart Grid প্রযুক্তির বাস্তব ধারণা।",
+      "সরকারি বিদ্যুৎ দপ্তর ও বেসরকারি ইলেকট্রনিক ইন্ডাস্ট্রিতে নিশ্চিত চাকরির সুযোগ।",
+      "AutoCAD Electrical, PLC & Industrial Automation-এর উপর ট্রেনিং।",
+      "নিজস্ব ইলেকট্রনিক সার্ভিস সেন্টার বা বিদ্যুৎ সংক্রান্ত ব্যবসা পরিচালনার সুযোগ।",
+    ],
+  },
+
+  // 4️⃣ Career Opportunities
+  careerOpportunities: {
+    title: "ক্যারিয়ার: শক্তিশালী ভবিষ্যতের পেশা",
+    description:
+      "ইলেকট্রিক্যাল ইঞ্জিনিয়াররা শিল্প, শক্তি উৎপাদন, টেলিকম, ও সরকারি খাতে অত্যন্ত গুরুত্বপূর্ণ ভূমিকা পালন করে।",
+
+    bangladesh: {
+      title: "বাংলাদেশে কর্মক্ষেত্র",
+      points: [
+        "BPDB, DESCO, PDB, REB, ও LGED-এ উপ-সহকারী প্রকৌশলী হিসেবে চাকরি।",
+        "Walton, Singer, ও Energypac-এর মতো প্রতিষ্ঠানে Electrical Supervisor।",
+        "Solar & Renewable Energy প্রজেক্টে ফিল্ড ইঞ্জিনিয়ার হিসেবে কাজ।",
+      ],
     },
 
-    aboutDepartment: {
-        title: "ইলেকট্রিক্যাল ইঞ্জিনিয়ারিং: শক্তি, দক্ষতা ও উদ্ভাবনের মেলবন্ধন",
-        description: `এই বিভাগে শিক্ষার্থীরা বিদ্যুৎ উৎপাদন, পরিবহন, বিতরণ এবং নিয়ন্ত্রণ বিষয়ে বাস্তবভিত্তিক প্রশিক্ষণ গ্রহণ করে।
-        আধুনিক ইলেকট্রিক্যাল সিস্টেম, স্মার্ট গ্রিড, সৌর শক্তি ও ইন্ডাস্ট্রিয়াল অটোমেশন নিয়ে হাতে-কলমে শিক্ষা প্রদান করা হয়।
-        আমাদের লক্ষ্য হলো এমন দক্ষ প্রকৌশলী তৈরি করা, যারা দেশের শক্তি খাতে পরিবর্তনের নেতৃত্ব দেবে।`,
+    abroad: {
+      title: "বিদেশে উচ্চ বেতনের সুযোগ",
+      points: [
+        "মধ্যপ্রাচ্য, কানাডা ও ইউরোপে পাওয়ার প্ল্যান্ট ও ইলেকট্রিক্যাল সিস্টেম ডিজাইন ইঞ্জিনিয়ার।",
+        "PLC Automation ও Maintenance Engineer হিসেবে কাজের সুযোগ।",
+      ],
     },
+  },
 
-    whyChoose: {
-        title: "কেন বেছে নেবেন ইলেকট্রিক্যাল ইঞ্জিনিয়ারিং?",
-        points: [
-            "দেশ ও বিদেশে বিদ্যুৎ প্রকৌশলীর চাহিদা ক্রমবর্ধমান।",
-            "Power Plant, Substation ও Industrial Automation-এ হাতে-কলমে প্রশিক্ষণ।",
-            "Renewable Energy (Solar, Wind) প্রযুক্তিতে বাস্তবভিত্তিক জ্ঞান।",
-            "Govt. Power Sector, PDB, DESCO, REB-তে চাকরির নিশ্চিত সুযোগ।",
-            "নিজস্ব Solar বা Electrical Maintenance ব্যবসা শুরু করার স্বাধীনতা।",
-        ],
+  // 5️⃣ Industrial Partners
+  industrialPartners: {
+    title: "ইন্ডাস্ট্রিয়াল ট্রেনিং ও পার্টনারশিপ",
+    description:
+      "শিক্ষার্থীরা পাওয়ার স্টেশন, ইলেকট্রনিক কোম্পানি ও ইন্ডাস্ট্রিয়াল প্রজেক্টে বাস্তব অভিজ্ঞতা অর্জন করে।",
+    companies: [
+      "BPDB - Bangladesh Power Development Board",
+      "DESCO - Dhaka Electric Supply Company",
+      "Walton Hi-Tech Industries Ltd.",
+      "Energypac Engineering Ltd.",
+      "Bangladesh Rural Electrification Board (REB)",
+    ],
+  },
+
+  // 6️⃣ Higher Study
+  higherStudy: {
+    title: "উচ্চ শিক্ষা: প্রযুক্তির গভীরতায়",
+    description:
+      "ডিপ্লোমা শেষে B.Sc. in Electrical & Electronic Engineering (EEE) এবং বিদেশে মাস্টার্স করে আরও বিশেষজ্ঞ হওয়া যায়।",
+    bangladesh: {
+      title: "দেশে উচ্চ শিক্ষা",
+      points: [
+        "ডুয়েট (DUET), বুয়েট (BUET), AIUB ইত্যাদি বিশ্ববিদ্যালয়ে B.Sc. EEE ভর্তি।",
+        "ল্যাটারাল এন্ট্রি মাধ্যমে সরাসরি দ্বিতীয় বর্ষে ভর্তির সুযোগ।",
+      ],
     },
-
-    careerOpportunities: {
-        title: "ক্যারিয়ার সুযোগ: শক্তি খাতের নেতৃত্বে আপনি",
-        description:
-            "ইলেকট্রিক্যাল ইঞ্জিনিয়ার হিসেবে আপনি শক্তি উৎপাদন থেকে শুরু করে রোবটিক অটোমেশন পর্যন্ত কাজ করার সুযোগ পাবেন।",
-
-        bangladesh: {
-            title: "দেশে কর্মক্ষেত্র",
-            points: [
-                "BPDB, DESCO, DPDC, REB, PGCB সহ সরকারি সংস্থায় উপ-সহকারী প্রকৌশলী পদে নিয়োগ।",
-                "বেসরকারি ইলেকট্রিক্যাল কোম্পানি, ফ্যাক্টরি ও ইন্ডাস্ট্রিয়াল প্ল্যান্টে মেইনটেন্যান্স ইঞ্জিনিয়ার।",
-                "বিদ্যুৎ নিরাপত্তা ও ইলেকট্রিক্যাল ডিজাইনে পরামর্শক হিসেবে কাজ।",
-            ],
-        },
-
-        abroad: {
-            title: "বিদেশে কর্মক্ষেত্র",
-            points: [
-                "মধ্যপ্রাচ্য, ইউরোপ ও কানাডায় পাওয়ার ইঞ্জিনিয়ার হিসেবে চাহিদাসম্পন্ন ক্যারিয়ার।",
-                "Solar, HVAC ও Industrial Automation সেক্টরে আন্তর্জাতিক কোম্পানিতে কাজের সুযোগ।",
-                "ইলেকট্রিক্যাল সেফটি কনসালটেন্ট বা টেকনিশিয়ান হিসেবে উচ্চ বেতনের পদ।",
-            ],
-        },
+    abroad: {
+      title: "বিদেশে উচ্চ শিক্ষা ও স্কলারশিপ",
+      points: [
+        "জার্মানি, জাপান ও কানাডায় Power Electronics, Renewable Energy বিষয়ে উচ্চতর শিক্ষা।",
+        "Erasmus, DAAD, বা Commonwealth স্কলারশিপ পাওয়ার সুযোগ।",
+      ],
     },
+  },
 
-    industrialPartners: {
-        title: "ইন্ডাস্ট্রিয়াল অ্যাটাচমেন্ট ও পার্টনার প্রতিষ্ঠান",
-        description:
-            "আমাদের শিক্ষার্থীরা বিভিন্ন বিদ্যুৎ কেন্দ্র, সাবস্টেশন এবং ইন্ডাস্ট্রিয়াল কোম্পানিতে ইন্টার্নশিপ করে বাস্তব অভিজ্ঞতা অর্জন করে।",
-        companies: [
-            "Bangladesh Power Development Board (BPDB)",
-            "DESCO / DPDC / REB",
-            "Summit Power Ltd.",
-            "Confidence Power Holdings",
-            "Walton Hi-Tech Industries",
-            "Bashundhara Industrial Complex",
-        ],
-    },
+  // 7️⃣ Entrepreneurship
+  entrepreneurship: {
+    title: "নিজস্ব উদ্যোগে উদ্যোক্তা হওয়ার সুযোগ",
+    description:
+      "ইলেকট্রিক্যাল জ্ঞান দিয়ে নিজস্ব সার্ভিস সেন্টার, ইনভার্টার-সোলার সিস্টেম ব্যবসা বা কনসালটেন্সি ফার্ম শুরু করা যায়।",
+    ideas: [
+      "Solar & Inverter Business",
+      "Electrical Consultancy Service",
+      "Home Automation Installation",
+    ],
+  },
 
-    higherStudy: {
-        title: "উচ্চ শিক্ষা ও বিশেষায়ন সুযোগ",
-        description:
-            "ডিপ্লোমা শেষে Electrical & Electronic Engineering-এ B.Sc. ও বিদেশে Masters করে আন্তর্জাতিক মানের প্রকৌশলী হোন।",
-        domestic: {
-            title: "দেশে উচ্চ শিক্ষা",
-            points: [
-                "DUET ও BUET-এ B.Sc. in EEE তে ভর্তি সুযোগ।",
-                "Private বিশ্ববিদ্যালয়ে ল্যাটারাল এন্ট্রির মাধ্যমে ২য় বর্ষে ভর্তি।",
-            ],
-        },
-        abroad: {
-            title: "বিদেশে উচ্চ শিক্ষা",
-            points: [
-                "জাপান, কানাডা, জার্মানি ও মালয়েশিয়ায় স্কলারশিপ সহ MSc. ও Ph.D. সুযোগ।",
-                "Renewable Energy, Automation, Control System-এ বিশেষায়িত প্রোগ্রাম।",
-            ],
-        },
-    },
+  // 8️⃣ Why Study at Square Polytechnic
+  whySquarePolytechnic: {
+    title: "কেন স্কয়ার পলিটেকনিকে ইলেকট্রিক্যাল পড়বেন?",
+    points: [
+      "অভিজ্ঞ শিক্ষক দ্বারা পরিচালিত ল্যাবভিত্তিক প্রশিক্ষণ।",
+      "PLC, Motor Control ও Solar Lab সুবিধা।",
+      "নিয়মিত ওয়ার্কশপ ও ইন্ডাস্ট্রিয়াল ভিজিট।",
+      "স্কলারশিপ ও ক্যারিয়ার কাউন্সেলিং সুবিধা।",
+      "সরকারি-বেসরকারি চাকরিতে সাফল্যের ধারাবাহিক রেকর্ড।",
+    ],
+  },
 
-    entrepreneurship: {
-        title: "উদ্যোক্তা হওয়ার সুযোগ",
-        description: `ইলেকট্রিক্যাল দক্ষতা ব্যবহার করে নিজস্ব ব্যবসা শুরু করার এক বিশাল ক্ষেত্র রয়েছে।`,
-        ideas: [
-            "Solar Installation & Maintenance ব্যবসা।",
-            "Electrical House Wiring ও Industrial Fitting সার্ভিস।",
-            "Electric Equipment Supply ও Consultancy ফার্ম।",
-        ],
-    },
-
-    whySquarePolytechnic: {
-        title: "কেন স্কয়ার পলিটেকনিকে ইলেকট্রিক্যাল ইঞ্জিনিয়ারিং পড়বেন?",
-        points: [
-            "আধুনিক Power Lab, Substation Trainer ও Renewable Energy সেটআপ।",
-            "অভিজ্ঞ Electrical Engineers দ্বারা ব্যবহারিক প্রশিক্ষণ।",
-            "স্কলারশিপ, হোস্টেল ও চাকরি সংযোগে অগ্রগামী।",
-            "রিয়েল প্রজেক্ট ও ইন্ডাস্ট্রি ভিজিটের সুযোগ।",
-        ],
-    },
-
-    admissionRequirements: {
-        title: "ভর্তি নির্দেশিকা",
-        description: "ইলেকট্রিক্যাল বিভাগে ভর্তি হতে নিম্নলিখিত শর্ত পূরণ করতে হবে:",
-        requirements: [
-            "ন্যূনতম GPA 2.00 (এসএসসি/সমমান)।",
-            "বিজ্ঞান বা ভোকেশনাল ব্যাকগ্রাউন্ড অগ্রাধিকার পাবে।",
-            "এসএসসি মার্কশিট, জন্মসনদ, ৪ কপি ছবি আবশ্যক।",
-        ],
-        deadline: "প্রতি বছর জুন-আগস্টে ভর্তি কার্যক্রম সম্পন্ন হয়।",
-    },
-
-    faq: {
-        title: "সাধারণ জিজ্ঞাসা (FAQ)",
-        questions: [
-            {
-                q: "ইলেকট্রিক্যাল কোর্সের মেয়াদ কত?",
-                a: "৪ বছর (৮ সেমিস্টার), শেষ সেমিস্টারে ইন্ডাস্ট্রিয়াল ট্রেনিং অন্তর্ভুক্ত।",
-            },
-            {
-                q: "এই বিভাগে কি ল্যাব সুবিধা আছে?",
-                a: "হ্যাঁ, অত্যাধুনিক Substation ও Electrical Machine Lab রয়েছে।",
-            },
-        ],
-    },
+  // 9️⃣ FAQ
+  faq: {
+    title: "সাধারণ জিজ্ঞাসা (FAQ) ও যোগাযোগ",
+    questions: [
+      {
+        q: "ইলেকট্রিক্যাল ডিপ্লোমা কোর্সের মেয়াদ কত?",
+        a: "৪ বছর (৮ সেমিস্টার)।",
+      },
+      {
+        q: "কোর্স শেষে চাকরি পাওয়া যায় কি?",
+        a: "হ্যাঁ, সরকারি ও বেসরকারি উভয় খাতেই প্রচুর সুযোগ রয়েছে।",
+      },
+      {
+        q: "যোগাযোগের ঠিকানা কী?",
+        a: "Square Polytechnic Institute, Garidaha, Sherpur, Bogura। ফোন: 017xxxxxxxx",
+      },
+    ],
+  },
 };
 
 export default electricalDepartmentData;

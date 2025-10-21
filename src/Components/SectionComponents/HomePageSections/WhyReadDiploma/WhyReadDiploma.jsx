@@ -1,14 +1,14 @@
 import React from "react";
-import SectionTitle from "../../../Shared/Titles/SectionTitle/SectionTitle";
+import SectionTitle from "@components/Shared/Titles/SectionTitle/SectionTitle";
 import {
   FaGraduationCap,
   FaTools,
   FaRocket,
   FaBriefcase,
 } from "react-icons/fa";
-import ActionButton from "../../../UI/ActionButton/ActionButton";
-import SubTitle from "../../../Shared/Titles/SubTitle/SubTitle";
-import whyReadDiplomaData from "../../../../Data/HomePageJsonData/whyReadDiploma.json";
+import ActionButton from "@components/UI/ActionButton/ActionButton";
+import SubTitle from "@components/Shared/Titles/SubTitle/SubTitle";
+import whyReadDiplomaData from "@data/HomePageJsonData/whyReadDiploma.json";
 
 // WhyReadDiploma Component
 // Props: diplomaInfo (from JSON or API)

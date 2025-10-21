@@ -1,40 +1,45 @@
 import React from "react";
 import { BsFillBuildingsFill } from "react-icons/bs";
 import { IoIosVideocam } from "react-icons/io";
-import SubTitle from "../../Shared/Titles/SubTitle/SubTitle";
-import SectionTitle from "../../Shared/Titles/SectionTitle/SectionTitle";
+import { MdCastForEducation } from "react-icons/md";
+import SectionTitle from "@components/Shared/Titles/SectionTitle/SectionTitle";
 import DepartmentAboutsIcon from "./DepartmentAboutsIcon";
-import TitleAndIconUI from "./TitleAndIconUI.jsX";
+import TitleUI from "./TitleUI.jsx";
 
-function AboutDepartment({ data, videoUrl }) {
+function AboutDepartment({ data, videoUrl, sectionTitle }) {
   if (!data || !videoUrl) return null;
 
   const { title, description } = data;
 
   return (
     <section>
-      <SectionTitle title="CIVIL" />
+      <SectionTitle title={sectionTitle} />
       <div className="flex flex-col md:flex-row gap-8 md:gap-15">
         {/* Left side - About text */}
         <div className="flex-1">
           {/* Icon & Title */}
-          <TitleAndIconUI
-            icon={BsFillBuildingsFill}
-            title={title}
-            className="md:text-left"
-          />
+          <div className="flex flex-col items-center md:items-start">
+            <DepartmentAboutsIcon icon={MdCastForEducation} />
+            <TitleUI title={title} />
+          </div>
           {/* Description */}
-          <p className="text-gray-700 text-justify leading-relaxed">{description}</p>
+          <p
+            className="text-gray-700 text-justify 
+          leading-relaxed"
+          >
+            {description}
+          </p>
         </div>
 
         {/* Right side - Video */}
         <div className="flex-1">
           {/* Icon & Title */}
-          <TitleAndIconUI
-            icon={IoIosVideocam}
-            title={"একনজরে পুরো ডিপার্টমেন্ট"}
-            className=" md:text-left"
-          />
+
+           <div className="flex flex-col items-center md:items-start">
+            <DepartmentAboutsIcon  icon={IoIosVideocam} />
+            <TitleUI title={title} />
+          </div>
+          
 
           {/* Video */}
           <div className="">

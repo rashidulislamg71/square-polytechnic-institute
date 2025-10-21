@@ -1,5 +1,5 @@
 import { FiPhone } from "react-icons/fi";
-import SubTitle from "../../../Shared/Titles/SubTitle/SubTitle";
+import SubTitle from "@components/Shared/Titles/SubTitle/SubTitle";
 
 export const GeneralCard = ({
   title,

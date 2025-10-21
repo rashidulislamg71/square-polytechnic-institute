@@ -1,7 +1,7 @@
 import React from "react";
-import instituteFeaturesData from "../../../Data/HomePageJsonData/instituteFeatures.json";
-import InstituteFeatureCard from "../../UI/Cards/InstituteFeaturesCard/InstituteFeaturesCard";
-import SectionTitle from "./../Titles/SectionTitle/SectionTitle";
+import instituteFeaturesData from "@data/HomePageJsonData/instituteFeatures.json";
+import InstituteFeatureCard from "@components/UI/Cards/InstituteFeaturesCard/InstituteFeaturesCard";
+import SectionTitle from "@components/Shared/Titles/SectionTitle/SectionTitle";
 
 function InstituteFeatures() {
   const { features } = instituteFeaturesData.instituteFeaturesInfo;

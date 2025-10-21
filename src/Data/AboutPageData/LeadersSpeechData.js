@@ -1,5 +1,5 @@
 
-import presidentImg from "../../assets/images/aboutUs_image/leaders_image/vp.jpg"
+import presidentImg from "@assets/images/aboutUs_image/leaders_image/vp.jpg"
 
 // instituteLeadersData.js
 

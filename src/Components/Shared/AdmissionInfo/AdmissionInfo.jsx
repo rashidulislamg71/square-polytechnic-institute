@@ -1,10 +1,9 @@
 import React from "react";
 import { FaUserGraduate } from "react-icons/fa";
-import DepartmentAboutsIcon from "../../SectionComponents/SingleDepartmentSections/DepartmentAboutsIcon";
+import DepartmentAboutsIcon from "@components/SectionComponents/SingleDepartmentSections/DepartmentAboutsIcon";
 
-import ActionButton from "./../../UI/ActionButton/ActionButton";
-import SubTitle from "../Titles/SubTitle/SubTitle";
-import { FaArrowRightLong } from "react-icons/fa6";
+import ActionButton from "@components/UI/ActionButton/ActionButton";
+import SubTitle from "@components/Shared//Titles/SubTitle/SubTitle";
 
 const admissionInfo = [
   {
@@ -29,13 +28,16 @@ const admissionInfo = [
 
 function AdmissionInfo({ showIcon = true }) {
   return (
-    <section className="bg-gradient-to-b from-gray-50 to-gray-100 py-16 px-5 md:px-10 font-[Tiro Bangla]">
+    <section className="py-10 md:py-15 px-5 md:px-10 ">
       <div className="max-w-6xl mx-auto text-center">
         {/* 🔹 Header */}
         <div className="flex flex-col items-center mb-3">
-          {/* 🔸 Icon Optional */}
+          {/* Icon Optional */}
           {showIcon && (
-            <DepartmentAboutsIcon icon={FaUserGraduate} className="inline-block" />
+            <DepartmentAboutsIcon
+              icon={FaUserGraduate}
+              className="inline-block"
+            />
           )}
 
           <div className="border-b-2 border-amber-400 inline-block px-4  ">
@@ -48,7 +50,7 @@ function AdmissionInfo({ showIcon = true }) {
           কোর্সে ভর্তির সুযোগ পেতে নিচের তথ্যগুলো ভালোভাবে পড়ে নাও।
         </p>
 
-        {/* 🔹 Info Cards */}
+        {/* Info Cards */}
         <div className="grid md:grid-cols-2 gap-8 mt-8 text-left">
           {admissionInfo.map((data) => (
             <div
@@ -70,13 +72,6 @@ function AdmissionInfo({ showIcon = true }) {
               </ul>
             </div>
           ))}
-        </div>
-
-        {/* 🔹 Apply Button */}
-        <div className="mt-12 flex gap-4 justify-center">
-      
-          <ActionButton text={"যোগাযোগ করুন"} bg_color="bg-amber-400" link={"/contuctUs"} />
-          <ActionButton text="আবেদন করুন" link={"/admission"}/>
         </div>
       </div>
     </section>

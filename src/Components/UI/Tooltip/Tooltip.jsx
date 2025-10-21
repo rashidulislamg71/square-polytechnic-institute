@@ -1,6 +1,6 @@
 
 import React from "react";
-import { useTooltip } from "../../../hooks/useTooltip";
+import { useTooltip } from "@hooks/useTooltip";
 
 const Tooltip = ({ children, text }) => {
   const { isOpen, openTooltip, closeTooltip } = useTooltip();

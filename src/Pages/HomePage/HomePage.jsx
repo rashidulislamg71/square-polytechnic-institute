@@ -1,20 +1,20 @@
-import HomeHeroSlider from "../../Components/SectionComponents/HomePageSections/HomeHeroSlider/HomeHeroSlider";
-import InstituteFeaturesCard from "../../Components/UI/Cards/InstituteFeaturesCard/InstituteFeaturesCard";
-import Notice from "../../Components/SectionComponents/HomePageSections/Notice/Notice";
-import AllDepartment from "../../Components/Shared/AllDepartment/AllDepartment";
+import HomeHeroSlider from "@components/SectionComponents/HomePageSections/HomeHeroSlider/HomeHeroSlider";
+import InstituteFeaturesCard from "@components/UI/Cards/InstituteFeaturesCard/InstituteFeaturesCard";
+import Notice from "@components/SectionComponents/HomePageSections/Notice/Notice";
+import AllDepartment from "@components/Shared/AllDepartment/AllDepartment";
 
-import ActionButton from "../../Components/UI/ActionButton/ActionButton";
-import SectionTitle from "../../Components/Shared/Titles/SectionTitle/SectionTitle";
-import WhyReadDiploma from "../../Components/SectionComponents/HomePageSections/WhyReadDiploma/WhyReadDiploma";
+import ActionButton from "@components/UI/ActionButton/ActionButton";
+import SectionTitle from "@components/Shared/Titles/SectionTitle/SectionTitle";
+import WhyReadDiploma from "@components/SectionComponents/HomePageSections/WhyReadDiploma/WhyReadDiploma";
 
-import HostelSection from "../../Components/SectionComponents/HomePageSections/Hostel/Hostel";
-import IndustrialTraining from "../../Components/Shared/IndustryInternshipTraining/IndustrialTraining";
-import AboutInstituteAndMap from "../../Components/Shared/AboutInstituteAndMap/AboutInstituteAndMap";
-import StudentsTestimonialSection from "../../Components/Widgets/StudentsTestimonial/StudentsTestimonialSection";
-import InstituteFeatures from "../../Components/Shared/InstituteFeatures/InstituteFeatures";
-import campusVideo from "../../assets/video/spi_campus_video.mp4";
-import ScholarshipSection from "./../../Components/Shared/ScholarshipSection/ScholarshipSection";
-import VideoPlayer from "../../Components/Video/Video";
+import HostelSection from "@components/SectionComponents/HomePageSections/Hostel/Hostel";
+import IndustrialTraining from "@components/Shared/IndustryInternshipTraining/IndustrialTraining";
+import AboutInstituteAndMap from "@components/Shared/AboutInstituteAndMap/AboutInstituteAndMap";
+import StudentsTestimonialSection from "@components/Widgets/StudentsTestimonial/StudentsTestimonialSection";
+import InstituteFeatures from "@components/Shared/InstituteFeatures/InstituteFeatures";
+import campusVideo from "@assets/video/spi_campus_video.mp4";
+import ScholarshipSection from "@components/Shared/ScholarshipSection/ScholarshipSection";
+import VideoPlayer from "@components/Video/Video";
 
 const HomePage = () => {
   return (

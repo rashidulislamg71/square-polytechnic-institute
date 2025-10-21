@@ -1,8 +1,10 @@
+
+
 import React from "react";
-import SubTitle from "../../Shared/Titles/SubTitle/SubTitle";
 import { FaHandshake } from "react-icons/fa";
-import GeneralList from "../../UI/GeneralList/GeneralList";
+import GeneralList from "@components/UI/GeneralList/GeneralList";
 import DepartmentAboutsIcon from "./DepartmentAboutsIcon";
+import TitleUI from "./TitleUI";
 
 function IndustrialPartners({ data }) {
   if (!data) return null;
@@ -11,12 +13,9 @@ function IndustrialPartners({ data }) {
   return (
     <section>
       <div className="flex flex-col items-center text-center md:py-10 md:bg-green-50">
-        {/* Icon */}
+        {/* Icon Title*/}
         <DepartmentAboutsIcon icon={FaHandshake} />
-        {/* Title */}
-        <div className="border-b-2 border-amber-400 pb-1 mb-4">
-          <SubTitle subTitle={title} />
-        </div>
+        <TitleUI title={title} />
 
         {/* Description */}
         <p className="max-w-3xl text-gray-700 mb-6">{description}</p>

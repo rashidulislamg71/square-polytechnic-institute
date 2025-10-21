@@ -18,7 +18,7 @@ import { PiStudentBold } from "react-icons/pi";
 import { LiaChalkboardTeacherSolid } from "react-icons/lia";
 
 // Import menu data from JSON file
-import navMenuDataJson from "../../../Data/HomePageJsonData/navMenu.json";
+import navMenuDataJson from "@data/HomePageJsonData/navMenu.json";
 import Header from "../Header/Header";
 
 // Map icon names to corresponding components

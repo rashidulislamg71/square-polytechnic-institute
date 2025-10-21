@@ -1,8 +1,8 @@
 import { FaSquarePhone } from "react-icons/fa6";
 
-import school from "../../assets/images/education_icon_img/school.png";
-import ActionButton from "../UI/ActionButton/ActionButton";
-import { FixedNumbers } from "../UI/ContactNumber/ContactNumber";
+import school from "@assets/images/education_icon_img/school.png";
+import ActionButton from "@components/UI/ActionButton/ActionButton";
+import { FixedNumbers } from "@components/UI/ContactNumber/ContactNumber";
 
 export const AdmissionBannerContent_1 = ({ sliderImage, index }) => {
   return (

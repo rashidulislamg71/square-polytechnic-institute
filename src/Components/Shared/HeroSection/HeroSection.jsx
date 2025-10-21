@@ -1,14 +1,11 @@
 import React from "react";
-import ActionButton from "../../UI/ActionButton/ActionButton";
+import ActionButton from "@components/UI/ActionButton/ActionButton";
 
 const HeroSection = ({
   title,
   subtitle,
   extraText,
-  buttonText,
-  buttonLink,
-  buttonLink1,
-  buttonText1,
+  buttons,
   className = "bg-center",
   bgImage,
 }) => {
@@ -25,20 +22,19 @@ const HeroSection = ({
         <h1 className=" leading-relaxed text-2xl md:text-3xl lg:text-4xl font-bold text-green-600 ">
           {title}
         </h1>
-        <p className="text-lg md:text-xl my-5">{subtitle}</p>
+        <p className="text-lg md:text-xl my-5 ">{subtitle}</p>
         <p className="text-[17px] md:text-lg mb-2">{extraText}</p>
-        {buttonText && (
-          <div className="space-x-4">
-            <ActionButton
-              text={buttonText}
-              link={buttonLink}
-              bg_color="bg-green-600 hover:bg-green-700"
-            />
-            <ActionButton
-              text={buttonText1}
-              link={buttonLink1}
-              bg_color="bg-orange-600 hover:bg-orange-700"
-            />
+        {buttons && buttons.length > 0 && (
+          <div className="flex justify-center flex-wrap gap-3 md:gap-6">
+            {/* flex container for all buttons */}
+            {buttons.map((btnData, idx) => (
+              <ActionButton
+                key={idx}
+                text={btnData.text}
+                link={btnData.link}
+                bg_color={btnData.btnBgColor}
+              />
+            ))}
           </div>
         )}
       </div>

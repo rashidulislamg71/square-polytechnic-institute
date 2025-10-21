@@ -1,9 +1,9 @@
 import React from "react";
-import SectionTitle from "./../Titles/SectionTitle/SectionTitle";
-import PeragraphText from "../PeragraphText/PeragraphText";
+import SectionTitle from "@components/Shared/Titles/SectionTitle/SectionTitle";
+import PeragraphText from "@components/Shared/PeragraphText/PeragraphText";
 
-import Image from "../../../assets/images/Departments_img/textile.jpeg";
-import { SingleBigImage } from "../../UI/GeneralImage/GeneralImage";
+import Image from "@assets/images/Departments_img/textile.jpeg";
+import { SingleBigImage } from "@components/UI/GeneralImage/GeneralImage";
 
 const IndustrialTraining = () => {
   return (

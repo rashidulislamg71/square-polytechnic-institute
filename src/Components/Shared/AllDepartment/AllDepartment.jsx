@@ -1,17 +1,17 @@
 import React from "react";
 
-import DepartmentCard from "../../UI/Cards/DepartmentCard/DepartmentCard";
-import departmentCardData from "../../../Data/DepartmentsData/departmentCardData";
+import DepartmentCard from "@components/UI/Cards/DepartmentCard/DepartmentCard";
+import departmentCardData from "@data/DepartmentsData/departmentCardData";
 
 // images
-import computerImg from "../../../assets/images/Departments_img/computer.png";
-import civilImg from "../../../assets/images/Departments_img/civil.png";
-import electricalImg from "../../../assets/images/Departments_img/electircal.jpg";
-import textileImg from "../../../assets/images/Departments_img/textile.jpeg";
-import mechImg from "../../../assets/images/Departments_img/mechnical.jpg";
+import computerImg from "@assets/images/Departments_img/computer.png";
+import civilImg from "@assets/images/Departments_img/civil.png";
+import electricalImg from "@assets/images/Departments_img/electircal.jpg";
+import textileImg from "@assets/images/Departments_img/textile.jpeg";
+import mechImg from "@assets/images/Departments_img/mechnical.jpg";
 
-import SectionTitle from "../Titles/SectionTitle/SectionTitle";
-import GeneralParagraphText from "../GeneralParagraphText/GeneralParagraphText";
+import SectionTitle from "@components/Shared//Titles/SectionTitle/SectionTitle";
+import GeneralParagraphText from "@components/Shared/GeneralParagraphText/GeneralParagraphText";
 
 const AllDepartment = () => {
   // destructure

@@ -1,3 +1,5 @@
+
+
 import electrical1 from "../../../../assets/images/Departments_img/civil.png";
 import electrical2 from "../../../../assets/images/Departments_img/electircal.jpg";
 import computer1 from "../../../../assets/images/Departments_img/computer.png";

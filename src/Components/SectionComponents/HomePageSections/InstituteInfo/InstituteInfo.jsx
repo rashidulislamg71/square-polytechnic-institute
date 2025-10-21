@@ -1,10 +1,10 @@
 import React from "react";
-import ActionButton from "../../../UI/ActionButton/ActionButton";
+import ActionButton from "@components/UI/ActionButton/ActionButton";
 import {
   FixedNumbers,
-} from "../../../UI/ContactNumber/ContactNumber";
-import PeragraphText from "../../../Shared/PeragraphText/PeragraphText";
-import SubTitle from "../../../Shared/Titles/SubTitle/SubTitle";
+} from "@components/UI/ContactNumber/ContactNumber";
+import PeragraphText from "@components/Shared/PeragraphText/PeragraphText";
+import SubTitle from "@components/Shared/Titles/SubTitle/SubTitle";
 
 /**
  * Static data for Institute Information.

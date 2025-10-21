@@ -1,8 +1,8 @@
 import { GiTargetShot } from "react-icons/gi";
 import { IoTelescopeSharp } from "react-icons/io5";
-import SubTitle from "../../../Shared/Titles/SubTitle/SubTitle";
-import GeneralIcons from "../../../Icons/GeneralIcons/GeneralIcons";
-import SectionTitle from "./../../../Shared/Titles/SectionTitle/SectionTitle";
+import SubTitle from "@components/Shared/Titles/SubTitle/SubTitle";
+import GeneralIcons from "@components/Icons/GeneralIcons/GeneralIcons";
+import SectionTitle from "@components/Shared/Titles/SectionTitle/SectionTitle";
 
 const instituteContent = {
   visionIcon: IoTelescopeSharp,

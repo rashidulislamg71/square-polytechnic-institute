@@ -1,16 +1,16 @@
 import React from "react";
 
-import HeroSlider from "../../Components/Shared/HeroSection/HeroSlider";
-import campus_img1 from "../../assets/images/Campus_images/campus1.jpeg";
-import campus_img2 from "../../assets/images/Campus_images/campus2.jpeg";
-import campus_img3 from "../../assets/images/Campus_images/campus3.jpeg";
-import campus_img4 from "../../assets/images/Campus_images/campus4.jpeg";
-import CampusTourSection from "../../Components/SectionComponents/CampusPageSections/CampusTourSecation/CampusTourSection";
-import CampusFeaturesSection from "../../Components/SectionComponents/CampusPageSections/CampusFeaturesSection/CampusFeaturesSection";
-import HostelSection from "../../Components/SectionComponents/HomePageSections/Hostel/Hostel";
-import CampusGallerySection from "../../Components/SectionComponents/CampusPageSections/CampusGallerySection/CampusGallerySection";
-import StudentsLifeAndActivites from "../../Components/SectionComponents/CampusPageSections/StudentsLifeAndActivitesSection/StudentsLifeAndActivitesSection";
-import StudentsTestimonialSection from './../../Components/Widgets/StudentsTestimonial/StudentsTestimonialSection';
+import HeroSlider from "@components/Shared/HeroSection/HeroSlider";
+import campus_img1 from "@assets/images/Campus_images/campus1.jpeg";
+import campus_img2 from "@assets/images/Campus_images/campus2.jpeg";
+import campus_img3 from "@assets/images/Campus_images/campus3.jpeg";
+import campus_img4 from "@assets/images/Campus_images/campus4.jpeg";
+import CampusTourSection from "@components/SectionComponents/CampusPageSections/CampusTourSecation/CampusTourSection";
+import CampusFeaturesSection from "@components/SectionComponents/CampusPageSections/CampusFeaturesSection/CampusFeaturesSection";
+import HostelSection from "@components/SectionComponents/HomePageSections/Hostel/Hostel";
+import CampusGallerySection from "@components/SectionComponents/CampusPageSections/CampusGallerySection/CampusGallerySection";
+import StudentsLifeAndActivites from "@components/SectionComponents/CampusPageSections/StudentsLifeAndActivitesSection/StudentsLifeAndActivitesSection";
+import StudentsTestimonialSection from '@components/Widgets/StudentsTestimonial/StudentsTestimonialSection';
 
 const heroSlidesData = [
   {

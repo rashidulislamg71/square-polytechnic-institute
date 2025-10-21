@@ -1,7 +1,7 @@
 
 
 import React from "react";
-import { leadersSpeechData } from "../../../../Data/AboutPageData/LeadersSpeechData";
+import { leadersSpeechData } from "@data/AboutPageData/LeadersSpeechData";
 import LeadersSpeech from "./LeadersSpeech";
 
 const LeadersSpeechSection = () => {

@@ -1,7 +1,7 @@
 // civilDepartmentData_refined.js
 
 import React from "react";
-import civilBg from "../../../assets/images/Departments_img/civil.png";
+import civilBg from "@assets/images/Departments_img/civil.png";
 
 const civilDepartmentData = {
   id: "civil",
@@ -14,8 +14,8 @@ const civilDepartmentData = {
       "আপনি কি স্বপ্ন দেখেন মেগা-প্রকল্পের অংশীদার হওয়ার? এখনই শুরু হোক আপনার প্রকৌশল যাত্রা!",
     background: civilBg,
     ctaButtons: [
-      { text: "সরাসরি ভর্তি হোন", link: "/admission" },
-      { text: "ডাউনলোড সিলেবাস ", link: "/syllabus/civil" },
+      { text: "সরাসরি ভর্তি হোন", link: "/admission", btnBgColor:"bg-green-600"},
+      { text: "ডাউনলোড সিলেবাস ", link: "/syllabus/civil", btnBgColor:"bg-orange-500"}
     ],
   },
 

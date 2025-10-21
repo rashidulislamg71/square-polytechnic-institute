@@ -1,13 +1,12 @@
 import React from "react";
-import HeroSection from "../../Components/Shared/HeroSection/HeroSection";
-import aboutUsImage from "../../assets/images/aboutUs_image/aboutUs.jpeg";
-import AboutInstituteAndMap from "../../Components/Shared/AboutInstituteAndMap/AboutInstituteAndMap";
-import InstituteFeatures from "../../Components/Shared/InstituteFeatures/InstituteFeatures";
-import DepartmentMenu from "../../Components/Shared/DepartmentMenu/DepartmentMenu";
-import InstituteAboutInfo from "../../Components/SectionComponents/AboutPageSections/InstituteAboutInfo/InstituteAboutInfo";
-import VisionMissionCard from "../../Components/SectionComponents/AboutPageSections/MissionAndVission/MissionAndVission";
-import LeadersSpeechSection from "../../Components/SectionComponents/AboutPageSections/LeadersSpeech/LeadersSpeechSection";
-import ScholarshipSection from "./../../Components/Shared/ScholarshipSection/ScholarshipSection";
+import HeroSection from "@components/Shared/HeroSection/HeroSection";
+import aboutUsImage from "@assets/images/aboutUs_image/aboutUs.jpeg";
+import InstituteFeatures from "@components/Shared/InstituteFeatures/InstituteFeatures";
+import DepartmentMenu from "@components/Shared/DepartmentMenu/DepartmentMenu";
+import InstituteAboutInfo from "@components/SectionComponents/AboutPageSections/InstituteAboutInfo/InstituteAboutInfo";
+import VisionMissionCard from "@components/SectionComponents/AboutPageSections/MissionAndVission/MissionAndVission";
+import LeadersSpeechSection from "@components/SectionComponents/AboutPageSections/LeadersSpeech/LeadersSpeechSection";
+import ScholarshipSection from "@components/Shared/ScholarshipSection/ScholarshipSection";
 
 const AboutPage = () => {
   return (
@@ -41,9 +40,9 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-<section>
-  <ScholarshipSection />
-</section>
+      <section>
+        <ScholarshipSection />
+      </section>
       {/*Department Menu Section */}
       <section className="py-16">
         <DepartmentMenu />

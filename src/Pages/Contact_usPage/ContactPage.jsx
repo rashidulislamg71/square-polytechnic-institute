@@ -1,16 +1,16 @@
 import React from "react";
 import { FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import { FaPhone } from "react-icons/fa"; // Phone icon
+import { FaPhone } from "react-icons/fa";
 
-import HeroSection from "../../Components/Shared/HeroSection/HeroSection";
-import heroImg from "../../assets/images/home_hero_img/bg_1.png";
-import CoontentTitle from "../../Components/Shared/Titles/SectionTitle/SectionTitle";
-import { SocialIconAndName } from "../../Components/Icons/SocialMediaIcons/SocialMediaIcons";
+import Img from "@assets/images/2.jpg";
+import heroImg from "@assets/images/home_hero_img/bg_1.png";
+import HeroSection from "@components/Shared/HeroSection/HeroSection";
+import CoontentTitle from "@components/Shared/Titles/SectionTitle/SectionTitle";
+import { SocialIconAndName } from "@components/Icons/SocialMediaIcons/SocialMediaIcons";
 
-import Img from "../../assets/images/2.jpg";
-import AcademyManagementCard from "../../Components/UI/Cards/AcademyManagementCard/AcademyManagementCard";
-import GoogleMap from "../../Components/Shared/GoogleMap/GoogleMap";
-import { FixedEmail } from "./../../Components/UI/Email/Email";
+import AcademyManagementCard from "@components/UI/Cards/AcademyManagementCard/AcademyManagementCard";
+import GoogleMap from "@components/Shared/GoogleMap/GoogleMap";
+import { FixedEmail } from "@components/UI/Email/Email";
 
 const managementTeam = [
   {
@@ -132,7 +132,10 @@ const ContactPage = () => {
         </section>
 
         {/* Management Team Section */}
-        <section className="px-4 md:px-10 lg:px-20" aria-label="Management Team">
+        <section
+          className="px-4 md:px-10 lg:px-20"
+          aria-label="Management Team"
+        >
           <CoontentTitle title="প্রশাসনিক যোগাযোগ" />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {managementTeam.map((member, index) => (

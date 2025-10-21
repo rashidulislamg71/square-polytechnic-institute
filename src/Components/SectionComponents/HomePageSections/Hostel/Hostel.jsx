@@ -9,14 +9,14 @@ import {
   FaPrayingHands,
   FaFirstAid,
 } from "react-icons/fa";
-import ActionButton from "../../../UI/ActionButton/ActionButton";
-import SectionTitle from "../../../Shared/Titles/SectionTitle/SectionTitle";
-import { DoubleMediumImage } from "../../../UI/GeneralImage/GeneralImage";
+import ActionButton from "@components/UI/ActionButton/ActionButton";
+import SectionTitle from "@components/Shared/Titles/SectionTitle/SectionTitle";
+import { DoubleMediumImage } from "@components/UI/GeneralImage/GeneralImage";
 
-import hostelImage1 from "../../../../assets/images/Hostel_image/hostel.jpeg";
-import hostelImage2 from "../../../../assets/images/Hostel_image/hostelb.jpeg";
-import GeneralParagraphText from "../../../Shared/GeneralParagraphText/GeneralParagraphText";
-import SubTitle from "../../../Shared/Titles/SubTitle/SubTitle";
+import hostelImage1 from "@assets/images/Hostel_image/hostel.jpeg";
+import hostelImage2 from "@assets/images/Hostel_image/hostelb.jpeg";
+import GeneralParagraphText from "@components/Shared/GeneralParagraphText/GeneralParagraphText";
+import SubTitle from "@components/Shared/Titles/SubTitle/SubTitle";
   const features = [
     {
       id: 1,

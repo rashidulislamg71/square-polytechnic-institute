@@ -1,5 +1,5 @@
 import { FaSquarePhone } from "react-icons/fa6";
-import GeneralIcons from "../../Icons/GeneralIcons/GeneralIcons";
+import GeneralIcons from "@components/Icons/GeneralIcons/GeneralIcons";
 import { FaPhone } from "react-icons/fa";
 
 export const AnyContactNumber = ({ number = "", className = "", iconClass = "" }) => {
@@ -14,6 +14,8 @@ export const AnyContactNumber = ({ number = "", className = "", iconClass = "" }
     </div>
   );
 };
+
+
 
 export const FixedNumbers = ({
   className ="",
@@ -30,7 +32,7 @@ export const FixedNumbers = ({
         >
           01760-998164
         </a>
-        <span className="text-green-400">|</span>
+        <span className="text-orange-400 bold mb-1">|</span>
         <a
           title="Principal Eng. S.M. Mehedi Hassan"
           className={`hover:text-green-300 transition ${className}`}

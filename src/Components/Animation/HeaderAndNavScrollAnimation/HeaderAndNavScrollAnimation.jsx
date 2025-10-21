@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import NavBar from "../../MainLayout/NavBar/NavBar";
-import ScrollToTop from "../../ScrollToTop/ScrollToTop";
+import NavBar from "@components/MainLayout/NavBar/NavBar";
+import ScrollToTop from "@components/ScrollToTop/ScrollToTop";
+import  DepartmentMenu  from '@components/Shared/DepartmentMenu/DepartmentMenu';
 
 const HeaderAndNavScrollAnimation = () => {
   // State to track whether to show or hide the header and navbar
@@ -38,6 +39,7 @@ const HeaderAndNavScrollAnimation = () => {
     <ScrollToTop />
       {/* Pass the visibility state as a prop to NavBar */}
       <NavBar show={showHeaderAndNavBar} scrollController = {lastScrollY} />
+      {/* <DepartmentMenu show={showHeaderAndNavBar} scrollController = {lastScrollY} /> */}
     </>
   );
 };

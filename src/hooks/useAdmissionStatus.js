@@ -17,10 +17,10 @@
 //       setIsActive(now < expireDate);
 //     };
 
-//     // প্রথমবার চেক করব
+//    
 //     checkStatus();
 
-//     // প্রতি 1 মিনিট পর পর চেক করবে
+//     
 //     const timer = setInterval(checkStatus, 1000 * 60);
 
 //     return () => clearInterval(timer);
@@ -54,8 +54,8 @@ export function useAdmissionStatus() {
       }
     };
 
-    checkStatus(); // প্রথমবার run
-    const timer = setInterval(checkStatus, 1000); // প্রতি ১ সেকেন্ডে চেক
+    checkStatus(); 
+    const timer = setInterval(checkStatus, 1000); 
 
     return () => clearInterval(timer);
   }, []);

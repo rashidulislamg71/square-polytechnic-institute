@@ -1,8 +1,8 @@
 import React from "react";
 import StudentsTestimonial from "./StudentsTestimonial";
-import GeneralParagraphText from "../../Shared/GeneralParagraphText/GeneralParagraphText";
-import SectionTitle from "../../Shared/Titles/SectionTitle/SectionTitle";
-import ActionButton from "../../UI/ActionButton/ActionButton";
+import GeneralParagraphText from "@components/Shared/GeneralParagraphText/GeneralParagraphText";
+import SectionTitle from "@components/Shared/Titles/SectionTitle/SectionTitle";
+import ActionButton from "@components/UI/ActionButton/ActionButton";
 
 function StudentsTestimonialSection() {
   return (

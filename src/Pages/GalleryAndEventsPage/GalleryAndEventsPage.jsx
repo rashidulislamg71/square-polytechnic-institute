@@ -1,9 +1,8 @@
 import React from "react";
-import { FaUsers, FaTrophy, FaCalendarAlt, FaQuoteLeft } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import HeroSection from "../../Components/Shared/HeroSection/HeroSection";
-import heroImg from "../../assets/images/Campus_images/CampusGallery_images/campus11.jpg"
+import HeroSection from "@components/Shared/HeroSection/HeroSection";
+import heroImg from "@assets/images/Campus_images/CampusGallery_images/campus11.jpg"
 
 const GalleryAndEventsPage = () => {
   return (

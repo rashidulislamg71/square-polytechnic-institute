@@ -28,9 +28,9 @@
 
 // components/UI/Cards/InstituteFeaturesCard/InstituteFeaturesCard.jsx
 import React from "react";
-import SubTitle from "../../../Shared/Titles/SubTitle/SubTitle";
+import SubTitle from "@components/Shared/Titles/SubTitle/SubTitle";
 import * as FaIcons from "react-icons/fa";
-import Tooltip from "../../Tooltip/Tooltip"; // Tooltip import
+import Tooltip from "@components/UI/Tooltip/Tooltip"; 
 
 const InstituteFeatureCard = ({ icon, title, description }) => {
   const IconComponent = FaIcons[icon];

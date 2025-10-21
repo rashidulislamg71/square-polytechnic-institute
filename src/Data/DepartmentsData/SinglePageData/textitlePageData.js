@@ -1,121 +1,128 @@
+import React from "react";
+import textileBg from "@assets/images/Departments_img/textile.jpeg";
+
 const textileDepartmentData = {
-    id: "textile",
-    title: "টেক্সটাইল ইঞ্জিনিয়ারিং",
+  id: "textile",
+  title: "টেক্সটাইল ইঞ্জিনিয়ারিং",
 
-    heroSection: {
-        title: "টেক্সটাইল ইঞ্জিনিয়ারিং: শিল্প ও ফ্যাশনের যুগান্তকারী",
-        tagline: "আপনি কি হতে চান টেক্সটাইল শিল্পের দক্ষ প্রকৌশলী? শুরু করুন আজই!",
-        background: "/images/Departments_img/textile_hero.jpg",
-        ctaButtons: [
-            { text: "ভর্তি করুন এখনই", link: "/admission" },
-            { text: "সিলেবাস দেখুন", link: "/syllabus/textile" },
-        ],
+  heroSection: {
+    title: "ফ্যাশন ও শিল্পে টেক্সটাইল ইঞ্জিনিয়ারিং-এর বিপ্লব",
+    tagline:
+      "দেশের রপ্তানি শিল্পের প্রাণকেন্দ্র — হোন একজন দক্ষ টেক্সটাইল ইঞ্জিনিয়ার!",
+    background: textileBg,
+    ctaButtons: [
+      { text: "সরাসরি ভর্তি হোন", link: "/admission", btnBgColor: "bg-green-600" },
+      { text: "ডাউনলোড সিলেবাস", link: "/syllabus/textile", btnBgColor: "bg-orange-500" },
+    ],
+  },
+
+  aboutDepartment: {
+    title: "টেক্সটাইল ইঞ্জিনিয়ারিং: শিল্প ও সৃজনশীলতার মেলবন্ধন",
+    description: `এই বিভাগে শিক্ষার্থীরা সুতা, বয়ন, রং ও ফিনিশিং টেকনোলজির উপর ব্যবহারিক জ্ঞান অর্জন করে।
+    গার্মেন্টস ও রপ্তানি শিল্পে দক্ষ পেশাজীবী তৈরিই এই বিভাগের মূল লক্ষ্য।`,
+  },
+
+  aboutDepartmentVideo: {
+    url: "https://www.youtube.com/embed/Ysl5EDvGBXQ",
+  },
+
+  whyChooseThisDepartment: {
+    title: "কেন বেছে নেবেন টেক্সটাইল ইঞ্জিনিয়ারিং?",
+    points: [
+      "দেশের বৃহত্তম রপ্তানি শিল্পে নিশ্চিত চাকরির সুযোগ।",
+      "Fabric Manufacturing, Dyeing & Finishing বিষয়ে বাস্তব প্রশিক্ষণ।",
+      "গার্মেন্টস কারখানায় Production ও Quality Control Officer হিসেবে কাজ।",
+      "Textile Design ও Fashion Technology বিষয়ে দক্ষতা বৃদ্ধি।",
+      "বিদেশে টেক্সটাইল সেক্টরে উচ্চ বেতনের সুযোগ।",
+    ],
+  },
+
+  careerOpportunities: {
+    title: "ক্যারিয়ার: ফ্যাশন ও শিল্পে সীমাহীন সম্ভাবনা",
+    description:
+      "টেক্সটাইল ইঞ্জিনিয়াররা বাংলাদেশসহ বিশ্বব্যাপী ফ্যাশন ও গার্মেন্টস শিল্পে গুরুত্বপূর্ণ ভূমিকা রাখে।",
+
+    bangladesh: {
+      title: "দেশে চাকরির সুযোগ",
+      points: [
+        "Readymade Garments (RMG) ফ্যাক্টরিতে Production Officer।",
+        "Textile Mills ও Dyeing Units-এ Technician বা Supervisor।",
+        "QA, Merchandising ও Buying House-এ কাজের সুযোগ।",
+      ],
     },
 
-    aboutDepartment: {
-        title: "টেক্সটাইল ইঞ্জিনিয়ারিং: কাপড়, প্রক্রিয়াকরণ ও ডিজাইন",
-        description: `শিক্ষার্থীরা Yarn, Fabric, Dyeing, Knitting ও Garment Manufacturing নিয়ে প্রায়োগিক প্রশিক্ষণ পায়।
-        এই বিভাগের লক্ষ্য হলো দক্ষ টেক্সটাইল ইঞ্জিনিয়ার তৈরি করা, যারা শিল্পখাতে এবং ফ্যাশন প্রযুক্তিতে নেতৃত্ব দিতে সক্ষম।`,
+    abroad: {
+      title: "বিদেশে সুযোগ",
+      points: [
+        "চীন, ভিয়েতনাম, ও ইউরোপে টেক্সটাইল ইঞ্জিনিয়ার হিসেবে চাকরি।",
+        "Fashion Design ও Fabric Technology-তে উচ্চ বেতনের সুযোগ।",
+      ],
     },
+  },
 
-    whyChoose: {
-        title: "কেন বেছে নেবেন টেক্সটাইল ইঞ্জিনিয়ারিং?",
-        points: [
-            "Textile Production, Garment Engineering ও Fashion Technology-এ ক্যারিয়ার গড়ার সুযোগ।",
-            "Modern Dyeing, Weaving, Knitting ও Quality Control-এ হাতে-কলমে শিক্ষা।",
-            "Country & Global Textile Industries-এ চাকরির সম্ভাবনা।",
-            "Own Textile Business বা Fashion Brand শুরু করার স্বাধীনতা।",
-        ],
+  industrialPartners: {
+    title: "ইন্ডাস্ট্রিয়াল ট্রেনিং ও পার্টনার প্রতিষ্ঠান",
+    description:
+      "আমাদের শিক্ষার্থীরা দেশের শীর্ষস্থানীয় গার্মেন্টস ও টেক্সটাইল ইন্ডাস্ট্রিতে ইন্টার্নশিপের সুযোগ পায়।",
+    companies: [
+      "Square Textiles Ltd.",
+      "DBL Group",
+      "Ha-Meem Group",
+      "Epyllion Group",
+      "Pacific Jeans Ltd.",
+    ],
+  },
+
+  higherStudy: {
+    title: "উচ্চ শিক্ষা: ফ্যাশন ও টেক্সটাইল প্রযুক্তির উন্নত ধাপ",
+    description:
+      "ডিপ্লোমা শেষে B.Sc. in Textile Engineering এবং বিদেশে Master's করার সুযোগ রয়েছে।",
+    bangladesh: {
+      title: "দেশে উচ্চ শিক্ষা",
+      points: [
+        "BUTEX, DUET, ও প্রাইভেট বিশ্ববিদ্যালয়ে ভর্তি সুযোগ।",
+      ],
     },
-
-    careerOpportunities: {
-        title: "ক্যারিয়ার সম্ভাবনা",
-        description: "টেক্সটাইল ইঞ্জিনিয়ার হিসেবে শিক্ষার্থীরা উৎপাদন, গুণমান নিয়ন্ত্রণ ও R&D-তে কাজ করতে পারবেন।",
-
-        bangladesh: {
-            title: "দেশে কর্মক্ষেত্র",
-            points: [
-                "Garment Factories ও Textile Mills-এ Production Engineer বা Quality Controller।",
-                "Textile R&D Centers-এ নতুন Fiber & Fabric Development।",
-                "Fashion & Apparel Industry-তে Technical Designer বা Supervisor।",
-            ],
-        },
-
-        abroad: {
-            title: "বিদেশে কর্মক্ষেত্র",
-            points: [
-                "সিঙ্গাপুর, মালয়েশিয়া, ইউরোপ ও মধ্যপ্রাচ্যে Textile & Garment Expert হিসেবে চাকরি।",
-                "Fashion Technology ও Quality Assurance-এ উচ্চ বেতনের সুযোগ।",
-            ],
-        },
+    abroad: {
+      title: "বিদেশে স্কলারশিপ",
+      points: [
+        "চীন, তুরস্ক ও ইউরোপে Fashion & Textile Technology বিষয়ে মাস্টার্স।",
+      ],
     },
+  },
 
-    industrialPartners: {
-        title: "ইন্ডাস্ট্রিয়াল অ্যাটাচমেন্ট ও পার্টনার",
-        description: "শিক্ষার্থীরা Textile Mills ও Garment Factories-এ ইন্টার্নশিপ করে অভিজ্ঞতা অর্জন করে।",
-        companies: [
-            "Beximco Textiles Ltd.",
-            "Square Textiles Ltd.",
-            "DBL Group",
-            "Epyllion Group",
-            "Ha-Meem Group",
-            "Pacific Jeans Ltd.",
-        ],
-    },
+  entrepreneurship: {
+    title: "নিজস্ব উদ্যোগ: ফ্যাশন জগতে উদ্যোক্তা হওয়া",
+    description:
+      "টেক্সটাইল ইঞ্জিনিয়াররা নিজের পোশাক ব্র্যান্ড, বুটিক হাউস বা রপ্তানি ব্যবসা শুরু করতে পারে।",
+    ideas: [
+      "Fashion Boutique Business",
+      "Garments Manufacturing",
+      "Textile Consultancy Firm",
+    ],
+  },
 
-    higherStudy: {
-        title: "উচ্চ শিক্ষা ও বিশেষায়ন",
-        description: "ডিপ্লোমা শেষে Textile Engineering-এ B.Sc. ও Masters করে দক্ষতা বৃদ্ধি করুন।",
-        domestic: {
-            title: "দেশে",
-            points: ["BUET, DUET, NSTU Textile Engineering-এ ভর্তি।"],
-        },
-        abroad: {
-            title: "বিদেশে",
-            points: [
-                "জার্মানি, মালয়েশিয়া ও জাপানে Textile Technology MSc. ও Ph.D. প্রোগ্রাম।",
-            ],
-        },
-    },
+  whySquarePolytechnic: {
+    title: "কেন স্কয়ার পলিটেকনিকে টেক্সটাইল ইঞ্জিনিয়ারিং?",
+    points: [
+      "Textile Lab, Dyeing Machine ও Loom প্রশিক্ষণ সুবিধা।",
+      "অভিজ্ঞ শিক্ষক দ্বারা পরিচালিত বাস্তবভিত্তিক ক্লাস।",
+      "স্কলারশিপ ও হোস্টেল সুবিধা।",
+      "শিল্প ভিজিট ও ইন্টার্নশিপ সুযোগ।",
+    ],
+  },
 
-    entrepreneurship: {
-        title: "উদ্যোক্তা হওয়ার সুযোগ",
-        description:
-            "Textile জ্ঞান ব্যবহার করে নিজস্ব Garment Factory, Fashion Brand বা Textile Consultancy শুরু করা যায়।",
-        ideas: [
-            "Own Garment Factory বা Knitwear Business।",
-            "Fashion & Apparel Design Studio।",
-            "Quality Control ও Textile Consultancy ফার্ম।",
-        ],
-    },
-
-    whySquarePolytechnic: {
-        title: "কেন স্কয়ার পলিটেকনিকে টেক্সটাইল ইঞ্জিনিয়ারিং?",
-        points: [
-            "Modern Textile Lab ও Dyeing/Knitting Workshop।",
-            "Industry-Experienced Trainers ও Practical Project Learning।",
-            "স্কলারশিপ, হোস্টেল ও ইন্ডাস্ট্রি ভিজিটের সুযোগ।",
-        ],
-    },
-
-    admissionRequirements: {
-        title: "ভর্তি নির্দেশিকা",
-        description: "টেক্সটাইল বিভাগে ভর্তি হতে যা প্রয়োজন:",
-        requirements: [
-            "ন্যূনতম GPA 2.00 (এসএসসি/সমমান)।",
-            "বিজ্ঞান বা ভোকেশনাল ব্যাকগ্রাউন্ড।",
-            "এসএসসি মার্কশিট, জন্মসনদ ও ছবি আবশ্যক।",
-        ],
-        deadline: "ভর্তি কার্যক্রম প্রতি বছর জুন-আগস্টে।",
-    },
-
-    faq: {
-        title: "সাধারণ জিজ্ঞাসা",
-        questions: [
-            { q: "কোর্স মেয়াদ কত?", a: "৪ বছর (৮ সেমিস্টার), শেষ সেমিস্টারে Industrial Training অন্তর্ভুক্ত।" },
-            { q: "ল্যাব সুবিধা আছে কি?", a: "হ্যাঁ, Modern Weaving, Dyeing & Knitting Labs রয়েছে।" },
-        ],
-    },
+  faq: {
+    title: "সাধারণ জিজ্ঞাসা (FAQ)",
+    questions: [
+      { q: "কোর্সের মেয়াদ কত?", a: "৪ বছর (৮ সেমিস্টার)।" },
+      { q: "চাকরির সুযোগ কেমন?", a: "টেক্সটাইল ও গার্মেন্টস ইন্ডাস্ট্রিতে প্রচুর চাহিদা রয়েছে।" },
+      {
+        q: "যোগাযোগের ঠিকানা?",
+        a: "Square Polytechnic Institute, Garidaha, Sherpur, Bogura। ফোন: 017xxxxxxxx",
+      },
+    ],
+  },
 };
 
 export default textileDepartmentData;

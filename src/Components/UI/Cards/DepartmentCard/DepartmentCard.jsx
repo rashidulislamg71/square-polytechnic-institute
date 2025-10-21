@@ -1,7 +1,7 @@
 
 
 
-import ActionButton from "../../ActionButton/ActionButton";
+import ActionButton from "@components/UI/ActionButton/ActionButton";
 import { useNavigate } from "react-router-dom";
 
 const DepartmentCard = ({ name, shortName, image, description, url }) => {

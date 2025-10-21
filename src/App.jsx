@@ -3,7 +3,7 @@
 
 import React from 'react';
 import "./index.css";
-import OutLet from "./Components/MainLayout/OutLet/OutLet"
+import OutLet from "@components/MainLayout/OutLet/OutLet"
 
 
 const App = () => {

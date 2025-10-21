@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import ModalPopup from "../../UI/ModalPopup/ModalPopup";
-import ImageGallery from "../../Shared/ImageGallery/ImageGallery";
+import ModalPopup from "@components/UI/ModalPopup/ModalPopup";
 
 // Single Big size image for a sections
 export const SingleBigImage = ({

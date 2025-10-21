@@ -6,7 +6,7 @@ import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import ActionButton from './../../UI/ActionButton/ActionButton';
+import ActionButton from '@components/UI/ActionButton/ActionButton';
 
 const HeroSlider = ({ slides, className = "" }) => {
   return (

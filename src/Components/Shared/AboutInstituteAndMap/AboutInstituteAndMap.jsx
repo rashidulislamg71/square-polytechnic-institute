@@ -1,6 +1,6 @@
-import GoogleMap from "../GoogleMap/GoogleMap";
-import SectionTitle from "../Titles/SectionTitle/SectionTitle";
-import InstituteInfo from "./../../SectionComponents/HomePageSections/InstituteInfo/InstituteInfo";
+import GoogleMap from "@components/Shared/GoogleMap/GoogleMap";
+import SectionTitle from "@components/Shared//Titles/SectionTitle/SectionTitle";
+import InstituteInfo from "@components/SectionComponents/HomePageSections/InstituteInfo/InstituteInfo";
 
 const AboutInstituteAndMap = () => {
   return (

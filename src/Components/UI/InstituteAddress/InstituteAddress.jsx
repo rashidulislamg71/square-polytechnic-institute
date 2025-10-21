@@ -1,9 +1,6 @@
+
 import { Link } from "react-router-dom";
 
-/**
- * InstituteName Component
- * Shows the name of the institute
- */
 export const InstituteName = ({ className = "" }) => {
   return (
     <div className={`font-bold ${className}`}>
@@ -11,13 +8,6 @@ export const InstituteName = ({ className = "" }) => {
     </div>
   );
 };
-
-/**
- * InstituteAddress Component
- * Shows the institute's address and redirects to Google Maps on click.
- *
- * @param {string} className - Additional TailwindCSS classes (optional)
- */
 export const InstituteAddress = ({ className = "" }) => {
   // Google Maps URL for the institute location
   const mapUrl =

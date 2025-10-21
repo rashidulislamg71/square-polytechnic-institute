@@ -1,6 +1,6 @@
 import React from "react";
 import { RiCheckboxMultipleBlankFill } from "react-icons/ri";
-import GeneralIcons from "../../Icons/GeneralIcons/GeneralIcons";
+import GeneralIcons from "@components/Icons/GeneralIcons/GeneralIcons";
 
 const GeneralList = ({ items = [], idColon = false, className = "text-gray-700" }) => {
   return (

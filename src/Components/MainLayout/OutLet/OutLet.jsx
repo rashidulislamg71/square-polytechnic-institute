@@ -22,10 +22,7 @@ const OutLet = () => {
       {/* This component handles the scroll animation for the header and navbar */}
       <HeaderAndNavScrollAnimation />
 
-      {/* Display the content based on the route */}
       <Outlet />
-
-      {/* Footer component that will be shown on every page */}
       <Footer />
     </div>
   );

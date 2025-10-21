@@ -1,8 +1,8 @@
 import React from "react";
-import GeneralList from "./../../UI/GeneralList/GeneralList";
-import SubTitle from "./../../Shared/Titles/SubTitle/SubTitle";
+import GeneralList from "@components/UI/GeneralList/GeneralList";
 import DepartmentAboutsIcon from "./DepartmentAboutsIcon";
 import { GiEnlightenment } from "react-icons/gi";
+import TitleUI from "./TitleUI";
 
 function WhySquarePolytechnicSection({ data }) {
   if (!data) return null;
@@ -10,13 +10,11 @@ function WhySquarePolytechnicSection({ data }) {
   const { title, points } = data;
 
   return (
-    <section className="space-y-4">
-      <DepartmentAboutsIcon icon={GiEnlightenment} />
-
-      <div className="">
-        <SubTitle subTitle={title} />
+    <section>
+      <div className="flex flex-col items-center md:items-start">
+        <DepartmentAboutsIcon icon={GiEnlightenment} />
+        <TitleUI title={title} />
       </div>
-
       <GeneralList items={points} />
     </section>
   );

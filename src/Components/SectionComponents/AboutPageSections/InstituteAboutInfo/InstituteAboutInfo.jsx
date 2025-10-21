@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FiBookOpen, FiTarget, FiInfo } from "react-icons/fi"; // React Icons
-import SectionTitle from "../../../Shared/Titles/SectionTitle/SectionTitle";
-import GeneralParagraphText from "./../../../Shared/GeneralParagraphText/GeneralParagraphText";
-import { GeneralCard } from "../../../UI/Cards/GeneralCard/GeneralCard";
+import SectionTitle from "@components/Shared/Titles/SectionTitle/SectionTitle";
+import GeneralParagraphText from "@components/Shared/GeneralParagraphText/GeneralParagraphText";
+import { GeneralCard } from "@components/UI/Cards/GeneralCard/GeneralCard";
 
 const instituteAboutInfoData = [
   {

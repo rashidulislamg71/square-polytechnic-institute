@@ -1,7 +1,7 @@
 
 import React from "react";
-import Modal from "../../../UI/ModalPopup/Modal";
-import { useModal } from "../../../../hooks/useModal";
+import Modal from "@components/UI/ModalPopup/Modal";
+import { useModal } from "@hooks/useModal";
 
 const LeadersSpeech = ({ leader, previewWords = 30 }) => {
   const { isOpen, openModal, closeModal } = useModal();

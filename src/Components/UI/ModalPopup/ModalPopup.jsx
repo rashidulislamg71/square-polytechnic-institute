@@ -1,6 +1,6 @@
 import React from "react";
 import { GoX } from "react-icons/go";
-import { useScrollLock } from "../../../hooks/useScrollLock";
+import { useScrollLock } from "@hooks/useScrollLock";
 
 const ModalPopup = ({ isOpen, onClose, children }) => {
   useScrollLock(isOpen);

@@ -4,9 +4,8 @@ import React from "react";
 import { Link} from "react-router-dom";
 
 import { GiNotebook } from "react-icons/gi";
-// import ActionButton from "../../../ActionButton/ActionButton";
-import SectionTitle from "../../../Shared/Titles/SectionTitle/SectionTitle";
-import SubTitle from "../../../Shared/Titles/SubTitle/SubTitle";
+import SectionTitle from "@components/Shared/Titles/SectionTitle/SectionTitle";
+import SubTitle from "@components/Shared/Titles/SubTitle/SubTitle";
 
 const Notice = () => {
   // src/data/notices.js

@@ -99,7 +99,7 @@ const Header = () => {
           <div className="ml-10">
             <ActionButton
               text={"Admission"}
-              link=""
+              link="/admission"
               bg_color={"bg-green-600"}
             />
           </div>

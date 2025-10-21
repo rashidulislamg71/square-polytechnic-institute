@@ -1,21 +1,22 @@
 import React from "react";
-import SubTitle from "../../Shared/Titles/SubTitle/SubTitle";
+import SubTitle from "@components/Shared/Titles/SubTitle/SubTitle";
 import { FaBriefcase, FaFlag, FaGlobe, FaRocket } from "react-icons/fa";
 import DepartmentAboutsIcon from "./DepartmentAboutsIcon";
 import Card from "./Card";
+import TitleUI from "./TitleUI";
 
 function CareerOpportunities({ data }) {
   if (!data) return null;
 
   const { title, description, bangladesh, abroad } = data || {};
   return (
-    <section className="">
-      {/* Section Header */}
+    <section>
       <div className="flex flex-col items-center max-w-xl mx-auto mb-12">
-        <DepartmentAboutsIcon icon={FaBriefcase} />
-        <div className="border-b-2 text-center md:text-left border-amber-500 pb-1 mb-3">
-          <SubTitle subTitle={title} />
+        <div className="text-center">
+          <DepartmentAboutsIcon icon={FaBriefcase} />
+          <TitleUI title={title} />
         </div>
+
         <p className="text-gray-700 text-center leading-relaxed">
           {description}
         </p>

@@ -2,11 +2,11 @@ import React from "react";
 import StudentsTestimonialCard from "./TestimonialCard";
 import "./index.css";
 
-import student1 from "../../../assets/images/StudentTestimonial/student1.jpeg";
-import student2 from "../../../assets/images/StudentTestimonial/student2.jpeg";
-import student3 from "../../../assets/images/StudentTestimonial/student.jpeg";
+import student1 from "@assets/images/StudentTestimonial/student1.jpeg";
+import student2 from "@assets/images/StudentTestimonial/student2.jpeg";
+import student3 from "@assets/images/StudentTestimonial/student.jpeg";
 
-import studentsData from "../../../Data/TestimonialJsonData/studentsData.json";
+import studentsData from "@data/TestimonialJsonData/studentsData.json";
 
 const images = {
   "student1.jpeg": student1,

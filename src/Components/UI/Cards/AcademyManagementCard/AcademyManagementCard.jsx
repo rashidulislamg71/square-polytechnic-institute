@@ -1,7 +1,7 @@
 import React from "react";
 
-import { AnyEmail } from "../../Email/Email";
-import { AnyContactNumber } from "../../ContactNumber/ContactNumber";
+import { AnyEmail } from "@components/UI/Email/Email";
+import { AnyContactNumber } from "@components/UI/ContactNumber/ContactNumber";
 
 const AcademyManagementCard = ({ image, name, designation, phone, email }) => {
   return (
