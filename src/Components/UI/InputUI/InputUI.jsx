@@ -1,6 +1,6 @@
 import React from "react";
 
-/* 🔹 Reusable Input Component */
+/* Reusable Input Component */
 export const InputUI = ({
   label,
   type = "text",
@@ -14,10 +14,7 @@ export const InputUI = ({
   return (
     <div className="flex flex-col space-y-1">
       {label && (
-        <label
-          htmlFor={name}
-          className="text-sm font-medium  text-gray-700 "
-        >
+        <label htmlFor={name} className="text-sm font-medium  text-gray-700 ">
           {label}
         </label>
       )}
@@ -30,13 +27,15 @@ export const InputUI = ({
         onChange={onChange}
         placeholder={placeholder}
         required={required}
-        className={`text-sm border border-gray-300 rounded p-2 focus:outline-none focus:ring-1 focus:ring-green-500 transition duration-200 ${className}`}
+        className={`text-sm border border-gray-300 rounded
+           p-2 focus:outline-none focus:ring-1 focus:ring-green-500
+            transition duration-200 ${className}`}
       />
     </div>
   );
 };
 
-/* 🔹 Reusable Select Component */
+/* Reusable Select Component */
 export const SelectInput = ({
   label,
   name,

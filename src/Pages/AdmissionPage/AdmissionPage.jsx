@@ -5,6 +5,8 @@ import { InstituteAddress } from "@components/UI/InstituteAddress/InstituteAddre
 import { FixedEmail } from "@components/UI/Email/Email";
 import GoogleMap from "@components/Shared/GoogleMap/GoogleMap";
 import { InputUI, SelectInput } from "@components/UI/InputUI/InputUI";
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "./../../firebase";
 
 // Form fields centralized
 const formFields = [
@@ -44,10 +46,10 @@ const formFields = [
     type: "select",
     options: [
       { value: "", label: "বিভাগ নির্বাচন করুন" },
-      { value: "science", label: "বিজ্ঞান" },
-      { value: "commerce", label: "ব্যবসায় শিক্ষা" },
-      { value: "arts", label: "মানবিক" },
-      { value: "vocational", label: "ভোকেশনাল" },
+      { value: "বিজ্ঞান", label: "বিজ্ঞান" },
+      { value: "ব্যবসায় শিক্ষা", label: "ব্যবসায় শিক্ষা" },
+      { value: "মানবিক", label: "মানবিক" },
+      { value: "ভোকেশনাল", label: "ভোকেশনাল" },
     ],
   },
   {
@@ -62,14 +64,14 @@ const formFields = [
     type: "select",
     options: [
       { value: "", label: "বোর্ড নির্বাচন করুন" },
-      { value: "rajshahi", label: "রাজশাহী" },
-      { value: "comilla", label: "কুমিল্লা" },
-      { value: "jessore", label: "যশোর" },
-      { value: "chittagong", label: "চট্টগ্রাম" },
-      { value: "barisal", label: "বরিশাল" },
-      { value: "sylhet", label: "সিলেট" },
-      { value: "dinajpur", label: "দিনাজপুর" },
-      { value: "mymensingh", label: "ময়মনসিংহ" },
+      { value: "রাজশাহী", label: "রাজশাহী" },
+      { value: "কুমিল্লা", label: "কুমিল্লা" },
+      { value: "যশোর", label: "যশোর" },
+      { value: "চট্টগ্রাম", label: "চট্টগ্রাম" },
+      { value: "বরিশাল", label: "বরিশাল" },
+      { value: "সিলেট", label: "সিলেট" },
+      { value: "সিলেট", label: "দিনাজপুর" },
+      { value: "ময়মনসিংহ", label: "ময়মনসিংহ" },
       { value: "BTEB", label: "BTEB" },
     ],
   },
@@ -79,11 +81,11 @@ const formFields = [
     type: "select",
     options: [
       { value: "", label: "বিভাগ নির্বাচন করুন" },
-      { value: "civil", label: "সিভিল" },
-      { value: "electrical", label: "ইলেকট্রিক্যাল" },
-      { value: "computer", label: "কম্পিউটার" },
-      { value: "mechanical", label: "মেকানিক্যাল" },
-      { value: "textile", label: "টেক্সটাইল" },
+      { value: "সিভিল", label: "সিভিল" },
+      { value: "ইলেকট্রিক্যাল", label: "ইলেকট্রিক্যাল" },
+      { value: "কম্পিউটার", label: "কম্পিউটার" },
+      { value: "মেকানিক্যাল", label: "মেকানিক্যাল" },
+      { value: "টেক্সটাইল", label: "টেক্সটাইল" },
     ],
   },
   {
@@ -94,36 +96,81 @@ const formFields = [
     rows: 1,
   },
 ];
-
 const AdmissionPage = () => {
   const [formData, setFormData] = useState({});
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
 
   // Input change handler
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Simple form validation
   const validateForm = () => {
     const newErrors = {};
-    formFields.forEach((field) => {
-      if (!formData[field.name] || formData[field.name].trim() === "") {
-        newErrors[field.name] = `${field.label} প্রয়োজন।`;
-      }
-    });
+
+    if (!formData.studentName?.trim())
+      newErrors.studentName = "শিক্ষার্থীর নাম প্রয়োজন।";
+
+    if (!formData.studentMobile?.match(/^01[0-9]{9}$/))
+      newErrors.studentMobile = "মোবাইল নাম্বার সঠিক নয়। 01471111110";
+
+    if (!formData.guardianMobile?.match(/^01[0-9]{9}$/))
+      newErrors.guardianMobile = "মোবাইল নাম্বার সঠিক নয়। 01471111110";
+
+    if (!formData.department) newErrors.department = "বিভাগ নির্বাচন করুন।";
+
+    if (!formData.sscRoll || formData.sscRoll.toString().length !== 6)
+      newErrors.sscRoll = "রোল নাম্বার সঠিক নয়।";
+
+    // if (!formData.sscReg || formData.sscReg.toString().length !== 10)
+    //   newErrors.sscReg = "রেজিস্ট্রেশন নাম্বার সঠিক নয়।";
+
+    if (!formData.sscYear || formData.sscYear.toString().length !== 4)
+      newErrors.sscYear = "পাসে সাল সঠিক নয়।";
+
+    if (!formData.sscBoard) newErrors.sscBoard = "বোর্ড নির্বাচন করুন।";
+
+    if (!formData.sscGroup) newErrors.sscGroup = "SSC বিভাগ নির্বাচন করুন।";
+
+    if (!formData.address?.trim()) newErrors.address = "ঠিকানা প্রয়োজন।";
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
   // Form submit
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (validateForm()) {
-      console.log("Form Data Submitted:", formData);
-      alert("ফরম সফলভাবে সাবমিট করা হয়েছে!");
-      setFormData({});
+    if (loading) return;
+    setLoading(true);
+
+    if (!validateForm()) {
+      setLoading(false);
+      return;
+    }
+
+    try {
+      await addDoc(collection(db, "admission"), formData);
+      alert("ফরম সফলভাবে জমা হয়েছে!");
+      setFormData({
+        studentName: "",
+        studentMobile: "",
+        guardianMobile: "",
+        department: "",
+        sscBoard: "",
+        sscGroup: "",
+        sscRoll: "",
+        sscReg: "",
+        address: "",
+      });
       setErrors({});
+      setLoading(false);
+    } catch (error) {
+      console.error("Error adding document: ", error);
+      alert(" কিছু সমস্যা হয়েছে, আবার চেষ্টা করুন।");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -191,7 +238,7 @@ const AdmissionPage = () => {
           {/* Video */}
           <div className="flex-1">
             <iframe
-              src="https://www.youtube.com/embed/tK7pb5rEusY?si=CdR9dQYo3r921f1f"
+              src="https://www.youtube.com/embed/r1bai6gdW4M?si=k-C2d2UawMPjAUoc"
               title="Department Overview Video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -241,7 +288,7 @@ const AdmissionPage = () => {
                       value={formData[field.name] || ""}
                       onChange={handleChange}
                       placeholder={field.placeholder}
-                      className="w-full border rounded-lg p-3 focus:outline-none focus:ring-1 focus:ring-blue-400"
+                      className="w-full border rounded p-3 focus:outline-none focus:ring-1 focus:ring-green-500"
                     />
                     {errors[field.name] && (
                       <p className="text-red-500 text-sm mt-1">
@@ -274,10 +321,11 @@ const AdmissionPage = () => {
             <div className="md:col-span-2 text-center">
               <button
                 type="submit"
-                className=" bg-green-600 hover:bg-green-700 cursor-pointer
-                 text-white font-semibold px-7 py-2 rounded shadow transition"
+                className={`bg-green-600 hover:bg-green-700 text-white font-semibold px-7 py-2 rounded shadow transition ${
+                  loading ? "opacity-50 cursor-not-allowed" : ""
+                }`}
               >
-                ফরম জমা দিন
+                {"ফরম জমা দিন"}
               </button>
             </div>
           </form>
@@ -288,11 +336,7 @@ const AdmissionPage = () => {
           <SectionTitle title="যোগাযোগ" />
           <div className="flex flex-col md:flex-row gap-8 md:gap-14 justify-center">
             <div className="flex-1 space-y-2 max-w-xl">
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Deserunt placeat quos repudiandae explicabo quis quae autem.
-                Nihil porro earum suscipit.
-              </p>
+              <p></p>
               <FixedNumbers />
               <FixedEmail />
               <InstituteAddress />
