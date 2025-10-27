@@ -8,7 +8,6 @@ import SectionTitle from "@components/Shared/Titles/SectionTitle/SectionTitle";
 import SubTitle from "@components/Shared/Titles/SubTitle/SubTitle";
 
 const Notice = () => {
-  // src/data/notices.js
   const notices = [
     {
       id: 1,

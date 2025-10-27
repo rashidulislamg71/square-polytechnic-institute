@@ -18,7 +18,8 @@ const QUICK_LINKS = [
   { to: "/notice", label: "নোটিশ" },
   { to: "/results", label: "রেজাল্ট" },
   { to: "/contact", label: "যোগাযোগ" },
-  { to: "/student-corner", label: "Student Corner" },
+  { to: "/student-care", label: "Students Care" },
+
 ];
 
 const EXTRA_LINKS = [
@@ -57,7 +58,7 @@ const Footer = () => {
           </div>
             <FixedNumbers iconClass="text-sm text-orange-400" />
             <div className="flex items-center gap-2">
-              <FaEnvelope className="text-green-600 text-[14px] " />
+      
               <FixedEmail className="text-white" />
             </div>
           </div>

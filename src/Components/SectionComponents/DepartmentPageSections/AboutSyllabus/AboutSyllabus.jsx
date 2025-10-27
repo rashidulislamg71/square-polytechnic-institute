@@ -6,7 +6,7 @@ import {
   FaPenFancy,
   FaDownload,
 } from "react-icons/fa";
-import SectionTitle from "./../../../Shared/Titles/SectionTitle/SectionTitle";
+import SectionTitle from "@components/Shared/Titles/SectionTitle/SectionTitle";
 
 const AboutSyllabus = () => {
   const syllabusInfo = [

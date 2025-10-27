@@ -1,10 +1,11 @@
 import React from "react";
-import { BsFillBuildingsFill } from "react-icons/bs";
+
 import { IoIosVideocam } from "react-icons/io";
 import { MdCastForEducation } from "react-icons/md";
 import SectionTitle from "@components/Shared/Titles/SectionTitle/SectionTitle";
 import DepartmentAboutsIcon from "./DepartmentAboutsIcon";
 import TitleUI from "./TitleUI.jsx";
+import YoutubeVideo from "./../../Video/YoutubeVideo";
 
 function AboutDepartment({ data, videoUrl, sectionTitle }) {
   if (!data || !videoUrl) return null;
@@ -35,22 +36,14 @@ function AboutDepartment({ data, videoUrl, sectionTitle }) {
         <div className="flex-1">
           {/* Icon & Title */}
 
-           <div className="flex flex-col items-center md:items-start">
-            <DepartmentAboutsIcon  icon={IoIosVideocam} />
+          <div className="flex flex-col items-center md:items-start">
+            <DepartmentAboutsIcon icon={IoIosVideocam} />
             <TitleUI title={title} />
           </div>
-          
 
-          {/* Video */}
-          <div className="">
-            <iframe
-              src={videoUrl.url}
-              title="Department Overview Video"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full aspect-video rounded shadow-md"
-            ></iframe>
+          {/*department overview Video */}
+          <div>
+            <YoutubeVideo src={videoUrl.url} title="Department Overview Video" />
           </div>
         </div>
       </div>

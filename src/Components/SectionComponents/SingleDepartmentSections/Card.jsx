@@ -11,7 +11,7 @@ const Card = ({
   className = "",
 }) => {
   return (
-    <div className=" p-4 bg-white rounded shadow hover:shadow-md transition-all duration-300">
+    <div className="m-auto p-4 bg-white rounded shadow hover:shadow-md transition-all duration-300">
       {/* Icon & Title */}
       <div className={`flex flex-col gap-2  ${className}`}>
         {icon &&
@@ -23,7 +23,7 @@ const Card = ({
         </div>
       </div>
 
-      {/* 🔹 List */}
+      {/* List */}
       <GeneralList items={items} />
     </div>
   );

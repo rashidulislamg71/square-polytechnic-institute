@@ -7,18 +7,6 @@ import GeneralParagraphText from "../../../Shared/GeneralParagraphText/GeneralPa
 import GeneralIcons from "../../../Icons/GeneralIcons/GeneralIcons";
 import SubTitle from "../../../Shared/Titles/SubTitle/SubTitle";
 
-/**
- * CampusFeaturesSection Component
- * Highlights campus features:
- * - Description of the campus
- * - Key features displayed as cards with icons
- * - Summary statement about the campus environment
- *
- * SEO & Accessibility:
- * - Semantic HTML tags: section, article, h2, h3, p
- * - Proper heading hierarchy
- * - Accessible icons with aria-label
- */
 const CampusFeaturesSection = () => {
   const { descriptionParagraphs, featuresList, summaryText } =
     campusFeaturesData;

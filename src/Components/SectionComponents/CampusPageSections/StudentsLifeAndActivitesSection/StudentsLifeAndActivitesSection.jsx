@@ -1,22 +1,22 @@
 import React from "react";
-import SectionTitle from "../../../Shared/Titles/SectionTitle/SectionTitle";
-import GeneralParagraphText from "../../../Shared/GeneralParagraphText/GeneralParagraphText";
-import ImageGallery from "../../../Shared/ImageGallery/ImageGallery";
-import ActionButton from "../../../UI/ActionButton/ActionButton";
+import SectionTitle from "@components/Shared/Titles/SectionTitle/SectionTitle";
+import GeneralParagraphText from "@components/Shared/GeneralParagraphText/GeneralParagraphText";
+import ImageGallery from "@components/Shared/ImageGallery/ImageGallery";
+import ActionButton from "@components/UI/ActionButton/ActionButton";
 
 // Images import
-import campus1 from "../../../../assets/images/Campus_images/CampusGallery_images/campus1.jpg";
-import campus2 from "../../../../assets/images/Campus_images/CampusGallery_images/campus2.png";
-import campus3 from "../../../../assets/images/Campus_images/CampusGallery_images/campus3.png";
-import campus4 from "../../../../assets/images/Campus_images/CampusGallery_images/campus4.jpg";
-import campus5 from "../../../../assets/images/Campus_images/CampusGallery_images/campus5.jpg";
-import campus6 from "../../../../assets/images/Campus_images/CampusGallery_images/campus6.jpg";
-import campus7 from "../../../../assets/images/Campus_images/CampusGallery_images/campus7.jpg";
-import campus8 from "../../../../assets/images/Campus_images/CampusGallery_images/campus8.jpg";
-import campus9 from "../../../../assets/images/Campus_images/CampusGallery_images/campus9.jpg";
-import campus10 from "../../../../assets/images/Campus_images/CampusGallery_images/campus10.jpg";
-import campus11 from "../../../../assets/images/Campus_images/CampusGallery_images/campus11.jpg";
-import campus12 from "../../../../assets/images/Campus_images/CampusGallery_images/campus12.jpg";
+import campus1 from "@assets/images/Campus_images/CampusGallery_images/campus1.jpg";
+import campus2 from "@assets/images/Campus_images/CampusGallery_images/campus2.png";
+import campus3 from "@assets/images/Campus_images/CampusGallery_images/campus3.png";
+import campus4 from "@assets/images/Campus_images/CampusGallery_images/campus4.jpg";
+import campus5 from "@assets/images/Campus_images/CampusGallery_images/campus5.jpg";
+import campus6 from "@assets/images/Campus_images/CampusGallery_images/campus6.jpg";
+import campus7 from "@assets/images/Campus_images/CampusGallery_images/campus7.jpg";
+import campus8 from "@assets/images/Campus_images/CampusGallery_images/campus8.jpg";
+import campus9 from "@assets/images/Campus_images/CampusGallery_images/campus9.jpg";
+import campus10 from "@assets/images/Campus_images/CampusGallery_images/campus10.jpg";
+import campus11 from "@assets/images/Campus_images/CampusGallery_images/campus11.jpg";
+import campus12 from "@assets/images/Campus_images/CampusGallery_images/campus12.jpg";
 
 const studentLifeAndActivitesImageGallery = [
   {

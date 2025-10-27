@@ -14,7 +14,8 @@ import StudentsTestimonialSection from "@components/Widgets/StudentsTestimonial/
 import InstituteFeatures from "@components/Shared/InstituteFeatures/InstituteFeatures";
 import campusVideo from "@assets/video/spi_campus_video.mp4";
 import ScholarshipSection from "@components/Shared/ScholarshipSection/ScholarshipSection";
-import VideoPlayer from "@components/Video/Video";
+import LocalVideo from "@components/Video/LocalVideo";
+
 
 const HomePage = () => {
   return (
@@ -62,12 +63,11 @@ const HomePage = () => {
 
         {/* Local Video */}
         <div className="mt-12">
-          <VideoPlayer
-            type="local"
+          <LocalVideo
             src={campusVideo}
             title="Campus Tour Video"
             controls
-            poster="/images/campus-preview.jpg"
+            poster=""
             
           />
         </div>

@@ -12,6 +12,7 @@ import HigherStudySection from "@components/SectionComponents/SingleDepartmentSe
 import WhySquarePolytechnicSection from "@components/SectionComponents/SingleDepartmentSections/WhySquarePolytechnicSection";
 import AdmissionInfo from "@components/Shared/AdmissionInfo/AdmissionInfo";
 import DepartmentMenu from "@components/Shared/DepartmentMenu/DepartmentMenu";
+import SectionWrapper from './../../../Components/Shared/SectionWrapper/SectionWrapper';
 
 const ComputerPage = () => {
   const {

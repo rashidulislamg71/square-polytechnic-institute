@@ -6,11 +6,7 @@ import {
 import PeragraphText from "@components/Shared/PeragraphText/PeragraphText";
 import SubTitle from "@components/Shared/Titles/SubTitle/SubTitle";
 
-/**
- * Static data for Institute Information.
- * Since the data is fixed and does not change dynamically,
- * it is declared outside the component for performance and clarity.
- */
+
 const instituteInfo = {
   title: "ইন্সটিটিউট পরিচিতি",
   welcomeMessage: "স্কয়ার পলিটেকনিক ইন্সটিটিউট আপনাকে স্বাগতম!!",
@@ -27,11 +23,6 @@ const instituteInfo = {
   ],
 };
 
-/**
- * Component: InfoList
- * This sub-component renders the list of institute details.
- * It checks if the detail is a phone number to render ContactNumber component.
- */
 const InfoList = ({ details }) => (
   <ul>
     {details.map((detail, idx) => (
@@ -40,16 +31,10 @@ const InfoList = ({ details }) => (
         <span className="text-gray-700">{detail.value}</span>
       </li>
     ))}
-    {/* FixedNumbers component always displayed at the end */}
     <FixedNumbers />
   </ul>
 );
 
-/**
- * Component: InstituteInfo
- * This is the main component to display Institute information.
- * It includes a subtitle, description, list of details, and a "Read More" button.
- */
 const InstituteInfo = () => {
   return (
     // Wrapper section with flex layout and vertical gap

@@ -1,9 +1,7 @@
-// Import necessary hooks and components
 import React, { useEffect, useRef, useState } from "react";
-import { NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { VscChromeClose } from "react-icons/vsc";
 import SPILogo from "../../UI/SPILogo/SPILogo";
-import styles from "./NavBar.module.css";
 
 // Import React Icons
 import {
@@ -82,9 +80,7 @@ const NavBar = ({ show }) => {
           <nav className="flex flex-wrap justify-between items-center py-2 px-3 md:px-6">
             {/* Logo Section */}
             <div onClick={closeMenuHandeling}>
-              
-                <SPILogo />
-          
+              <SPILogo />
             </div>
 
             {/* Big Screen Menu */}
@@ -113,9 +109,7 @@ const NavBar = ({ show }) => {
                             : "text-black hover:text-[#1f8383] flex items-center gap-1"
                         }
                       >
-                        <p className={`${styles.custom_font_size}`}>
-                          {item.text}
-                        </p>
+                        <p>{item.text}</p>
                       </NavLink>
                     </li>
                   );
@@ -159,7 +153,7 @@ const NavBar = ({ show }) => {
                     }
                   >
                     <div className="flex justify-center items-center gap-2">
-                      {Icon && <Icon />} 
+                      {Icon && <Icon />}
                       <p>{item.text}</p>
                     </div>
                   </NavLink>

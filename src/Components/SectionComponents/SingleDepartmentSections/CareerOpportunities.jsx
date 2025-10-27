@@ -23,7 +23,8 @@ function CareerOpportunities({ data }) {
       </div>
 
       {/* Career Cards */}
-      <div className="flex flex-col md:flex-row gap-8 max-w-6xl mx-auto mt-[-25px] ">
+      <div className="m-auto flex flex-col md:flex-row gap-8 max-w-6xl mx-auto 
+      mt-[-25px] ">
         {/* Bangladesh Career */}
 
         <Card

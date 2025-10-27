@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom"; // React Router
-import PeragraphText from "../../../Shared/PeragraphText/PeragraphText";
-import SubTitle from "../../../Shared/Titles/SubTitle/SubTitle";
-import GeneralList from "../../../UI/GeneralList/GeneralList";
-import SectionTitle from "../../../Shared/Titles/SectionTitle/SectionTitle";
-import careerAndHigherEdu_img from "../../../../assets/images/Departments_img/career_and_higher_education_img.jpg";
-import { SingleBigImage } from "../../../UI/GeneralImage/GeneralImage";
+import { Link } from "react-router-dom"; 
+import PeragraphText from "@components/Shared/PeragraphText/PeragraphText";
+import SubTitle from "@components/Shared/Titles/SubTitle/SubTitle";
+import GeneralList from "@components/UI/GeneralList/GeneralList";
+import SectionTitle from "@components/Shared/Titles/SectionTitle/SectionTitle";
+import careerAndHigherEdu_img from "@assets/images/Departments_img/career_and_higher_education_img.jpg";
+import { SingleBigImage } from "@components/UI/GeneralImage/GeneralImage";
 
 // Static data for the section
 const careerAndHigherStudyData = {
@@ -63,7 +63,9 @@ const CareerAndHigherStudy = () => {
                   <Link to={dept.link} className="hover:underline">
                     {dept.name}
                   </Link>
-                  {idx < data.departments.length - 1 && <span className="ml-3 text-orange-500 samebold" >|</span>}
+                  {idx < data.departments.length - 1 && (
+                    <span className="ml-3 text-orange-500 samebold">|</span>
+                  )}
                 </li>
               ))}
             </ul>

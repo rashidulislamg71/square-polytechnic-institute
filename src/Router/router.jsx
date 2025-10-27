@@ -8,7 +8,7 @@ import DepartmentPage from "@pages/DepartmentPage/DepartmentPage";
 
 import NoticePage from "@pages/NoticePage/NoticePage";
 import CampusPage from "@pages/CampusPage/CampusPage";
-import StudentCornerPage from "@pages/StudentCornerPage/StudentCornerPage";
+import StudentsCarePage from "@pages/StudentsCarePage/StudentsCarePage";
 import ContactPage from "@pages/Contact_usPage/ContactPage";
 import ResultPage from "@pages/ResultPage/ResultPage";
 import ComputerPage from "@pages/DepartmentPages/ComputerPage/ComputerPage";
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/studentCorner",
-        element: <StudentCornerPage />,
+        element: <StudentsCarePage />,
       },
 
       //Depeartment pages

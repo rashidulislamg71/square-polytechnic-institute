@@ -50,8 +50,8 @@
     },
     {
       "id": 9,
-      "text": "Student Corner",
-      "link": "/studentCorner",
+      "text": "Students Care",
+      "link": "/students-care",
       "icon": "LiaChalkboardTeacherSolid"
     }
   ]

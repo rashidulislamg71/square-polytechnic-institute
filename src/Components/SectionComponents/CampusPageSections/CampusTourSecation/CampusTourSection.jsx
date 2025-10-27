@@ -1,7 +1,7 @@
-import SectionTitle from "../../../Shared/Titles/SectionTitle/SectionTitle";
-import VideoPlayer from "../../../Video/Video";
-import campusVideo from "../../../../assets/video/spi_campus_video.mp4";
-import PeragraphText from "./../../../Shared/PeragraphText/PeragraphText";
+import SectionTitle from "@components/Shared/Titles/SectionTitle/SectionTitle";
+import campusVideo from "@assets/video/spi_campus_video.mp4";
+import PeragraphText from "@components/Shared/PeragraphText/PeragraphText";
+import LocalVideo from "../../../Video/LocalVideo";
 
 const aboutCampus = [
   " আমাদের ক্যাম্পাসটি বগুড়া জেলা, শেরপুর উপজেলাধীন গাড়ীদহ বাসস্ট্যান্ডে, পল্লী উন্নয়ন একাডেমী (RDA)-এর ঠিক দক্ষিণ পাশে অবস্থিত। এই মনোরম অবস্থানটি শহর ও গ্রামাঞ্চলের চমৎকার সংযোগস্থল, যা শিক্ষার্থীদের জন্য যাতায়াতকে অত্যন্ত সহজ করে তোলে।",
@@ -28,16 +28,14 @@ const CampusTourSection = () => {
 
         {/* Right Column: Video */}
         <div className="md:flex-1">
-          <VideoPlayer
-            type="local"
+          <LocalVideo
             src={campusVideo}
             title="Campus Tour Video"
-            aspectRatio="16/9"
             autoPlay
             muted
             loop
             controls
-            poster="/images/campus-preview.jpg"
+            poster=""
           />
         </div>
       </div>

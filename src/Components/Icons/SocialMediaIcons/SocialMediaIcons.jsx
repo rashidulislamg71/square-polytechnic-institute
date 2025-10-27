@@ -1,4 +1,5 @@
-// SocialMedia.jsx
+
+
 import React from "react";
 import {
   FaFacebookSquare,
@@ -47,18 +48,18 @@ const socialMediaData = [
   },
 ];
 
-// ✅ Icon-only component (always icons)
+
 export const SocialIcons = () => (
   <div className="flex md:flex-col flex-wrap justify-center gap-4">
     {socialMediaData.map((social) => (
       <Link
         key={social.id}
-        to={social.link} // react-router-dom হলে `to` ব্যবহার করুন, external link হলে <a href>
+        to={social.link} 
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center gap-2 group"
       >
-        {/* শুধু আইকনের জন্য ব্যাকগ্রাউন্ড */}
+        {/* icon bg */}
         <div
           className="p-2 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
           style={{ backgroundColor: social.color }}
@@ -66,7 +67,7 @@ export const SocialIcons = () => (
           <span className="text-white text-xl">{social.icon}</span>
         </div>
 
-        {/* নাম */}
+        {/* icon name */}
         <span className="text-sm text-gray-200 group-hover:underline">
           {social.name}
         </span>
@@ -75,7 +76,7 @@ export const SocialIcons = () => (
   </div>
 );
 
-// ✅ Icon + Name (responsive: mobile = icon only, desktop = icon + name)
+// Icon + Name (responsive: mobile = icon only, desktop = icon + name)
 export const SocialIconAndName = () => (
   <div className="flex flex-wrap justify-center gap-2 md:gap-4">
     {socialMediaData.map((social) => (
@@ -84,14 +85,14 @@ export const SocialIconAndName = () => (
         to={social.link}
         target="_blank"
         rel="noopener noreferrer"
-        // মোবাইলে rounded-full, md থেকে border + rounded-md
+        // phone rounded-full, md to border + rounded-md
         className="flex items-center justify-center p-3 md:px-3 md:py-2 rounded-full md:rounded border md:border-gray-400  "
       >
         <div className="hover:scale-110 flex items-center transition-transform duration-300">
           <span className="text-[25px]" style={{ color: social.color }}>
             {social.icon}
           </span>
-          {/* Mobile এ hidden, md screen+ এ visible */}
+          {/* Mobile  hidden, md screen+  visible */}
           <span className="font-medium hidden md:inline ml-2">
             {social.name}
           </span>

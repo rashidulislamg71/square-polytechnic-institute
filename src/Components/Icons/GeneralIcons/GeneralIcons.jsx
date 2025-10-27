@@ -1,4 +1,5 @@
-// src/components/InfoItem.jsx
+
+
 import React from "react";
 
 const GeneralIcons = ({ icon: Icon, className = "text-[16px]" }) => {

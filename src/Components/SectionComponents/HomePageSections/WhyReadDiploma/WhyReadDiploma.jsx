@@ -10,12 +10,10 @@ import ActionButton from "@components/UI/ActionButton/ActionButton";
 import SubTitle from "@components/Shared/Titles/SubTitle/SubTitle";
 import whyReadDiplomaData from "@data/HomePageJsonData/whyReadDiploma.json";
 
-// WhyReadDiploma Component
-// Props: diplomaInfo (from JSON or API)
 const WhyReadDiploma = () => {
   const { diplomaInfo } = whyReadDiplomaData;
 
-  // Optional: icon mapping for each section
+  //  icon mapping for each section
   const icons = [FaGraduationCap, FaTools, FaRocket, FaBriefcase];
 
   return (
@@ -65,8 +63,8 @@ const WhyReadDiploma = () => {
       {/* Call to Action Button */}
       <div className="mt-8 text-center">
         <ActionButton
-          text={"বিস্তারিত পড়ুন..."} // SEO-friendly CTA text
-          link={"/about_us"} // Link to about page
+          text={"বিস্তারিত পড়ুন..."} 
+          link={"/about_us"} 
           bg_color={"bg-[#27ae60] hover:bg-green-600"}
           fontSize="text-[17px]"
         />
