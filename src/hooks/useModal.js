@@ -1,4 +1,24 @@
 
+// ====================================================================
+// useModal Hook
+// --------------------------------------------------------------------
+// This custom hook provides reusable logic for controlling modals.
+// It manages modal open/close state, handles ESC key press to close,
+// and locks the page scroll when the modal is open.
+//
+// Features:
+//   openModal()   - Opens the modal
+//   closeModal()  - Closes the modal
+//   ESC key       - Closes the modal when "Escape" is pressed
+//   Scroll Lock   - Disables background scrolling when open
+//
+// It uses:
+//   - useState()     - To store modal open/close state
+//   - useCallback()  - To memoize open/close functions
+//   - useEffect()    - To manage keyboard and scroll behavior
+//   - useScrollLock()- To handle scroll locking in a reusable way
+// ====================================================================
+
 
 import { useState, useCallback, useEffect } from "react";
 import { useScrollLock } from "./useScrollLock";

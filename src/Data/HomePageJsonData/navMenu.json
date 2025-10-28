@@ -1,5 +1,5 @@
-
-{ "navMenuData":[
+{
+  "navMenuData": [
     {
       "id": 1,
       "text": "হোম",
@@ -10,7 +10,14 @@
       "id": 2,
       "text": "ডিপার্টমেন্টস্",
       "link": "/departments",
-      "icon": "FaBuilding"
+      "icon": "FaBuilding",
+      "subMenu": [
+        { "id": 1, "text": "Civil", "link": "/civil_page" },
+        { "id": 2, "text": "Electrical", "link": "/electrical_page" },
+        { "id": 3, "text": "Computer", "link": "/computer_page" },
+        { "id": 4, "text": "Textile", "link": "/textile_page" },
+        { "id": 5, "text": "Mechanical", "link": "/mechanical_page" }
+      ]
     },
     {
       "id": 3,
@@ -56,4 +63,3 @@
     }
   ]
 }
-  

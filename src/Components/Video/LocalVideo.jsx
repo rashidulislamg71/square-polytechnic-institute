@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
+import useInViewAutoPlayVideo from "@hooks/useInViewAutoPlay";
 
 const LocalVideo = ({
   src,
@@ -11,37 +12,8 @@ const LocalVideo = ({
   title = "Square Polytechnic Institute",
 }) => {
   const videoRef = useRef(null); // Reference to the video DOM element
-
-  useEffect(() => {
-    const videoElement = videoRef.current;
-
-    // Create an IntersectionObserver
-    // This observes whether the video is visible in the viewport
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
-            videoElement.play();
-          } else {
-            videoElement.pause();
-          }
-        });
-      },
-      {
-        threshold: [0, 0.5, 1], // Observe visibility at 0%, 50%, and 100%
-      }
-    );
-
-    // Start observing the video element
-    if (videoElement) {
-      observer.observe(videoElement);
-    }
-
-    //stop observing when the component unmounts
-    return () => {
-      if (videoElement) observer.unobserve(videoElement);
-    };
-  }, []);
+  // custom hook for video autoplay
+  useInViewAutoPlayVideo(videoRef);
 
   return (
     <div className={`${className}`} style={{ width, height }}>

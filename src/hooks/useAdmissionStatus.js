@@ -1,5 +1,23 @@
 
 
+// ====================================================================
+//  useAdmissionStatus Hook
+// --------------------------------------------------------------------
+// This custom hook checks whether the admission is currently active
+// based on the configuration in `ADMISSION` (That's Components set the admission time).
+//
+// Features:
+//   - Reads `ADMISSION.active` and `ADMISSION.expires` from config
+//   - Returns a boolean `isActive`
+//   - Automatically updates the status in real-time
+//   - Cleans up interval when the component unmounts
+//
+// Usage:
+//   const isAdmissionOpen = useAdmissionStatus();
+//   return <div>{isAdmissionOpen ? "Admission Open" : "Admission Closed"}</div>
+// ====================================================================
+
+
 import { useEffect, useState } from "react";
 import { ADMISSION } from "../config/admissionConfig";
 
@@ -23,8 +41,8 @@ export function useAdmissionStatus() {
       }
     };
 
-    checkStatus(); 
-    const timer = setInterval(checkStatus, 1000); 
+    checkStatus();
+    const timer = setInterval(checkStatus, 1000);
 
     return () => clearInterval(timer);
   }, []);
