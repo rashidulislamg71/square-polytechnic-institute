@@ -50,7 +50,7 @@ const notices = [
     shortDescription:
       "All students must complete their form fill-up before the last date announced by BTEB.",
     type: "BTEB",
-    date: "29-10-2025",
+    date: "28-10-2025",
     file: "/files/bteb_form_fillup_notice.pdf",
   },
   {
@@ -59,7 +59,7 @@ const notices = [
     shortDescription:
       "All students must complete their form fill-up before the last date announced by BTEB.",
     type: "Academy",
-    date: "30-01-2025",
+    date: "30-10-2025",
     file: "/files/bteb_form_fillup_notice.pdf",
   },
 ];

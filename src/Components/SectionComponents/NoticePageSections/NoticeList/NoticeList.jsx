@@ -1,4 +1,8 @@
-import { HiOutlineDownload, HiOutlineEye, HiOutlineSearch } from "react-icons/hi";
+import {
+  HiOutlineDownload,
+  HiOutlineEye,
+  HiOutlineSearch,
+} from "react-icons/hi";
 import { MdOutlineDateRange } from "react-icons/md";
 
 const NoticeList = ({ limitedNotices }) => {
@@ -31,8 +35,8 @@ const NoticeList = ({ limitedNotices }) => {
               </p>
 
               <div className="flex items-center justify-between mt-3 border-t border-gray-100 pt-3">
-                <span className="text-sm flex items-center gap-1 text-gray-500 font-medium">
-                  <MdOutlineDateRange className="w-4 h-4" /> প্রকাশিত:{" "}
+                <span className="text-xs flex items-center gap-1 text-gray-500 font-medium">
+                  <MdOutlineDateRange /> প্রকাশিত: {""}
                   {notice.date}
                 </span>
 
