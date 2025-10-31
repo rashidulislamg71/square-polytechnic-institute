@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { VscChromeClose } from "react-icons/vsc";
@@ -49,8 +48,7 @@ const NavBar = ({ show }) => {
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
-    return () =>
-      document.removeEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const toggleMenu = () => setOpenMenu(!openMenu);
@@ -59,14 +57,14 @@ const NavBar = ({ show }) => {
     <header
       className={`fixed top-0 left-0 w-full
          z-40 transition-all duration-500 ease-in-out ${
-        show ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
-      }`}
+           show ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+         }`}
     >
       {/* Header Section */}
       <Header />
 
       {/* Navigation Bar */}
-      <div className="bg-white shadow-md">
+      <div className="bg-white  shadow-md">
         <nav className="flex flex-wrap justify-between items-center py-2 px-3 md:px-6">
           {/* Logo */}
           <div onClick={() => setOpenMenu(false)}>
@@ -95,9 +93,11 @@ const NavBar = ({ show }) => {
 
                     {/* Desktop Dropdown: only visible when NavLink hovered */}
                     {hasSubMenu && (
-                      <ul className="absolute left-0 top-full mt-2
+                      <ul
+                        className="absolute left-0 top-full mt-2
                        bg-white shadow-md rounded-md opacity-0 invisible
-                        group-hover:visible group-hover:opacity-100 transition-all duration-300 min-w-[150px] z-50">
+                        group-hover:visible group-hover:opacity-100 transition-all duration-300 min-w-[150px] z-50"
+                      >
                         {item.subMenu.map((sub) => (
                           <li
                             key={sub.id}
@@ -132,8 +132,10 @@ const NavBar = ({ show }) => {
           ref={menuRef}
           className={`fixed lg:hidden left-0 top-[124px] w-full bg-white 
             transition-all duration-500 ease-in-out z-40 ${
-            openMenu ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-full"
-          }`}
+              openMenu
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 -translate-x-full"
+            }`}
         >
           <ul>
             {navMenuDataJson.navMenuData.map((item) => {
@@ -149,7 +151,8 @@ const NavBar = ({ show }) => {
                       className="flex items-center gap-2"
                       onClick={() => setOpenMenu(false)}
                     >
-                      {item.icon && React.createElement(iconComponents[item.icon])}
+                      {item.icon &&
+                        React.createElement(iconComponents[item.icon])}
                       <span>{item.text}</span>
                     </NavLink>
 
@@ -160,7 +163,11 @@ const NavBar = ({ show }) => {
                           setOpenDeptMobile(isDeptOpen ? null : item.id)
                         }
                       >
-                        {isDeptOpen ? <IoMdArrowDropup /> : <IoMdArrowDropdown />}
+                        {isDeptOpen ? (
+                          <IoMdArrowDropup />
+                        ) : (
+                          <IoMdArrowDropdown />
+                        )}
                       </button>
                     )}
                   </div>
@@ -195,4 +202,3 @@ const NavBar = ({ show }) => {
 };
 
 export default NavBar;
-

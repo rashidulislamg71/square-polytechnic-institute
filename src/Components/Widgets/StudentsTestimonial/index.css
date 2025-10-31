@@ -1,10 +1,12 @@
-
-
-
 .wrapper {
-  mask-image: linear-gradient(to right, transparent, rgb(172, 172, 172) 10%, rgb(180, 180, 180) 90%, transparent);
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    rgb(172, 172, 172) 10%,
+    rgb(180, 180, 180) 90%,
+    transparent
+  );
 }
-
 
 @media (max-width: 768px) {
   .wrapper {
@@ -25,7 +27,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
   }
 }
 
