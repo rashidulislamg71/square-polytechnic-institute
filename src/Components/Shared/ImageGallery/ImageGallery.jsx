@@ -54,21 +54,21 @@ function ImageGallery({images }) {
         share={{
           url: (slide) => slide.src,
           title: (slide) => slide.description,
-          text: (slide) => `${slide.description}\n\nদেখুন এখানে: ${slide.src}`,
+          text: (slide) => `${slide.description}\n\n এখানে দেখুন : ${slide.src}`,
           embed: true,
           copy: true,
           onShare: (slide) => {
             if (navigator.share) {
               navigator.share({
                 title: slide.description,
-                text: `${slide.description}\n\nদেখুন এখানে:`,
+                text: `${slide.description}\n\n এখানে দেখুন:`,
                 url: slide.src,
               });
             } else {
               navigator.clipboard.writeText(
                 `${slide.description} - ${slide.src}`
               );
-              alert("✅ লিংক কপি করা হয়েছে!");
+              alert("লিংক কপি করা হয়েছে!");
             }
           },
         }}
