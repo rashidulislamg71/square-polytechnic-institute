@@ -15,6 +15,7 @@ import InstituteFeatures from "@components/Shared/InstituteFeatures/InstituteFea
 import campusVideo from "@assets/video/spi_campus_video.mp4";
 import ScholarshipSection from "@components/Shared/ScholarshipSection/ScholarshipSection";
 import LocalVideo from "@components/Video/LocalVideo";
+import SectionWrapper from './../../Components/Shared/SectionWrapper/SectionWrapper';
 
 
 const HomePage = () => {
@@ -82,9 +83,9 @@ const HomePage = () => {
         <HostelSection />
       </section>
       {/* Industrial Training and Internship */}
-      <section className="px-4 md:px-10 lg:px-20">
+      <SectionWrapper>
         <IndustrialTraining />
-      </section>
+      </SectionWrapper>
 
       {/* Why Read Diploma */}
       <section className="px-[15px] bg-gray-100" aria-label="Why Read Diploma">

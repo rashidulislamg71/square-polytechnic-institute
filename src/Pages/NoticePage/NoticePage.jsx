@@ -5,9 +5,13 @@ import notices from "../../Data/NoticesData/NoticesData";
 import Error from "../../Components/UI/Error/Error";
 import Loader from "../../Components/UI/Loader/Loader";
 import NoticeList from "../../Components/SectionComponents/NoticePageSections/NoticeList/NoticeList";
+import FilterButton from "../../Components/UI/FilterButton/FilterButton";
+import useFetchingData from "../../hooks/useFetchData";
 
 const NoticePage = () => {
   const noticesData = useMemo(() => notices || [], [notices]);
+
+  const buttons = ["All", "Academy", "BTEB"];
 
   const [active, setActive] = useState("All");
   const [search, setSearch] = useState("");
@@ -15,37 +19,13 @@ const NoticePage = () => {
   const [month, setMonth] = useState("");
   const [year, setYear] = useState("");
   const [itemsToShow, setItemsToShow] = useState(10);
-  const [allNotices, setAllNotices] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
-  // Load local notices
-  useEffect(() => {
-    const fetchNotices = async () => {
-      try {
-        setLoading(true);
-        setError(null);
-
-        // local data
-        setAllNotices(noticesData);
-
-        // short delay for loading animation
-        setTimeout(() => setLoading(false), 500);
-
-        //backend data
-        // const res = await fetch(API_URL);
-        // if (!res.ok) throw new Error("Failed to fetch notices");
-        // const data = await res.json();
-        // setAllNotices(data);
-      } catch (err) {
-        console.error(err);
-        setError("নোটিস লোড করতে সমস্যা হয়েছে। পরে আবার চেষ্টা করুন।");
-        setLoading(false);
-      }
-    };
-
-    fetchNotices();
-  }, [noticesData]);
+  // Load  notice data
+  const {
+    data: allNotices,
+    loading,
+    error,
+  } = useFetchingData(noticesData, null, 500);
 
   // Filter notices
   const filteredNotices = useMemo(() => {
@@ -101,18 +81,13 @@ const NoticePage = () => {
 
       {/* Filter Buttons */}
       <div className="flex justify-center flex-wrap gap-4 md:gap-8 mt-6 max-w-4xl mx-auto">
-        {["All", "Academy", "BTEB"].map((btn) => (
-          <button
+        {buttons.map((btn) => (
+          <FilterButton
             key={btn}
-            onClick={() => setActive(btn)}
-            className={`px-5 py-2 rounded-full cursor-pointer shadow-md font-medium transition duration-200 text-sm md:text-base whitespace-nowrap ${
-              active === btn
-                ? "bg-amber-500 text-white transform scale-105 shadow-lg"
-                : "bg-gray-300 text-gray-700 hover:bg-gray-300"
-            }`}
-          >
-            {btn}
-          </button>
+            label={btn}
+            active={active}
+            onClick={setActive}
+          />
         ))}
       </div>
 
