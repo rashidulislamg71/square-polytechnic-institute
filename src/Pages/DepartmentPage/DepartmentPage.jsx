@@ -1,7 +1,7 @@
 import React from "react";
 
 // Image
-import deptHero from "@assets/images/Departments_img/department_banner.png";
+import deptHero from "@assets/images/Departments_img/Department-banner.png";
 
 // Shared Components
 import AllDepartment from "@components/Shared/AllDepartment/AllDepartment";
@@ -17,7 +17,7 @@ import CareerAndHigherStudy from "@components/SectionComponents/DepartmentPageSe
 
 const DepartmentPage = () => {
   return (
-    <main className="space-y-20">
+    <main>
       {/* Hero Section */}
       <section>
         <HeroSection
@@ -28,9 +28,9 @@ const DepartmentPage = () => {
       </section>
 
       {/* All Department Section */}
-      <section>
+      <SectionWrapper>
         <AllDepartment />
-      </section>
+      </SectionWrapper>
 
       {/* Lab Facilities */}
       <section>
@@ -51,9 +51,7 @@ const DepartmentPage = () => {
       </SectionWrapper>
 
       {/*Career & Higher Study Section */}
-      <SectionWrapper>
-        <CareerAndHigherStudy />
-      </SectionWrapper>
+      <CareerAndHigherStudy />
     </main>
   );
 };

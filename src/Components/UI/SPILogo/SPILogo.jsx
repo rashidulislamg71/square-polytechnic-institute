@@ -3,6 +3,7 @@ import spi_logo from "/public/images/SPI_Logo.png";
 import styles from "./SPILogo.module.css";
 import { Link } from 'react-router-dom';
 
+
 const SPILogo = () => {
     return (
         <Link to="/" className="flex items-center gap-1">

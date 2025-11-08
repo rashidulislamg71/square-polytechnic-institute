@@ -16,7 +16,7 @@ const socialMediaData = [
     name: "Facebook",
     icon: <FaFacebookSquare />,
     color: "#1877F2",
-    link: "#",
+    link: "https://www.facebook.com/squarepolytechnic/",
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const socialMediaData = [
     name: "LinkedIn",
     icon: <FaLinkedin />,
     color: "#0A66C2",
-    link: "#",
+    link: "https://www.linkedin.com/company/square-polytechnic-bogura",
   },
   {
     id: 4,

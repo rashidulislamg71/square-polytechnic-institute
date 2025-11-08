@@ -11,7 +11,7 @@ function EntrepreneurshipSection({ data }) {
   return (
     <div
       className="flex flex-col items-center text-center
-       md:py-10 md:bg-green-50"
+       md:py-15 md:bg-green-50"
     >
       {/* Icon & title */}
       <DepartmentAboutsIcon icon={GiPodiumWinner} />

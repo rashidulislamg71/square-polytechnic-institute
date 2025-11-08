@@ -15,8 +15,8 @@ export const SingleBigImage = ({
         src={image}
         alt={alt}
         className={` w-full md:w-[450px] lg:w-[560px] h-[280px] md:h-[350px] lg:h-[370px]  rounded 
-        border-b-8 border-green-500 shadow-xl object-cover 
-        hover:scale-105 hover:shadow-2xl transition-transform duration-500 ${className}`}
+         object-cover 
+        ${className}`}
       />
 
       {/* Reusable Modal*/}

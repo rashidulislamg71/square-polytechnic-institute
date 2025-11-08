@@ -1,67 +1,82 @@
 import React, { useState } from "react";
 import SectionTitle from "../../Components/Shared/Titles/SectionTitle/SectionTitle";
-
 import FilterButton from "../../Components/UI/FilterButton/FilterButton";
 import studntTestimonialsData from "../../Data/TestimonialJsonData/studentsData";
 import useFetchingData from "../../hooks/useFetchData";
 import Loader from "../../Components/UI/Loader/Loader";
 import Error from "../../Components/UI/Error/Error";
 import TestimonialCard from "../../Components/SectionComponents/TestimonialPageSections/TestimonialCard/TestimonialCard";
-const buttons = [
-  "Students Testimonial",
-  "Guardian Testimonial",
-  "Teachers Testimonial",
-];
+import { FaExclamationTriangle } from "react-icons/fa";
+
+const buttons = ["Students", "Guardian", "Teachers"];
 
 const AllTestimonialPage = () => {
   const localData = studntTestimonialsData || [];
-  const [active, setActive] = useState("Students Testimonial");
+  console.log(studntTestimonialsData);
+  console.log(localData);
+  const [active, setActive] = useState("Students");
   const { data: testimonials, loading, error } = useFetchingData(localData);
 
-  if (loading) return <Loader message="নোটিশ লোড হচ্ছে..." />;
+  if (loading) return <Loader message="টেস্টিমোনিয়াল লোড হচ্ছে..." />;
   if (error) return <Error message={error} />;
+
   return (
-    <div className="py-10">
-      {/* Title */}
-      <SectionTitle title="মতামত" />
+    <div className="mt-[100px] py-10 px-5 md:px-10">
+      {/* Page Title */}
+      <SectionTitle title="আমাদের ছাত্র, অভিভাবক ও শিক্ষকদের মতামত" />
 
       {/* Filter Buttons */}
-      <div className="flex justify-center flex-wrap gap-4 md:gap-8 mt-6 max-w-4xl mx-auto">
+      <div className="flex justify-center gap-4 my-8 flex-wrap">
         {buttons.map((btn) => (
-          <FilterButton
+          <button
             key={btn}
-            label={btn}
-            active={active}
-            onClick={setActive}
-          />
+            onClick={() => setActive(btn)}
+            className={`px-6 py-2 rounded-full font-medium transition-all ${
+              active === btn
+                ? "bg-emerald-600 text-white shadow-lg"
+                : " bg-gray-300 text-gray-700 hover:bg-emerald-100"
+            }`}
+          >
+            {btn}
+          </button>
         ))}
       </div>
 
-      {/* Dynamic Content */}
-      <div className="mt-10 mx-auto">
-        {active === "Students Testimonial" && (
-          <div>
-            <p className="text-center text-gray-700 mb-4">
-              🎓 Student testimonials show here...
-            </p>
-        
-            <div className="flex flex-wrap justify-center gap-8 md:gap-10">
-              {testimonials.map((item) => (
-              <TestimonialCard data={item} />
-            ))}
+      {/* Testimonials Grid */}
+      <div className="max-w-6xl mx-auto mt-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {active === "Students" &&
+          testimonials.map((item, index) =>
+            item ? <TestimonialCard key={index} item={item} /> : null
+          )}
+
+        {active === "Guardian" && (
+          <div className="col-span-full text-center ">
+            <div className="flex flex-col items-center justify-centertext-center">
+              <FaExclamationTriangle className="text-yellow-500 text-4xl mb-4" />
+              <h2 className="text-xl font-bold text-gray-800 mb-2">
+                কোন মতামত খুঁজে পাওয়া যায়নি!
+              </h2>
             </div>
           </div>
         )}
-        {active === "Guardian Testimonial" && (
-          <p className="text-center text-gray-700">
-            👨‍👩‍👧 Guardian testimonials show here...
-          </p>
+
+        {active === "Teachers" && (
+          <div className="col-span-full text-center">
+            <div className="flex flex-col items-center justify-center text-center">
+              <FaExclamationTriangle className="text-yellow-500 text-4xl mb-4" />
+              <h2 className="text-xl font-bold text-gray-800 mb-2">
+                কোন মতামত খুঁজে পাওয়া যায়নি!
+              </h2>
+            </div>
+          </div>
         )}
-        {active === "Teachers Testimonial" && (
-          <p className="text-center text-gray-700">
-            👩‍🏫 Teacher testimonials show here...
-          </p>
-        )}
+      </div>
+
+      {/* Motivational Quote */}
+      <div className="text-center mt-16">
+        <p className="italic text-gray-600 text-lg">
+          “ভালো শিক্ষা একজন মানুষের জীবনের সবচেয়ে বড় সম্পদ।”
+        </p>
       </div>
     </div>
   );

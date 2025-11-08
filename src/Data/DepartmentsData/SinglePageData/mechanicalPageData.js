@@ -1,18 +1,26 @@
 import React from "react";
-import mechanicalBg from "@assets/images/Departments_img/mechnical.jpg";
+import mechanicalBg from "@assets/images/Departments_img/department-banner/mechanical-banner.png";
 
 const mechanicalDepartmentData = {
   id: "mechanical",
   title: "মেকানিক্যাল ইঞ্জিনিয়ারিং",
 
   heroSection: {
-    title: "যন্ত্র প্রকৌশলের মাধ্যমে আধুনিক শিল্পের ভিত্তি গড়ুন",
+    title: " আধুনিক প্রযুক্তি ও মেশিনারিজের মূল ভিত্তি",
     tagline:
-      "যন্ত্র, ডিজাইন ও উৎপাদন— শিল্পোন্নত বাংলাদেশের মেরুদণ্ডে যুক্ত হোন আজই!",
+      "যন্ত্র, ডিজাইন ও উৎপাদন— শিল্পোন্নত দেশ গড়তে আপনিও হবে পারেন বাংলাদেশর ভরসা!",
     background: mechanicalBg,
     ctaButtons: [
-      { text: "সরাসরি ভর্তি হোন", link: "/admission", btnBgColor: "bg-green-600" },
-      { text: "ডাউনলোড সিলেবাস", link: "/syllabus/mechanical", btnBgColor: "bg-orange-500" },
+      {
+        text: "সরাসরি ভর্তি হোন",
+        link: "/admission",
+        btnBgColor: "bg-green-600",
+      },
+      {
+        text: "ডাউনলোড সিলেবাস",
+        link: "/syllabus/mechanical",
+        btnBgColor: "bg-orange-500",
+      },
     ],
   },
 
@@ -78,10 +86,7 @@ const mechanicalDepartmentData = {
       "ডিপ্লোমা শেষে B.Sc. in Mechanical Engineering ও বিদেশে Master's করার সুযোগ রয়েছে।",
     bangladesh: {
       title: "দেশে উচ্চ শিক্ষা",
-      points: [
-        "DUET, BUET, RUET-এ ভর্তি সুযোগ।",
-        "ল্যাটারাল এন্ট্রি সুবিধা।",
-      ],
+      points: ["DUET, BUET, RUET-এ ভর্তি সুযোগ।", "ল্যাটারাল এন্ট্রি সুবিধা।"],
     },
     abroad: {
       title: "বিদেশে স্কলারশিপ সুযোগ",
@@ -116,7 +121,10 @@ const mechanicalDepartmentData = {
     title: "সাধারণ জিজ্ঞাসা (FAQ)",
     questions: [
       { q: "কোর্সের মেয়াদ কত?", a: "৪ বছর (৮ সেমিস্টার)।" },
-      { q: "ইন্টার্নশিপ কি বাধ্যতামূলক?", a: "হ্যাঁ, শেষ সেমিস্টারে ইন্ডাস্ট্রিয়াল ট্রেনিং আবশ্যক।" },
+      {
+        q: "ইন্টার্নশিপ কি বাধ্যতামূলক?",
+        a: "হ্যাঁ, শেষ সেমিস্টারে ইন্ডাস্ট্রিয়াল ট্রেনিং আবশ্যক।",
+      },
       {
         q: "যোগাযোগের ঠিকানা?",
         a: "Square Polytechnic Institute, Garidaha, Sherpur, Bogura। ফোন: 017xxxxxxxx",

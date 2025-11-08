@@ -1,32 +1,94 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import ActionButton from "@components/UI/ActionButton/ActionButton";
 
 const HeroSection = ({
-  title,
-  subtitle,
-  extraText,
-  buttons,
-  className = "bg-center",
-  bgImage,
+  title = "",
+  subtitle = "",
+  extraText = "",
+  buttons = [],
+  bgImage = "",
+  overlayColor = "bg-black/40",
+  textColor = "text-white",
+  align = "center",
+  height = "h-[60vh] md:min-h-[75vh] lg:min-h-[90vh]",
+  position = "bg-center",
+  overlay = true,
+  className = "",
+  seo = {
+    title: "",
+    description: "",
+    keywords: "",
+  },
 }) => {
+  // Dynamic alignment class
+  const textAlignClass =
+    align === "left"
+      ? "text-left items-start"
+      : align === "right"
+      ? "text-right items-end"
+      : "text-center items-center";
+
   return (
     <section
-      className={`relative bg-cover bg-center h-[40vh] md:h-[60vh] lg:h-[70vh] flex mt-[-25px] items-center justify-center text-center text-white  opacity-90 ${className} `}
-      style={{ backgroundImage: `url(${bgImage})` }}
+      className={`relative flex justify-center ${textAlignClass} mt-[-16px] ${textColor} ${height} ${position} bg-cover object-top bg-no-repeat ${className}`}
+      style={{
+        backgroundImage: `url(${bgImage})`,
+        backgroundSize: "cover",
+      }}
     >
+      {/* Helmet for SEO */}
+      <Helmet>
+        <title>{seo.title || title}</title>
+        {seo.description && (
+          <meta name="description" content={seo.description} />
+        )}
+        {seo.keywords && <meta name="keywords" content={seo.keywords} />}
+      </Helmet>
+
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50"></div>
+      {overlay && (
+        <div
+          className={`absolute inset-0 ${overlayColor}`}
+          aria-hidden="true"
+        ></div>
+      )}
 
       {/* Content */}
-      <div className="relative z-10 max-w-[700px] mx-auto px-4">
-        <h1 className=" leading-relaxed text-2xl md:text-3xl lg:text-4xl font-bold text-green-600 ">
-          {title}
-        </h1>
-        <p className="text-lg md:text-xl my-5 ">{subtitle}</p>
-        <p className="text-[17px] md:text-lg mb-2">{extraText}</p>
-        {buttons && buttons.length > 0 && (
-          <div className="flex justify-center flex-wrap gap-3 md:gap-6">
-            {/* flex container for all buttons */}
+      <div className="relative z-10 max-w-[900px] w-full mx-auto px-4 sm:px-6 lg:px-10 py-10 md:py-16 flex flex-col items-center justify-center">
+        {/* Title */}
+        {title && (
+          <h1 className="text-3xl md:text-4xl font-bold leading-snug drop-shadow-lg mb-4 md:mb-6">
+            {title}
+          </h1>
+        )}
+
+        {/* Subtitle */}
+        {subtitle && (
+          <h2 className="text-lg sm:text-xl md:text-2xl
+          font-medium mb-3 md:mb-5 opacity-90">
+            {subtitle}
+          </h2>
+        )}
+
+        {/* Extra Text */}
+        {extraText && (
+          <p className=" text-lg  max-w-[700px] leading-relaxed">
+            {extraText}
+          </p>
+        )}
+
+        {/* Buttons */}
+        {buttons.length > 0 && (
+          <div
+            className={`flex flex-wrap gap-3 md:gap-5 mt-10 ${
+              align === "center"
+                ? "justify-center"
+                : align === "right"
+                ? "justify-end"
+                : "justify-start"
+            }`}
+          >
             {buttons.map((btnData, idx) => (
               <ActionButton
                 key={idx}

@@ -25,17 +25,24 @@ export const GeneralCard = ({
         </h2>
       )}
       {/* Icon and Subtitle Section */}
-      <span className="text-3xl text-green-600  "> {icon}</span>
+      {icon && <span className="text-3xl text-green-600">{icon}</span>}
+     
       <SubTitle className="text-lg" subTitle={subTitle} />
       {/* Description Section */}
-      <div className={`text-left mt-3 text-gray-600
-         ${descriptionClassName}`}>
+      <div
+        className={`text-left mt-3 text-gray-800
+         ${descriptionClassName}`}
+      >
         {isDescriptionArray && (
           <>
             {isDescriptionArray.map((info, i) => (
               <p key={i}>
-                <span className="font-medium
-                 text-gray-800">{info.label}:</span>
+                <span
+                  className="font-medium
+                 text-gray-800"
+                >
+                  {info.label}:
+                </span>
                 {info.value}
               </p>
             ))}

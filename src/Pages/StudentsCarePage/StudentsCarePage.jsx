@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
+import DataNotFound from "../../Components/Shared/DataNotFound/DataNotFound";
 
 const StudentsCarePage = () => {
-    return (
-        <div>
-            Students care Page
-        </div>
-    );
+  return (
+    <>
+    <DataNotFound />
+    </>
+  );
 };
 
 export default StudentsCarePage;

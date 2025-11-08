@@ -1,25 +1,33 @@
 // civilDepartmentData_refined.js
 
 import React from "react";
-import civilBg from "@assets/images/Departments_img/civil.png";
+import civilBg from "@assets/images/Departments_img/department-banner/civil-banner.png";
 
 const civilDepartmentData = {
   id: "civil",
   title: "সিভিল ইঞ্জিনিয়ারিং",
 
-  // 1️⃣ Hero Section
+  //  Hero Section
   heroSection: {
     title: "নির্মাণ শিল্পের ভবিষ্যৎ গড়ার লক্ষ্যে সিভিল ইঞ্জিনিয়ারিং",
     tagline:
       "আপনি কি স্বপ্ন দেখেন মেগা-প্রকল্পের অংশীদার হওয়ার? এখনই শুরু হোক আপনার প্রকৌশল যাত্রা!",
     background: civilBg,
     ctaButtons: [
-      { text: "সরাসরি ভর্তি হোন", link: "/admission", btnBgColor:"bg-green-600"},
-      { text: "ডাউনলোড সিলেবাস ", link: "/syllabus/civil", btnBgColor:"bg-orange-500"}
+      {
+        text: "সরাসরি ভর্তি হোন",
+        link: "/admission",
+        btnBgColor: "bg-green-600",
+      },
+      {
+        text: "ডাউনলোড সিলেবাস ",
+        link: "/syllabus/civil",
+        btnBgColor: "bg-orange-500",
+      },
     ],
   },
 
-  // 2️⃣ About Department
+  // About Department
   aboutDepartment: {
     title: "সিভিল ইঞ্জিনিয়ারিং: আধুনিক বিশ্বের স্থপতি",
     description: `সিভিল ইঞ্জিনিয়ারিং বিভাগটি নির্মাণ, পরিকল্পনা এবং ডিজাইনের মৌলিক ও ব্যবহারিক জ্ঞান প্রদান করে।
@@ -28,11 +36,10 @@ const civilDepartmentData = {
   },
 
   aboutDepartmentVideo: {
-    url: "  https://www.youtube.com/embed/ZoMaLeuURyw?si=FAmKBsyFQZbwdwGw" 
-
+    url: "  https://www.youtube.com/embed/ZoMaLeuURyw?si=FAmKBsyFQZbwdwGw",
   },
 
-  // 3️⃣ Why Choose This Department
+  // Why Choose This Department
   whyChooseThisDepartment: {
     title: "কেন বেছে নেবেন সিভিল ইঞ্জিনিয়ারিং?",
     points: [
@@ -44,7 +51,7 @@ const civilDepartmentData = {
     ],
   },
 
-  // 4️⃣ Career Opportunities
+  // Career Opportunities
   careerOpportunities: {
     title: "ক্যারিয়ার: বিশ্বজুড়ে সিভিল ইঞ্জিনিয়ারদের চাহিদা",
     description:
@@ -69,7 +76,7 @@ const civilDepartmentData = {
     },
   },
 
-  // 5️⃣ Industrial Attachment & Partners
+  // Industrial Attachment & Partners
   industrialPartners: {
     title: "ইন্ডাস্ট্রিয়াল পার্টনারশিপ ও বাস্তব অভিজ্ঞতা",
     description:
@@ -84,7 +91,7 @@ const civilDepartmentData = {
     ],
   },
 
-  // 6️⃣ Higher Study Opportunities
+  //  Higher Study Opportunities
   higherStudy: {
     title: "উচ্চ শিক্ষা: প্রকৌশল উৎকর্ষতার পরবর্তী ধাপ",
     description:
@@ -105,7 +112,7 @@ const civilDepartmentData = {
     },
   },
 
-  // 7️⃣ Entrepreneurship Scope
+  //  Entrepreneurship Scope
   entrepreneurship: {
     title: "নিজস্ব উদ্যোগে স্বাধীনতা: একজন সফল উদ্যোক্তা",
     description: `সিভিল ইঞ্জিনিয়ারিং জ্ঞান আপনাকে শুধুমাত্র চাকরিপ্রার্থী হিসেবেই নয়, বরং একজন সফল উদ্যোক্তা হিসেবে প্রতিষ্ঠা পেতেও সাহায্য করে।`,
@@ -116,7 +123,7 @@ const civilDepartmentData = {
     ],
   },
 
-  // 8️⃣ Why Study at Square Polytechnic
+  // Why Study at Square Polytechnic
   whySquarePolytechnic: {
     title:
       "কেন স্কয়ার পলিটেকনিকে সিভিল ইঞ্জিনিয়ারিং পড়বেন? আমাদের বিশেষত্ব:",
@@ -130,7 +137,7 @@ const civilDepartmentData = {
     ],
   },
 
-  // 🔟 FAQ / Contact Section
+  // FAQ / Contact Section
   faq: {
     title: "সাধারণ জিজ্ঞাসা (FAQ) ও যোগাযোগ",
     questions: [

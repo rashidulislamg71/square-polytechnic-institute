@@ -43,11 +43,12 @@ const instituteContent = {
 const MissionAndVission = ({ className = "" }) => {
   return (
     <section
-      className={`py-16 w-full md:max-w-3xl mx-auto p-0 md:p-5 bg-white md:rounded-lg md:shadow-md ${className}`}
+      className={`mt-[-30px] md:mt-0 mb-20 md:mb-24  w-full md:max-w-4xl mx-auto p-0 md:p-5
+         bg-white md:rounded-lg md:shadow-md ${className}`}
     >
       <SectionTitle title={"আমাদের লক্ষ্য ও উদ্দেশ্য"} />
       <div className="mt-[-10px] md:mt-0">
-         {/* Vision Section */}
+        {/* Vision Section */}
         <div className="mb-6">
           <div className="flex items-center gap-2 mb-2">
             <GeneralIcons
@@ -59,7 +60,7 @@ const MissionAndVission = ({ className = "" }) => {
               className="text-[20px]"
             />
           </div>
-          <p className="mb-4 whitespace-pre-line text-gray-700 leading-relaxed">
+          <p className="mb-4 whitespace-pre-line text-gray-800 leading-relaxed">
             {instituteContent.visionText}
           </p>
         </div>
@@ -67,31 +68,34 @@ const MissionAndVission = ({ className = "" }) => {
         <hr className="my-6 border-gray-300" />
 
         {/* Mission Section */}
-          <div className="flex items-center gap-2 mb-3">
-            <GeneralIcons
-              icon={instituteContent.missionIcon}
-              className="text-3xl text-green-600"
-            />
-            <SubTitle
-              subTitle={instituteContent.missionTitle}
-              className="text-[20px]"
-            />
-          </div>
-
-          <ul className="space-y-3">
-            {instituteContent.missionPoints.map((point) => (
-              <li
-                key={point.id}
-                className="border-l-4
-             border-green-500 pl-4"
-              >
-                <div className=" font-bold text-green-700">{point.title}</div>
-                <div className="text-sm text-gray-600">{point.description}</div>
-              </li>
-            ))}
-          </ul>
+        <div className="flex items-center gap-2 mb-3">
+          <GeneralIcons
+            icon={instituteContent.missionIcon}
+            className="text-3xl text-green-600"
+          />
+          <SubTitle
+            subTitle={instituteContent.missionTitle}
+            className="text-[20px]"
+          />
         </div>
-     
+
+        <ul className="space-y-3">
+          {instituteContent.missionPoints.map((point) => (
+            <li
+              key={point.id}
+              className="border-l-4
+             border-green-500 pl-4"
+            >
+              <div className="text-[16px] font-bold text-green-700">
+                {point.title}
+              </div>
+              <div className="text-[16px] text-gray-800">
+                {point.description}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 };

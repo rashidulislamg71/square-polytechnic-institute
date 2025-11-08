@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import HeroSection from "@components/Shared/HeroSection/HeroSection";
 import heroImg from "@assets/images/Campus_images/CampusGallery_images/campus11.jpg"
+import DataNotFound from './../../Components/Shared/DataNotFound/DataNotFound';
 
 const GalleryAndEventsPage = () => {
   return (
@@ -14,6 +15,8 @@ const GalleryAndEventsPage = () => {
         bgImage={heroImg}
       />
      </section>
+
+     <DataNotFound />
     </div>
   );
 };

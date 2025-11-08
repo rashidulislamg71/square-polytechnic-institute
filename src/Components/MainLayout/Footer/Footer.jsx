@@ -24,9 +24,9 @@ const QUICK_LINKS = [
 
 const EXTRA_LINKS = [
   { to: "/admission", label: "ভর্তি" },
-  { to: "/student-feedback", label: "শিক্ষার্থীদের মতামত" },
-  { to: "/guardian-feedback", label: "অভিভাবক মতামত" },
-  { to: "/teacher-feedback", label: "শিক্ষকদের মতামত" },
+  { to: "", label: "শিক্ষার্থীদের মতামত" },
+  { to: "", label: "অভিভাবক মতামত" },
+  { to: "", label: "শিক্ষকদের মতামত" },
 ];
 
 const Footer = () => {

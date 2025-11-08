@@ -12,11 +12,11 @@
       "link": "/departments",
       "icon": "FaBuilding",
       "subMenu": [
-        { "id": 1, "text": "Civil", "link": "/civil_page" },
-        { "id": 2, "text": "Electrical", "link": "/electrical_page" },
-        { "id": 3, "text": "Computer", "link": "/computer_page" },
-        { "id": 4, "text": "Textile", "link": "/textile_page" },
-        { "id": 5, "text": "Mechanical", "link": "/mechanical_page" }
+        { "id": 1, "text": "Civil", "link": "/civil" },
+        { "id": 2, "text": "Electrical", "link": "/electrical" },
+        { "id": 3, "text": "Computer", "link": "/computer" },
+        { "id": 4, "text": "Textile", "link": "/textile" },
+        { "id": 5, "text": "Mechanical", "link": "/mechanical" }
       ]
     },
     {
@@ -43,12 +43,7 @@
       "link": "/notice",
       "icon": "IoMdNotifications"
     },
-    {
-      "id": 7,
-      "text": "রেজাল্ট",
-      "link": "/result",
-      "icon": "PiStudentBold"
-    },
+
     {
       "id": 8,
       "text": "যোগাযোগ",

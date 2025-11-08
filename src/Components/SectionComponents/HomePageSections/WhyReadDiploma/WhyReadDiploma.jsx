@@ -1,76 +1,72 @@
 import React from "react";
-import SectionTitle from "@components/Shared/Titles/SectionTitle/SectionTitle";
+import { Helmet } from "react-helmet-async";
 import {
-  FaGraduationCap,
-  FaTools,
-  FaRocket,
-  FaBriefcase,
-} from "react-icons/fa";
-import ActionButton from "@components/UI/ActionButton/ActionButton";
-import SubTitle from "@components/Shared/Titles/SubTitle/SubTitle";
-import whyReadDiplomaData from "@data/HomePageJsonData/whyReadDiploma.json";
+  diplomaIntro,
+  diplomaFeatures,
+} from "../../../../Data/HomePageJsonData/whyReadDiploma.js";
+import SectionTitle from "./../../../Shared/Titles/SectionTitle/SectionTitle";
+import GeneralPeragraphText from "../../../Shared/GeneralParagraphText/GeneralParagraphText.jsx";
+import SubTitle from "./../../../Shared/Titles/SubTitle/SubTitle";
 
-const WhyReadDiploma = () => {
-  const { diplomaInfo } = whyReadDiplomaData;
-
-  //  icon mapping for each section
-  const icons = [FaGraduationCap, FaTools, FaRocket, FaBriefcase];
-
+const WhyStudyDiploma = () => {
   return (
-    <section
-      className="w-full lg:w-4/5 mx-auto text-justify space-y-12 py-12"
-      aria-label="Why Read Diploma Section"
-    >
-      {/* Section Title */}
-      <header>
-        <SectionTitle
-          title={diplomaInfo.title}
-          className="text-center text-2xl lg:text-3xl font-bold"
+    <section className="relative">
+      <Helmet>
+        <title>
+          কেন পড়বেন ডিপ্লোমা ইন ইঞ্জিনিয়ারিং | Square Polytechnic Institute
+        </title>
+        <meta
+          name="description"
+          content="ডিপ্লোমা ইন ইঞ্জিনিয়ারিং এর মাধ্যমে হাতে-কলমে শিক্ষা, দ্রুত দক্ষতা অর্জন, চাকরির সুযোগ, বিদেশে কর্মসংস্থান এবং উদ্যোক্তা হওয়ার সুযোগ।"
         />
-      </header>
-
-      {/* Diploma Sections */}
-      <div className="flex flex-col space-y-0.5">
-        {diplomaInfo.sections.map((section, idx) => {
-          const Icon = icons[idx % icons.length]; // Assign icon dynamically
-
-          return (
-            <article
-              key={section.id}
-              className="bg-white p-4  flex flex-col lg:flex-row 
-              items-start gap-4 border-l-5 border-orange-400 shadow-sm hover:shadow-md transition-shadow duration-300"
-            >
-              {/* Icon */}
-              <div className="text-green-600 text-3xl lg:text-4xl mt-1 flex-shrink-0">
-                <Icon aria-hidden="true" />
-              </div>
-
-              {/* Text Content */}
-              <div>
-                <SubTitle
-                  subTitle={section.subtitle}
-                  className="text-lg lg:text-xl font-semibold"
-                />
-                <p className="mt-2 text-gray-700 leading-relaxed">
-                  {section.text}
-                </p>
-              </div>
-            </article>
-          );
-        })}
-      </div>
-
-      {/* Call to Action Button */}
-      <div className="mt-8 text-center">
-        <ActionButton
-          text={"বিস্তারিত পড়ুন..."} 
-          link={"/about_us"} 
-          bg_color={"bg-[#27ae60] hover:bg-green-600"}
-          fontSize="text-[17px]"
+        <meta
+          name="keywords"
+          content="ডিপ্লোমা ইন ইঞ্জিনিয়ারিং, কারিগরি শিক্ষা, চাকরি, দক্ষতা, উদ্যোক্তা"
         />
+      </Helmet>
+
+      <div className="container mx-auto">
+        {/* Section Header */}
+        <header className="text-center mb-12" data-aos="fade-down">
+          <SectionTitle title={"কেন পড়বেন ডিপ্লোমা ইন ইঞ্জিনিয়ারিং?"} />
+          <div className="mt-[-15px]">
+            {diplomaIntro.map((para, i) => (
+              <GeneralPeragraphText
+                key={i}
+                text={para}
+                className="mt-0 text-justify md:text-center"
+              />
+            ))}
+          </div>
+        </header>
+
+        {/* Feature Cards */}
+        <ul
+          data-aos="fade-left"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-3 list-none"
+        >
+          {diplomaFeatures.map((feature) => {
+            const Icon = feature.icon; // React component
+            return (
+              <li
+                key={feature.id}
+                className="bg-white p-4 shadow-lg rounded-lg hover:shadow-2xl transition duration-300"
+              >
+                <div className="flex items-center gap-2 mb-2">
+                  <Icon
+                    className={`text-lg text-green-600`}
+                    aria-hidden="true"
+                  />
+                  <SubTitle subTitle={feature.title} />
+                </div>
+                <p className="text-gray-700 text-sm">{feature.desc}</p>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </section>
   );
 };
 
-export default WhyReadDiploma;
+export default WhyStudyDiploma;

@@ -22,7 +22,7 @@ const Header = () => {
               >
                 <FaPhoneAlt className="border p-1 text-white  text-2xl md:text-xl bg-emerald-700 rounded md:border-0 md:bg-transparent md:text-black md:p-0" />
                 <span className="text-black pr-4 hidden md:block">
-                  01782841671
+                  01793-538282
                 </span>
               </a>
             </div>
@@ -72,10 +72,10 @@ const Header = () => {
             {/* linkedin  */}
             <div>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/square-polytechnic-bogura"
                 target="_blank"
                 className="flex items-center gap-1"
-                title=""
+                title="Go to Linkedin"
               >
                 <FaLinkedin className="text-xl text-blue-800" />
                 <span className="hidden  mr-0 md:mr-2 md:block ">Linkedin</span>

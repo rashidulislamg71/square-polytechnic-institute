@@ -6,27 +6,27 @@ const departmentMenu = [
   {
     id: 1,
     text: "ইলেকট্রিক্যাল",
-    url: "/electrical_page",
+    url: "/electrical",
   },
   {
     id: 2,
     text: "কম্পিউটার",
-    url: "/computer_page",
+    url: "/computer",
   },
   {
     id: 3,
     text: "সিভিল",
-    url: "/civil_page",
+    url: "/civil",
   },
   {
     id: 4,
     text: "টেক্সটাইল",
-    url: "/textile_page",
+    url: "/textile",
   },
   {
     id: 5,
     text: "মেকানিক্যাল",
-    url: "/mechanical_page",
+    url: "/mechanical",
   },
 ];
 const DepartmentMenu = () => {

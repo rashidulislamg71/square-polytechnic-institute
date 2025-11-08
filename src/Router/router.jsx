@@ -59,29 +59,29 @@ const router = createBrowserRouter([
         element: <ContactPage />,
       },
       {
-        path: "/studentCorner",
+        path: "/students-care",
         element: <StudentsCarePage />,
       },
 
       //Depeartment pages
       {
-        path: "/computer_page",
+        path: "/computer",
         element: <ComputerPage />,
       },
       {
-        path: "/electrical_page",
+        path: "/electrical",
         element: <ElectricalPage />,
       },
       {
-        path: "/civil_page",
+        path: "/civil",
         element: <CivilPage />,
       },
       {
-        path: "/textile_page",
+        path: "/textile",
         element: <TextilePage />,
       },
       {
-        path: "/mechanical_page",
+        path: "/mechanical",
         element: <MechanicalPage />,
       },
       {

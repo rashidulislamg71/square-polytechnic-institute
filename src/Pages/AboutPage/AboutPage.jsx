@@ -1,52 +1,61 @@
 import React from "react";
 import HeroSection from "@components/Shared/HeroSection/HeroSection";
-import aboutUsImage from "@assets/images/aboutUs_image/aboutUs.jpeg";
+import aboutUsImage from "@assets/images/aboutUs_image/about-banner.jpg";
 import InstituteFeatures from "@components/Shared/InstituteFeatures/InstituteFeatures";
 import DepartmentMenu from "@components/Shared/DepartmentMenu/DepartmentMenu";
 import InstituteAboutInfo from "@components/SectionComponents/AboutPageSections/InstituteAboutInfo/InstituteAboutInfo";
 import VisionMissionCard from "@components/SectionComponents/AboutPageSections/MissionAndVission/MissionAndVission";
 import LeadersSpeechSection from "@components/SectionComponents/AboutPageSections/LeadersSpeech/LeadersSpeechSection";
 import ScholarshipSection from "@components/Shared/ScholarshipSection/ScholarshipSection";
+import SectionWrapper from "@components/Shared/SectionWrapper/SectionWrapper";
 
 const AboutPage = () => {
   return (
-    <div>
-      {/*Hero Section */}
+    <div className="bg-gray-50">
+      {/* Hero Section */}
       <HeroSection
-        className="bg-top"
+        className="bg-bottom"
         bgImage={aboutUsImage}
         title="About Us"
-        subtitle="জ্ঞান, দক্ষতা, আত্মবিশ্বাস: ভবিষ্যত প্রযুক্তির ভিত্তি।"
+        subtitle=""
         extraText=""
+        overlayColor="bg-black/40"
       />
 
       {/* About Institute Section */}
-      <section className="py-16">
+      <SectionWrapper>
         <InstituteAboutInfo />
-      </section>
+      </SectionWrapper>
 
       {/* Mission & Vision + Features + Leader’s Speech */}
-      <section className="py-16 bg-gray-50 px-4 md:px-10 lg:px-20">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+      <SectionWrapper>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-13 items-start">
           {/* Left Side: Mission & Vision + Features */}
           <div className="lg:col-span-2 space-y-16">
             <VisionMissionCard />
-            <InstituteFeatures />
+          <div className="mt-[-80px] ">
+              <InstituteFeatures />
+          </div>
           </div>
 
           {/* Right Side: Leader’s Speech */}
-          <div className="lg:col-span-1">
+          <aside className="lg:col-span-1 mt-15 md:mt-0">
             <LeadersSpeechSection />
-          </div>
+          </aside>
         </div>
-      </section>
-      <section>
-        <ScholarshipSection />
-      </section>
-      {/*Department Menu Section */}
-      <section className="py-16">
+      </SectionWrapper>
+
+      {/* Scholarship Section */}
+
+      <ScholarshipSection />
+
+      {/*Department Menu */}
+      <SectionWrapper>
+        <h2 className="text-3xl font-bold text-center text-green-800 mb-10">
+          Our Departments
+        </h2>
         <DepartmentMenu />
-      </section>
+      </SectionWrapper>
     </div>
   );
 };

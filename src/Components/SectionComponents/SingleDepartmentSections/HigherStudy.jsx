@@ -15,7 +15,7 @@ function HigherStudySection({ data }) {
   const { title, description, bangladesh, abroad } = data;
 
   return (
-    <section>
+    <section className="px-4">
       {/* Icon & title */}
       <div className="flex flex-col items-center">
         <DepartmentAboutsIcon icon={FaGraduationCap} />
@@ -28,7 +28,7 @@ function HigherStudySection({ data }) {
       </div>
 
       {/* Two Columns */}
-      <div className="flex flex-col md:flex-row gap-8 md:gap-15 mt-10">
+      <div className="flex flex-col md:flex-row gap-8 md:gap-15 mt-8 md:mt-10">
         {/*In bangladesh  */}
         <Card
           icon={FaReadme}

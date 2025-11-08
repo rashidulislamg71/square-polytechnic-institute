@@ -10,8 +10,8 @@ function WhySquarePolytechnicSection({ data }) {
   const { title, points } = data;
 
   return (
-    <section>
-      <div className="flex flex-col items-center md:items-start">
+    <section className="flex flex-col justify-center items-center ">
+      <div className="flex flex-col justify-center items-center ">
         <DepartmentAboutsIcon icon={GiEnlightenment} />
         <TitleUI title={title} />
       </div>

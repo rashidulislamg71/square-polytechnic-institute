@@ -36,19 +36,19 @@ const instituteAboutInfoData = [
 
 function InstituteAboutInfo() {
   return (
-    <div className="px-4 md:px-10 lg:px-20">
+    <div>
       {/* Section Intro */}
       <div className="text-center mb-12">
         <SectionTitle title={"আমাদের সম্পর্কে"} />
         <GeneralParagraphText
           text={
-            " স্কয়ার পলিটেকনিক ইনস্টিটিউট বাংলাদেশের অন্যতম মানসম্মত কারিগরি শিক্ষা প্রতিষ্ঠান। আমরা শিক্ষার্থীদের হাতে-কলমে বাস্তব অভিজ্ঞতা প্রদান করি যাতে তারা দক্ষ পেশাজীবী হিসেবে প্রস্তুত হতে পারে।"
+            " স্কয়ার পলিটেকনিক ইন্সটিটিউট বাংলাদেশের অন্যতম মানসম্মত কারিগরি শিক্ষা প্রতিষ্ঠান। আমরা শিক্ষার্থীদের হাতে-কলমে বাস্তব অভিজ্ঞতা প্রদান করি, যাতে তারা দক্ষ পেশাজীবী হিসেবে প্রস্তুত হতে পারে।"
           }
         />
       </div>
 
       {/* Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
         {instituteAboutInfoData.map((item, index) => (
           <motion.div
             key={index}
@@ -62,7 +62,8 @@ function InstituteAboutInfo() {
               subTitle={item.title}
               description={item.description}
               isDescriptionArray={item.details}
-              parentClassName="w-[350px] lg:w-[380px] h-[220px] border-t-3 border-amber-400"
+              parentClassName="w-[350px] lg:w-[380px] max-h-[240px] md:h-[220px]
+               border-t-3 border-amber-400"
               iconTitleClassName="flex gap-2"
               descriptionClassName="text-[16px] "
             />

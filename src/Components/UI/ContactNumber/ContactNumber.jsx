@@ -4,7 +4,7 @@ import { FaPhone } from "react-icons/fa";
 
 export const AnyContactNumber = ({ number = "", className = "", iconClass = "" }) => {
   return (
-    <div>
+    <div className="flex items-center gap-2" >
       <span className={` ${iconClass}`}>
         <FaPhone />
       </span>

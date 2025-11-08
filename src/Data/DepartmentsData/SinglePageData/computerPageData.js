@@ -1,16 +1,16 @@
 import React from "react";
 
-import computerDetailsPageImg from "@assets/images/Departments_img/computer.png";
+import computerDetailsPageImg from "../../../assets/images/Departments_img/department-banner/computer-banner.png";
 
 const computerDepartmentData = {
   id: "computer",
   title: "কম্পিউটার ইঞ্জিনিয়ারিং",
 
-  // 1️⃣ Hero Section
+  // Hero Section
   heroSection: {
-    title: "ডিজিটাল ভবিষ্যৎ নির্মাণে আপনার প্রযুক্তিগত হাতিয়ার",
+    title: "ডিজিটাল ভবিষ্যৎ নির্মাণে এক মাত্র হাতিয়ার!",
     tagline:
-      "প্রোগ্রামিং, কৃত্রিম বুদ্ধিমত্তা ও সফটওয়্যার ডেভেলপমেন্ট— ভবিষ্যতের দক্ষ আইটি পেশাজীবী হোন আজই!",
+      "প্রোগ্রামিং, কৃত্রিম বুদ্ধিমত্তা ও সফটওয়্যার ডেভেলপমেন্ট— ভবিষ্যতের দক্ষ আইটি পেশাজীবী হতে আজই শুরু হোক কম্পিউটার ইঞ্জিনিয়ারিং শেখা!",
     background: computerDetailsPageImg,
     ctaButtons: [
       {
@@ -37,7 +37,7 @@ const computerDepartmentData = {
     url: "https://www.youtube.com/embed/EWv0ekn9hcw",
   },
 
-  // 3️⃣ Why Choose
+  // Why Choose
   whyChooseThisDepartment: {
     title: "কেন বেছে নেবেন কম্পিউটার ইঞ্জিনিয়ারিং?",
     points: [
@@ -49,7 +49,7 @@ const computerDepartmentData = {
     ],
   },
 
-  // 4️⃣ Career Opportunities
+  // Career Opportunities
   careerOpportunities: {
     title: "ক্যারিয়ার: প্রযুক্তির দুনিয়ায় অফুরন্ত সম্ভাবনা",
     description:
@@ -73,7 +73,7 @@ const computerDepartmentData = {
     },
   },
 
-  // 5️⃣ Industrial Partners
+  // Industrial Partners
   industrialPartners: {
     title: "ইন্ডাস্ট্রিয়াল পার্টনারশিপ ও ইন্টার্নশিপ",
     description:
@@ -85,8 +85,7 @@ const computerDepartmentData = {
       "Local IT Support Centers",
     ],
   },
-
-  // 6️⃣ Higher Study
+  // Higher Study
   higherStudy: {
     title: "উচ্চ শিক্ষা: ডিজিটাল ইনোভেশনের পরবর্তী ধাপ",
     description:
@@ -107,7 +106,7 @@ const computerDepartmentData = {
     },
   },
 
-  // 7️⃣ Entrepreneurship
+  //  Entrepreneurship
   entrepreneurship: {
     title: "নিজস্ব উদ্যোগ: প্রযুক্তিভিত্তিক উদ্যোক্তা হওয়া",
     description:
@@ -119,7 +118,7 @@ const computerDepartmentData = {
     ],
   },
 
-  // 8️⃣ Why Square Polytechnic
+  //  Why Square Polytechnic
   whySquarePolytechnic: {
     title: "কেন স্কয়ার পলিটেকনিকে কম্পিউটার ইঞ্জিনিয়ারিং?",
     points: [
@@ -131,7 +130,7 @@ const computerDepartmentData = {
     ],
   },
 
-  // 9️⃣ FAQ
+  //  FAQ
   faq: {
     title: "সাধারণ জিজ্ঞাসা (FAQ)",
     questions: [

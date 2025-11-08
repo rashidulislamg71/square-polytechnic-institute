@@ -1,13 +1,13 @@
 // electricalDepartmentData_refined.js
 
 import React from "react";
-import electricalBg from "@assets/images/Departments_img/electircal.jpg";
+import electricalBg from "@assets/images/Departments_img/department-banner/electrical-banner.png";
 
 const electricalDepartmentData = {
   id: "electrical",
   title: "ইলেকট্রিক্যাল ইঞ্জিনিয়ারিং",
 
-  // 1️⃣ Hero Section
+  // Hero Section
   heroSection: {
     title: "বিদ্যুৎ প্রযুক্তির দক্ষ হাতে আলোকিত ভবিষ্যৎ",
     tagline:
@@ -19,7 +19,7 @@ const electricalDepartmentData = {
     ],
   },
 
-  // 2️⃣ About Department
+  //  About Department
   aboutDepartment: {
     title: "ইলেকট্রিক্যাল ইঞ্জিনিয়ারিং: শক্তি ও প্রযুক্তির সমন্বয়",
     description: `ইলেকট্রিক্যাল ইঞ্জিনিয়ারিং বিভাগটি বিদ্যুৎ উৎপাদন, সঞ্চালন, বিতরণ এবং ইলেকট্রনিক ডিভাইসের ডিজাইন ও কন্ট্রোল নিয়ে কাজ করে।
@@ -30,7 +30,7 @@ const electricalDepartmentData = {
     url: "https://www.youtube.com/embed/9mDqVZpDytU",
   },
 
-  // 3️⃣ Why Choose This Department
+  // Why Choose This Department
   whyChooseThisDepartment: {
     title: "কেন বেছে নেবেন ইলেকট্রিক্যাল ইঞ্জিনিয়ারিং?",
     points: [
@@ -42,7 +42,7 @@ const electricalDepartmentData = {
     ],
   },
 
-  // 4️⃣ Career Opportunities
+  // Career Opportunities
   careerOpportunities: {
     title: "ক্যারিয়ার: শক্তিশালী ভবিষ্যতের পেশা",
     description:
@@ -66,7 +66,7 @@ const electricalDepartmentData = {
     },
   },
 
-  // 5️⃣ Industrial Partners
+  //Industrial Partners
   industrialPartners: {
     title: "ইন্ডাস্ট্রিয়াল ট্রেনিং ও পার্টনারশিপ",
     description:
@@ -80,7 +80,7 @@ const electricalDepartmentData = {
     ],
   },
 
-  // 6️⃣ Higher Study
+  // Higher Study
   higherStudy: {
     title: "উচ্চ শিক্ষা: প্রযুক্তির গভীরতায়",
     description:
@@ -101,7 +101,7 @@ const electricalDepartmentData = {
     },
   },
 
-  // 7️⃣ Entrepreneurship
+  //  Entrepreneurship
   entrepreneurship: {
     title: "নিজস্ব উদ্যোগে উদ্যোক্তা হওয়ার সুযোগ",
     description:
@@ -113,7 +113,7 @@ const electricalDepartmentData = {
     ],
   },
 
-  // 8️⃣ Why Study at Square Polytechnic
+  //  Why Study at Square Polytechnic
   whySquarePolytechnic: {
     title: "কেন স্কয়ার পলিটেকনিকে ইলেকট্রিক্যাল পড়বেন?",
     points: [
@@ -125,7 +125,7 @@ const electricalDepartmentData = {
     ],
   },
 
-  // 9️⃣ FAQ
+  //  FAQ
   faq: {
     title: "সাধারণ জিজ্ঞাসা (FAQ) ও যোগাযোগ",
     questions: [

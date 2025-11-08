@@ -2,6 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap");
 @import url("https://fonts.cdnfonts.com/css/solaimanlipi");
 
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap");
+
 @layer base {
   *,
   *::before,
@@ -12,7 +16,10 @@
   }
 
   html {
-    font-family: "SolaimanLipi", "Tiro Bangla", Arial, sans-serif;
+    /* font-family: "SolaimanLipi", "Tiro Bangla", Arial, sans-serif; */
+    font-family: "Hind Siliguri", sans-serif;
+    /* font-family: "Tiro Bangla", serif; */
+      scroll-behavior: smooth;
   }
   body {
     max-width: 1535px;

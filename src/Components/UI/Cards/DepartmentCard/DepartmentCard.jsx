@@ -1,46 +1,59 @@
+import React from "react";
 import ActionButton from "@components/UI/ActionButton/ActionButton";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const DepartmentCard = ({ name, shortName, image, description, url }) => {
-  const navigate = useNavigate();
-
-  const handleDepartmentClick = (path) => {
-    navigate(path);
-  };
-
   return (
-    <div className="bg-white md:w-[290px] rounded-md hover:drop-shadow-lg flex flex-col cursor-pointer overflow-hidden">
-      {/* 🔹 Image Click */}
-      <img
-        onClick={() => handleDepartmentClick(url)}
-        src={image}
-        alt={name}
-        className="w-full h-32 object-cover rounded-t-md transform transition-transform duration-500 ease-in-out hover:scale-105"
-      />
+    <article
+      className="group max-w-[290px] bg-white/90 backdrop-blur-md rounded-xl shadow-md 
+                 hover:shadow-2xl border border-gray-100 hover:border-emerald-500 
+                 transform hover:-translate-y-2 transition-all duration-500 
+                 overflow-hidden flex flex-col"
+    >
+      {/* Image Section */}
+      <figure className="relative overflow-hidden">
+        <Link to={url} aria-label={`${name} Department`}>
+          <img
+            src={image}
+            alt={`${name} Department - ${shortName}`}
+            loading="lazy"
+            className="w-full h-40 object-cover rounded-t-xl 
+                       transition-transform duration-700 ease-in-out 
+                       group-hover:scale-110"
+          />
+        </Link>
 
-      <div className="px-4 pb-6 flex-1 flex flex-col justify-between">
-        {/* 🔹 Title & Description Click */}
-        <div
-          onClick={() => handleDepartmentClick(url)}
-          className="cursor-pointer"
-        >
-          <h3 className="text-md font-semibold mt-3">
-            {name} <span className="text-gray-400">({shortName})</span>
-          </h3>
-          <small className="text-sm text-gray-600 mt-1">{description}</small>
-        </div>
+        {/* Overlay Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent"></div>
 
-        {/* 🔹 Button */}
-        <div className="mt-6">
+        {/* Department Title */}
+        <figcaption className="absolute bottom-2 left-4">
+          <Link to={url}>
+            <h2 className="text-white font-bold text-lg drop-shadow-md">
+              {name}{" "}
+              <span className="text-teal-400 font-semibold">({shortName})</span>
+            </h2>
+          </Link>
+        </figcaption>
+      </figure>
+
+      {/* Content Section */}
+      <div className="flex flex-col justify-between flex-1 p-4">
+        <p className="text-gray-700 text-[15px] leading-relaxed line-clamp-3">
+          {description}
+        </p>
+
+        <div className="mt-5">
           <ActionButton
             text="বিস্তারিত পড়ুন..."
-            bg_color="bg-[#27ae60]"
+            bg_color="bg-green-600 hover:bg-green-700"
             link={url}
-            fontSize="text-[14px]"
+            fontSize="text-[15px]"
+            ariaLabel={`Learn more about ${name} Department`}
           />
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

@@ -1,9 +1,12 @@
 
-.logo{
-    width: 65px;
+
+.logo {
+  width: 65px;
+  
 }
 
-b.logo_text{
-    font-size: 18px;
-    font-weight: 500;
+b.logo_text {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(3, 46, 44);
 }

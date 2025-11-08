@@ -1,12 +1,11 @@
-import HomeHeroSlider from "@components/SectionComponents/HomePageSections/HomeHeroSlider/HomeHeroSlider";
-import InstituteFeaturesCard from "@components/UI/Cards/InstituteFeaturesCard/InstituteFeaturesCard";
-import Notice from "@components/SectionComponents/HomePageSections/Notice/Notice";
-import AllDepartment from "@components/Shared/AllDepartment/AllDepartment";
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
+import HomeHeroSlider from "@components/SectionComponents/HomePageSections/HomeHeroSlider/HomeHeroSlider";
+import AllDepartment from "@components/Shared/AllDepartment/AllDepartment";
 import ActionButton from "@components/UI/ActionButton/ActionButton";
 import SectionTitle from "@components/Shared/Titles/SectionTitle/SectionTitle";
 import WhyReadDiploma from "@components/SectionComponents/HomePageSections/WhyReadDiploma/WhyReadDiploma";
-
 import HostelSection from "@components/SectionComponents/HomePageSections/Hostel/Hostel";
 import IndustrialTraining from "@components/Shared/IndustryInternshipTraining/IndustrialTraining";
 import AboutInstituteAndMap from "@components/Shared/AboutInstituteAndMap/AboutInstituteAndMap";
@@ -15,85 +14,114 @@ import InstituteFeatures from "@components/Shared/InstituteFeatures/InstituteFea
 import campusVideo from "@assets/video/spi_campus_video.mp4";
 import ScholarshipSection from "@components/Shared/ScholarshipSection/ScholarshipSection";
 import LocalVideo from "@components/Video/LocalVideo";
-import SectionWrapper from './../../Components/Shared/SectionWrapper/SectionWrapper';
-
+import SectionWrapper from "@components/Shared/SectionWrapper/SectionWrapper";
 
 const HomePage = () => {
   return (
-    <main className="home-page">
+    <main className="home-page bg-gray-50">
+      {/* SEO Helmet */}
+      <Helmet>
+        <title>
+          Square Polytechnic Institute | Government Approved Diploma Engineering
+          Institute
+        </title>
+        <meta
+          name="description"
+          content="Square Polytechnic Institute (Code: 20294 | AIIN: 139309) is a government-approved polytechnic institute located in Garidaha, Sherpur, Bogura. We offer Diploma Engineering programs in Civil, Electrical, Computer, Textile, and Mechanical, along with short courses and scholarships."
+        />
+        <meta
+          name="keywords"
+          content="Square Polytechnic Institute, Polytechnic in Bogura, Diploma Engineering Bangladesh, Civil, Electrical, Computer, Textile, Mechanical, Bogura Polytechnic, Square Institute"
+        />
+        <meta name="author" content="Square Polytechnic Institute" />
+        <meta
+          property="og:title"
+          content="Square Polytechnic Institute | Bogura"
+        />
+        <meta
+          property="og:description"
+          content="One of the best government-approved polytechnic institutes in Bogura offering modern facilities, experienced teachers, hostels, and scholarships."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://squarepolytechnic.edu.bd/" />
+        <meta
+          property="og:image"
+          content="https://squarepolytechnic.edu.bd/assets/images/logo.png"
+        />
+        <link rel="canonical" href="https://squarepolytechnic.edu.bd/" />
+        <meta name="robots" content="index, follow" />
+        <html lang="bn" />
+      </Helmet>
+
       {/* Hero Section */}
       <header className="-mt-10">
         <HomeHeroSlider />
       </header>
 
-      {/* Notice Section */}
-      <section
-        className="px-4 md:px-10 lg:px-20"
-        aria-label="Institute Notices"
-      >
-        <Notice />
-      </section>
+      {/* Why Read Diploma Section */}
+      <SectionWrapper bg="bg-gray-50">
+        <WhyReadDiploma />
+      </SectionWrapper>
 
       {/* Department Section */}
-      <section aria-label="Departments">
-        <AllDepartment />
-      </section>
+      <SectionWrapper>
+        <section aria-label="Departments">
+          <AllDepartment />
+        </section>
+      </SectionWrapper>
 
-      {/* Institute Info  */}
-      <section className="w-full   py-15 bg-white" aria-label="Institute Info">
+      {/* Institute Info & Map */}
+      <section
+        className="w-full mt-12 bg-white py-16"
+        aria-label="Institute Info"
+      >
         <AboutInstituteAndMap />
       </section>
 
       {/* Institute Features */}
-      <section
-        className=" py-16 px-4 md:px-10 lg:px-20 bg-gray-100"
-        aria-label="Institute Features"
-      >
-        <InstituteFeatures />
-        <div className="text-center mt-10 md:mt-15 ">
-          <ActionButton link="features" />
-        </div>
-      </section>
+      <SectionWrapper bg="bg-gray-100">
+        <section aria-label="Institute Features">
+          <InstituteFeatures />
 
-      {/* Campus Video Section */}
-      <section
-        className="px-[15px] lg:px-[50px] py-[60px]"
-        aria-label="Campus Videos"
-      >
-        <SectionTitle title={"এক নজরে ক্যাম্পাস ট্যুর"} />
+          {/* <div className="text-center mt-10 md:mt-14">
+            <ActionButton link="/about" text="আরও পড়ুন..." />
+          </div> */}
+        </section>
+      </SectionWrapper>
 
-        {/* Local Video */}
-        <div className="mt-12">
-          <LocalVideo
-            src={campusVideo}
-            title="Campus Tour Video"
-            controls
-            poster=""
-            
-          />
-        </div>
-      </section>
+      {/* Campus Tour Video */}
+      <SectionWrapper>
+        <section aria-label="Campus Tour">
+          <SectionTitle title="এক নজরে ক্যাম্পাস ট্যুর" />
+          <div className="mt-12">
+            <LocalVideo
+              src={campusVideo}
+              title="Campus Tour Video"
+              controls
+              height=""
+              className="rounded-xl shadow-lg overflow-hidden"
+            />
+          </div>
+        </section>
+      </SectionWrapper>
 
-      <section>
-        <ScholarshipSection />
-      </section>
+      {/* Scholarship Section */}
+      <ScholarshipSection />
 
       {/* Hostel Section */}
-      <section>
+      <SectionWrapper bg="bg-gray-100">
         <HostelSection />
-      </section>
-      {/* Industrial Training and Internship */}
-      <SectionWrapper>
+      </SectionWrapper>
+
+      {/* Industrial Training Section */}
+      <SectionWrapper bg="bg-white">
         <IndustrialTraining />
       </SectionWrapper>
 
-      {/* Why Read Diploma */}
-      <section className="px-[15px] bg-gray-100" aria-label="Why Read Diploma">
-        <WhyReadDiploma />
+      {/* Student Testimonials */}
+      <section aria-label="testimonial">
+        <StudentsTestimonialSection />
       </section>
-
-      {/* Student Testimonial */}
-      <StudentsTestimonialSection />
     </main>
   );
 };

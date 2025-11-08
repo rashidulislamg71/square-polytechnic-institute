@@ -84,8 +84,8 @@ const NavBar = ({ show }) => {
                       to={item.link}
                       className={({ isActive }) =>
                         isActive
-                          ? "text-[#25755c] flex items-center gap-1"
-                          : "text-black hover:text-[#1f8383] flex items-center gap-1"
+                          ? "text-green-700 flex items-center gap-1"
+                          : "text-black hover:text-green-700 flex items-center gap-1 "
                       }
                     >
                       <p>{item.text}</p>
@@ -105,7 +105,7 @@ const NavBar = ({ show }) => {
                           >
                             <NavLink
                               to={sub.link}
-                              className="text-black hover:text-[#1f8383] block"
+                              className="text-black hover:text-green-700 block"
                             >
                               {sub.text}
                             </NavLink>
@@ -182,7 +182,7 @@ const NavBar = ({ show }) => {
                         >
                           <NavLink
                             to={sub.link}
-                            className="text-black hover:text-[#00df9a] block"
+                            className="text-black hover:text-green-700 block"
                             onClick={() => setOpenMenu(false)}
                           >
                             {sub.text}

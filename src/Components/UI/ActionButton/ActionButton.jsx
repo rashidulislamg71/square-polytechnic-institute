@@ -6,6 +6,7 @@ const ActionButton = ({
   link,
   bg_color = "bg-[#00a63e]",
   fontSize = "text-[17px]",
+  padding = " px-[20px] "
 }) => {
   return (
     <Link
@@ -18,7 +19,9 @@ const ActionButton = ({
         py-1.5
         px-4
         ${fontSize}
+        ${padding}
         text-white
+   
         rounded
         cursor-pointer
         transition

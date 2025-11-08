@@ -2,10 +2,6 @@ import React, { useState } from "react";
 import StudentsTestimonialCard from "./TestimonialCard";
 import "./testimonial.css";
 
-import student1 from "@assets/images/StudentTestimonial/student1.jpeg";
-import student2 from "@assets/images/StudentTestimonial/student2.jpeg";
-import student3 from "@assets/images/StudentTestimonial/student.jpeg";
-
 import studntTestimonialsData from "@data/TestimonialJsonData/studentsData";
 
 import Lightbox from "yet-another-react-lightbox";
@@ -13,11 +9,7 @@ import Captions from "yet-another-react-lightbox/plugins/captions";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import Share from "yet-another-react-lightbox/plugins/share";
 
-const images = {
-  "student1.jpeg": student1,
-  "student2.jpeg": student2,
-  "student3.jpeg": student3,
-};
+const images = "https://placehold.co/400";
 
 function StudentsTestimonial() {
   const testimonials = studntTestimonialsData || [];
@@ -60,7 +52,7 @@ function StudentsTestimonial() {
         </ul>
       </div>
 
-      {/* 🔹 Lightbox */}
+      {/*Lightbox */}
       <Lightbox
         open={lightboxOpen}
         index={currentIndex}

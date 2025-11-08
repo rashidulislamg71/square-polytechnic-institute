@@ -4,7 +4,7 @@ import PeragraphText from "@components/Shared/PeragraphText/PeragraphText";
 import SubTitle from "@components/Shared/Titles/SubTitle/SubTitle";
 import GeneralList from "@components/UI/GeneralList/GeneralList";
 import SectionTitle from "@components/Shared/Titles/SectionTitle/SectionTitle";
-import careerAndHigherEdu_img from "@assets/images/Departments_img/career_and_higher_education_img.jpg";
+import careerAndHigherEdu_img from "@assets/images/Departments_img/career_and_higher_education_img.png";
 import { SingleBigImage } from "@components/UI/GeneralImage/GeneralImage";
 
 // Static data for the section
@@ -23,11 +23,11 @@ const careerAndHigherStudyData = {
   ],
   // Departments list for links
   departments: [
-    { name: "Civil", link: "/civil_page" },
-    { name: "Electrical", link: "/electrical_page" },
-    { name: "Computer", link: "/computer_page" },
-    { name: "Textile", link: "/textile_page" },
-    { name: "Mechanical", link: "/mechanical_page" },
+    { name: "Civil", link: "/civil" },
+    { name: "Electrical", link: "/electrical" },
+    { name: "Computer", link: "/computer" },
+    { name: "Textile", link: "/textile" },
+    { name: "Mechanical", link: "/mechanical" },
   ],
 };
 
@@ -35,7 +35,7 @@ const CareerAndHigherStudy = () => {
   const data = careerAndHigherStudyData;
 
   return (
-    <section className="bg-white">
+    <section className="bg-[#f8f7f3] py-15 px-4 md:px-10 lg:px-20">
       {/* Section Title */}
       <SectionTitle title={data.sectionTitle} />
 

@@ -12,7 +12,7 @@ function IndustrialPartners({ data }) {
   const { title, description, companies } = data;
   return (
     <section>
-      <div className="flex flex-col items-center text-center md:py-10 md:bg-green-50">
+      <div className="flex flex-col items-center text-center md:py-15 md:bg-green-50">
         {/* Icon Title*/}
         <DepartmentAboutsIcon icon={FaHandshake} />
         <TitleUI title={title} />

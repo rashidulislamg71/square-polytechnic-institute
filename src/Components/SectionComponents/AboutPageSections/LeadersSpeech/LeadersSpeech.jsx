@@ -1,60 +1,86 @@
-
 import React from "react";
 import Modal from "@components/UI/ModalPopup/Modal";
 import { useModal } from "@hooks/useModal";
+import { getShortText } from "../../../utils/textShowControlUtils";
 
-const LeadersSpeech = ({ leader, previewWords = 30 }) => {
+const placeholderImg =
+  "https://via.placeholder.com/400x250.png?text=No+Image+Available";
+
+const LeadersSpeech = ({ leader }) => {
   const { isOpen, openModal, closeModal } = useModal();
-
-  const words = leader.speech.split(" ");
-  const showReadMore = words.length > previewWords;
-  const shortText = words.slice(0, previewWords).join(" ");
+  const { shortText, isLong } = getShortText(leader.speech, 30);
 
   return (
     <>
-      <div className="text-center bg-white p-2 md:p-4">
-        {leader.image && (
+      {/* Card Section */}
+      <div
+        className="bg-white rounded-xl shadow-sm hover:shadow-xl overflow-hidden 
+        transition-all duration-500 border border-gray-100 hover:border-green-300 group"
+      >
+        {/* Image Section */}
+        <div className="relative h-[200px] w-full overflow-hidden rounded-t-xl">
           <img
-            src={leader.image}
-            alt={leader.name}
-            className="h-[160px] w-[250px] mx-auto rounded mb-4 object-cover"
+            src={leader.image || placeholderImg}
+            alt={leader.name || "Leader"}
+            loading="lazy"
+            className="h-full w-full object-cover group-hover:scale-105
+             transition-transform duration-700"
           />
-        )}
-        <div>
-          <h3 className="font-semibold mt-[-10px]">{leader.title}</h3>
-          <p className="text-sm text-gray-700">{leader.name}</p>
+          {/* Overlay Gradient */}
+          <div
+            className="absolute inset-0 bg-gradient-to-t from-black/40 
+          to-transparent"
+          ></div>
         </div>
-        <p className="text-xs italic border-t-2 border-orange-400 text-gray-600 mt-2 text-justify pt-1">
-          {showReadMore ? (
-            <>
-              {shortText}...
-              <button
-                onClick={openModal}
-                className="ml-2 text-blue-500 underline hover:text-blue-700"
-              >
-                আরও পড়ুন
-              </button>
-            </>
-          ) : (
-            leader.speech
-          )}
-        </p>
+
+        {/* Content */}
+        <div className="p-5 text-center">
+          <h3 className="text-green-800 font-semibold text-lg md:text-xl mb-1">
+            {leader.title}
+          </h3>
+          <p className="text-gray-800 font-bold text-base md:text-lg mb-3">
+            {leader.name}
+          </p>
+
+          <p
+            className="text-[15px] text-gray-700 italic text-left border-t
+             border-orange-400 pt-3"
+          >
+            {isLong ? (
+              <>
+                {shortText}...
+                <button
+                  onClick={openModal}
+                  className="ml-2 text-blue-500 font-medium hover:text-blue-700
+                   underline transition-colors"
+                >
+                  আরও পড়ুন
+                </button>
+              </>
+            ) : (
+              leader.speech
+            )}
+          </p>
+        </div>
       </div>
 
-      {/* Animated Modal */}
+      {/* Modal Popup */}
       <Modal isOpen={isOpen} onClose={closeModal}>
-        {leader.image && (
+        <div className="text-center px-4">
           <img
-            src={leader.image}
+            src={leader.image || placeholderImg}
             alt={leader.name}
-            className="w-40 h-40 mx-auto rounded-full object-cover border-4 border-gray-200 mb-4"
+            className="w-36 h-36 mx-auto rounded-full border-4 border-green-200 shadow-md mb-4 object-cover"
           />
-        )}
-        <h3 className="text-xl font-bold text-center mb-2">{leader.title}</h3>
-        <p className="text-center font-medium text-gray-700 mb-4">
-          {leader.name}
-        </p>
-        <p className="text-gray-600 whitespace-pre-line">{leader.speech}</p>
+
+          <h3 className="text-xl font-bold text-green-900 mb-1">
+            {leader.title}
+          </h3>
+          <p className="font-medium text-gray-700 mb-4">{leader.name}</p>
+          <p className="text-gray-600 leading-relaxed whitespace-pre-line text-justify">
+            {leader.speech}
+          </p>
+        </div>
       </Modal>
     </>
   );

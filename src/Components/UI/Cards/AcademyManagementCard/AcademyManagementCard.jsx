@@ -5,23 +5,23 @@ import { AnyContactNumber } from "@components/UI/ContactNumber/ContactNumber";
 
 const AcademyManagementCard = ({ image, name, designation, phone, email }) => {
   return (
-    <div className="flex items-center gap-1 text-left bg-green-100 rounded max-w-md p-4 shadow-md mb-4">
+    <div className="w-[350px] bg-green-200 p-6 rounded ">
       <div>
-        <img
+        {/* <img
           src={image}
           alt={name}
-          className="w-24 h-24 mx-auto rounded-full object-cover border-4 border-gray-100 shadow"
-        />
+          className="w-[100px] h- object-cover border-4 border-gray-100 shadow"
+        /> */}
       </div>
       <div>
-        <div>
+        <div className="border-b-1 border-gray-300 w-full mb-3">
           <h3 className=" font-semibold text-gray-800">{name}</h3>
-          <p className="text-gray-500">{designation}</p>
+          <p className="text-gray-700">{designation}</p>
         </div>
 
-        <div className="text-gray-600 text-[15px] space-y-1">
-          <AnyContactNumber number={phone} className="text-[14px]" iconClass = "text-[14px]" />
-          <AnyEmail email={email} className="text-[14px]" iconClass="text-[14px] "  />
+        <div className="text-gray-700 text-[15px] space-y-1">
+          <AnyContactNumber number={phone} />
+          <AnyEmail email={email} />
         </div>
       </div>
     </div>

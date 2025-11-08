@@ -1,5 +1,5 @@
 import React from "react";
-import textileBg from "@assets/images/Departments_img/textile.jpeg";
+import textileBg from "@assets/images/Departments_img/department-banner/textile-banner.png";
 
 const textileDepartmentData = {
   id: "textile",
@@ -8,7 +8,7 @@ const textileDepartmentData = {
   heroSection: {
     title: "ফ্যাশন ও শিল্পে টেক্সটাইল ইঞ্জিনিয়ারিং-এর বিপ্লব",
     tagline:
-      "দেশের রপ্তানি শিল্পের প্রাণকেন্দ্র — হোন একজন দক্ষ টেক্সটাইল ইঞ্জিনিয়ার!",
+      "দেশের রপ্তানি শিল্পের প্রাণকেন্দ্র — হতে একজন দক্ষ টেক্সটাইল ইঞ্জিনিয়ার!",
     background: textileBg,
     ctaButtons: [
       { text: "সরাসরি ভর্তি হোন", link: "/admission", btnBgColor: "bg-green-600" },

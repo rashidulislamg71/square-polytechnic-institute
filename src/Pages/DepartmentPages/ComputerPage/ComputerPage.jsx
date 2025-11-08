@@ -12,7 +12,8 @@ import HigherStudySection from "@components/SectionComponents/SingleDepartmentSe
 import WhySquarePolytechnicSection from "@components/SectionComponents/SingleDepartmentSections/WhySquarePolytechnicSection";
 import AdmissionInfo from "@components/Shared/AdmissionInfo/AdmissionInfo";
 import DepartmentMenu from "@components/Shared/DepartmentMenu/DepartmentMenu";
-import SectionWrapper from './../../../Components/Shared/SectionWrapper/SectionWrapper';
+import SectionWrapper from "./../../../Components/Shared/SectionWrapper/SectionWrapper";
+import ActionButton from "../../../Components/UI/ActionButton/ActionButton";
 
 const ComputerPage = () => {
   const {
@@ -48,15 +49,19 @@ const ComputerPage = () => {
         <IndustrialPartners data={industrialPartners} />
       </SectionWrapper>
 
-      <SectionWrapper>
+      <section className="pb-20">
         <HigherStudySection data={higherStudy} />
-        <EntrepreneurshipSection data={entrepreneurship} />
-      </SectionWrapper>
-      <SectionWrapper>
-        <WhySquarePolytechnicSection data={whySquarePolytechnic} />
-      </SectionWrapper>
-      <AdmissionInfo />
+      </section>
+      <EntrepreneurshipSection data={entrepreneurship} />
 
+      <section className="pt-20">
+        <WhySquarePolytechnicSection data={whySquarePolytechnic} />
+      </section>
+
+      <div className="flex justify-center flex-col items-center mb-15">
+        <AdmissionInfo />
+        <ActionButton link={"/admission"} text={"Apply Now"} />
+      </div>
       <div className="py-10">
         <DepartmentMenu />
       </div>
