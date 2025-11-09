@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { VscChromeClose } from "react-icons/vsc";
-import SPILogo from "../../UI/SPILogo/SPILogo";
+import SPILogo from "@components/UI/SPILogo/SPILogo";
 import Header from "../Header/Header";
 
 // React Icons

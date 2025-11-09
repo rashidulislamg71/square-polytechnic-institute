@@ -1,10 +1,9 @@
 // src/components/Footer/Footer.js
 import React from "react";
-import Logo from "../../UI/SPILogo/SPILogo";
+import Logo from "@components/UI/SPILogo/SPILogo";
 import { FixedNumbers } from "../../UI/ContactNumber/ContactNumber";
 import { FixedEmail } from "../../UI/Email/Email";
 import { SocialIcons } from "../../Icons/SocialMediaIcons/SocialMediaIcons";
-import { FaEnvelope } from "react-icons/fa";
 import FooterLink from "../../UI/FooterLink/FooterLink";
 import { InstituteAddress } from "../../UI/InstituteAddress/InstituteAddress";
 import { FaLocationDot } from "react-icons/fa6";
