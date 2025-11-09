@@ -19,7 +19,7 @@ import SectionWrapper from "@components/Shared/SectionWrapper/SectionWrapper";
 const HomePage = () => {
   return (
     <main className="home-page bg-gray-50">
-      {/* SEO Helmet */}
+      {/* SEO Helmet meta tags */}
       <Helmet>
         <title>
           Square Polytechnic Institute | Government Approved Diploma Engineering

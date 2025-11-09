@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
@@ -8,25 +7,30 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import ActionButton from "@components/UI/ActionButton/ActionButton";
 
-const HeroSlider = ({ slides, className = "" }) => {
+const HeroSlider = ({ slides, imagePosition = "bg-center", className = "" }) => {
+
+
   return (
     <div className={`w-full relative ${className}`}>
       <Swiper
         loop={true}
         speed={1000}
         autoplay={{
-          delay: 3000, // 3s
+          delay: 3000,
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
-        navigation={true}
+        navigation={{
+          nextEl: ".custom-next",
+          prevEl: ".custom-prev",
+        }}
         modules={[Autoplay, Navigation]}
         className="mySwiper"
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <div
-              className="relative h-[40vh] sm:h-[50vh] md:h-[70vh] lg:h-[80vh] flex items-center justify-center bg-cover bg-center"
+              className= {`relative h-[40vh] sm:h-[50vh] md:h-[70vh] lg:h-[80vh] flex items-center justify-center bg-cover  ${imagePosition}`}
               style={{ backgroundImage: `url(${slide.image})` }}
             >
               <div className="absolute inset-0 bg-black/20"></div>
@@ -42,6 +46,12 @@ const HeroSlider = ({ slides, className = "" }) => {
             </div>
           </SwiperSlide>
         ))}
+        <div className="custom-prev absolute top-1/2 left-5 z-10 -translate-y-1/2 bg-black/40 text-white p-3 rounded-full cursor-pointer hover:bg-black/60 transition">
+          ❮
+        </div>
+        <div className="custom-next absolute top-1/2 right-5 z-10 -translate-y-1/2 bg-black/40 text-white p-3 rounded-full cursor-pointer hover:bg-black/60 transition">
+          ❯
+        </div>
       </Swiper>
     </div>
   );

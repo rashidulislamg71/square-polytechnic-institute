@@ -8,7 +8,7 @@ import AcademyManagementCard from "@components/UI/Cards/AcademyManagementCard/Ac
 import GoogleMap from "@components/Shared/GoogleMap/GoogleMap";
 import { FixedEmail } from "@components/UI/Email/Email";
 
-import Img from "@assets/images/2.jpg";
+
 import heroImg from "../../assets/images/Contact-page-img/স্কয়ার পলিটেকনিক ইন্সটিটিউট.png";
 import vicePrincipal from "../../assets/images/aboutUs_image/leaders_image/asfakur-rahman-square-polytechnic-bogura.jpg";
 import principal from "../../assets/images/aboutUs_image/leaders_image/sm-mehedi-hassn-principal-square-polytechnic-bogura.jpg";
@@ -19,7 +19,7 @@ const managementTeam = [
     designation: "Accountant",
     phone: "01849-267660",
     email: "jrashidulislam0103@gmail.com",
-    image: Img,
+    image: null,
   },
   {
     name: "Engr. S. M. Mehedi Hasan",
