@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import SectionTitle from "../../Components/Shared/Titles/SectionTitle/SectionTitle";
-import FilterButton from "../../Components/UI/FilterButton/FilterButton";
 import studntTestimonialsData from "../../Data/TestimonialJsonData/studentsData";
 import useFetchingData from "../../hooks/useFetchData";
 import Loader from "../../Components/UI/Loader/Loader";

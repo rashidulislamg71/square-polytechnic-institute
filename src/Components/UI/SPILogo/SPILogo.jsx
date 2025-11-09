@@ -1,5 +1,5 @@
 import React from 'react';
-import spi_logo from "/public/images/SPI_Logo.png";
+import spi_logo from "/images/SPI_Logo.png";
 import styles from "./SPILogo.module.css";
 import { Link } from 'react-router-dom';
 

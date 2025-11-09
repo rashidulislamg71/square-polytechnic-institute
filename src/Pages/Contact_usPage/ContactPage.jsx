@@ -38,8 +38,6 @@ const managementTeam = [
 const ContactPage = () => {
   return (
     <main className="bg-gray-50">
-      {/* SEO tags */}
-
       {/* Hero Section */}
       <HeroSection title="যোগাযোগ করুন" bgImage={heroImg} />
 
