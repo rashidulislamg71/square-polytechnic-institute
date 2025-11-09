@@ -52,7 +52,7 @@ const AllDepartment = () => {
       </div>
 
       {/* Department Cards */}
-      <div className="flex flex-wrap gap-6 justify-center mt-10">
+      <div className="flex flex-wrap gap-8 md:gap-15 justify-center mt-10">
         {data.map((dept) => (
           <article key={dept.id} aria-label={`${dept.name} Department`}>
             <DepartmentCard

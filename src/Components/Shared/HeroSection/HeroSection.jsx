@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
 import ActionButton from "@components/UI/ActionButton/ActionButton";
 
 const HeroSection = ({
@@ -15,11 +14,7 @@ const HeroSection = ({
   position = "bg-center",
   overlay = true,
   className = "",
-  seo = {
-    title: "",
-    description: "",
-    keywords: "",
-  },
+
 }) => {
   // Dynamic alignment class
   const textAlignClass =
@@ -37,15 +32,6 @@ const HeroSection = ({
         backgroundSize: "cover",
       }}
     >
-      {/* Helmet for SEO */}
-      <Helmet>
-        <title>{seo.title || title}</title>
-        {seo.description && (
-          <meta name="description" content={seo.description} />
-        )}
-        {seo.keywords && <meta name="keywords" content={seo.keywords} />}
-      </Helmet>
-
       {/* Overlay */}
       {overlay && (
         <div
@@ -65,17 +51,17 @@ const HeroSection = ({
 
         {/* Subtitle */}
         {subtitle && (
-          <h2 className="text-lg sm:text-xl md:text-2xl
-          font-medium mb-3 md:mb-5 opacity-90">
+          <h2
+            className="text-lg sm:text-xl md:text-2xl
+          font-medium mb-3 md:mb-5 opacity-90"
+          >
             {subtitle}
           </h2>
         )}
 
         {/* Extra Text */}
         {extraText && (
-          <p className=" text-lg  max-w-[700px] leading-relaxed">
-            {extraText}
-          </p>
+          <p className=" text-lg  max-w-[700px] leading-relaxed">{extraText}</p>
         )}
 
         {/* Buttons */}

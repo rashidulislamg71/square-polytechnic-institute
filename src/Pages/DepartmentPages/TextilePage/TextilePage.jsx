@@ -49,9 +49,11 @@ const TextilePage = () => {
         <CareerOpportunities data={careerOpportunities} />
         <IndustrialPartners data={industrialPartners} />
       </SectionWrapper>
-      <section className="pb-20">
-        <HigherStudySection data={higherStudy} />
-      </section>
+      <SectionWrapper>
+        <section className="pb-20">
+          <HigherStudySection data={higherStudy} />
+        </section>
+      </SectionWrapper>
       <EntrepreneurshipSection data={entrepreneurship} />
 
       <section className="pt-20">

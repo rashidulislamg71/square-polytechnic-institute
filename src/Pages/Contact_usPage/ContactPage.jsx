@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
 import { FaEnvelope, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 import HeroSection from "@components/Shared/HeroSection/HeroSection";
 import CoontentTitle from "@components/Shared/Titles/SectionTitle/SectionTitle";
@@ -7,7 +6,6 @@ import { SocialIconAndName } from "@components/Icons/SocialMediaIcons/SocialMedi
 import AcademyManagementCard from "@components/UI/Cards/AcademyManagementCard/AcademyManagementCard";
 import GoogleMap from "@components/Shared/GoogleMap/GoogleMap";
 import { FixedEmail } from "@components/UI/Email/Email";
-
 
 import heroImg from "../../assets/images/Contact-page-img/স্কয়ার পলিটেকনিক ইন্সটিটিউট.png";
 import vicePrincipal from "../../assets/images/aboutUs_image/leaders_image/asfakur-rahman-square-polytechnic-bogura.jpg";
@@ -41,24 +39,9 @@ const ContactPage = () => {
   return (
     <main className="bg-gray-50">
       {/* SEO tags */}
-      <Helmet>
-        <title>যোগাযোগ করুন | Square Polytechnic Institute</title>
-        <meta
-          name="description"
-          content="Square Polytechnic Institute, Garidaha, Sherpur, Bogura — ভর্তি, কোর্স বা প্রশাসনিক তথ্যের জন্য যোগাযোগ করুন। ফোন: 01719-043487, ইমেইল: info@squarepoly.com।"
-        />
-        <meta
-          name="keywords"
-          content="Square Polytechnic Institute, Contact, Bogura Polytechnic, Sherpur Polytechnic, Admission, Engineering College, Diploma in Engineering"
-        />
-        <link rel="canonical" href="https://squarepoly.com/contact" />
-      </Helmet>
 
       {/* Hero Section */}
-      <HeroSection
-        title="যোগাযোগ করুন"
-        bgImage={heroImg}
-      />
+      <HeroSection title="যোগাযোগ করুন" bgImage={heroImg} />
 
       <div className="max-w-7xl mx-auto py-12 px-4 space-y-20">
         {/*Office Contact Section */}
@@ -68,7 +51,8 @@ const ContactPage = () => {
         >
           <CoontentTitle title="অফিস যোগাযোগ" />
           <p className="max-w-2xl mx-auto text-gray-600">
-           আপনার জিজ্ঞাসা, মতামত বা ভর্তি সংক্রান্ত তথ্যের জন্য আমাদের সাথে যোগাযোগ করুন। 
+            আপনার জিজ্ঞাসা, মতামত বা ভর্তি সংক্রান্ত তথ্যের জন্য আমাদের সাথে
+            যোগাযোগ করুন।
             <br />
             Square Polytechnic Institute সর্বদা আপনার পাশে।
           </p>

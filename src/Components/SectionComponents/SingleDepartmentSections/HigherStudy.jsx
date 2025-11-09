@@ -28,7 +28,7 @@ function HigherStudySection({ data }) {
       </div>
 
       {/* Two Columns */}
-      <div className="flex flex-col md:flex-row gap-8 md:gap-15 mt-8 md:mt-10">
+      <div className="flex flex-col md:justify-between md:flex-row gap-8 md:gap-20 mt-8 md:mt-10">
         {/*In bangladesh  */}
         <Card
           icon={FaReadme}

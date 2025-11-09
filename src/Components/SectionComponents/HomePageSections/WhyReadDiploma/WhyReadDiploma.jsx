@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
 import {
   diplomaIntro,
   diplomaFeatures,
@@ -11,20 +10,6 @@ import SubTitle from "./../../../Shared/Titles/SubTitle/SubTitle";
 const WhyStudyDiploma = () => {
   return (
     <section className="relative">
-      <Helmet>
-        <title>
-          কেন পড়বেন ডিপ্লোমা ইন ইঞ্জিনিয়ারিং | Square Polytechnic Institute
-        </title>
-        <meta
-          name="description"
-          content="ডিপ্লোমা ইন ইঞ্জিনিয়ারিং এর মাধ্যমে হাতে-কলমে শিক্ষা, দ্রুত দক্ষতা অর্জন, চাকরির সুযোগ, বিদেশে কর্মসংস্থান এবং উদ্যোক্তা হওয়ার সুযোগ।"
-        />
-        <meta
-          name="keywords"
-          content="ডিপ্লোমা ইন ইঞ্জিনিয়ারিং, কারিগরি শিক্ষা, চাকরি, দক্ষতা, উদ্যোক্তা"
-        />
-      </Helmet>
-
       <div className="container mx-auto">
         {/* Section Header */}
         <header className="text-center mb-12" data-aos="fade-down">

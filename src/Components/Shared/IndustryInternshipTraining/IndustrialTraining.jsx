@@ -3,7 +3,6 @@ import SectionTitle from "@components/Shared/Titles/SectionTitle/SectionTitle";
 import PeragraphText from "@components/Shared/PeragraphText/PeragraphText";
 import industrialTrainingImg from "@assets/images/Industral-training.png";
 import { SingleBigImage } from "@components/UI/GeneralImage/GeneralImage";
-import { Helmet } from "react-helmet-async";
 import { FaCheckCircle } from "react-icons/fa";
 // Data array
 const trainingData = {
@@ -19,7 +18,6 @@ const trainingData = {
 };
 
 const IndustrialTraining = () => {
-
   const imageLoadControl = industrialTrainingImg || null;
 
   return (
@@ -28,22 +26,6 @@ const IndustrialTraining = () => {
       itemScope
       itemType="https://schema.org/EducationalOrganization"
     >
-      {/* SEO meta tags */}
-      <Helmet>
-        <title>
-          শিল্প প্রশিক্ষণ ও ইন্টার্নশিপ | Square Polytechnic Institute
-        </title>
-        <meta
-          name="description"
-          content="স্কয়ার পলিটেকনিক ইন্সটিটিউট শিক্ষার্থীদের জন্য বাস্তবভিত্তিক শিল্প প্রশিক্ষণ এবং ইন্টার্নশিপের সুযোগ প্রদান করে। শিক্ষার্থীরা প্রজেক্ট ভিত্তিক কাজ ও বাস্তব অভিজ্ঞতা অর্জন করে।"
-        />
-        <meta
-          name="keywords"
-          content="Industrial Training, Internship, Square Polytechnic Institute, স্কয়ার পলিটেকনিক, শিক্ষার্থীদের প্রশিক্ষণ, Industrial Internship"
-        />
-        <link rel="canonical" href="https://square.edu.bd/#internship" />
-      </Helmet>
-
       {/* Section Title */}
       <div className="text-center">
         <SectionTitle title="শিল্প প্রশিক্ষণ ও ইন্টার্নশিপ" />
