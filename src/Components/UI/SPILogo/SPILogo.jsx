@@ -1,4 +1,5 @@
 import React from "react";
+import Logo from "../../../assets/images/Logo/SPI_Logo.png";
 import styles from "./SPILogo.module.css";
 import { Link } from "react-router-dom";
 
@@ -7,7 +8,7 @@ const SPILogo = () => {
     <Link to="/" className="flex items-center gap-1">
       <img
         className={`${styles.logo}`}
-        src="./images/SPI_Logo.png"
+        src={Logo}
         alt="Square Polytechnic institute Logo"
       />
       <h3>

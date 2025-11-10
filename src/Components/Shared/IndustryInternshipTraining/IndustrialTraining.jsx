@@ -25,7 +25,6 @@ const IndustrialTraining = () => {
       id="internship"
       itemScope
       itemType="https://schema.org/EducationalOrganization"
-      className="py-10 md:py-15 md:px-10 lg:px-20"
     >
       {/* Section Title */}
       <div className="text-center">
