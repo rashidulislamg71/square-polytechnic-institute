@@ -6,7 +6,7 @@ import ActionButton from "@components/UI/ActionButton/ActionButton";
 
 function StudentsTestimonialSection() {
   return (
-    <section className="py-15 bg-white" aria-label="Students Testimonial">
+    <section className="py-15 bg-white mb-[-60px] " aria-label="Students Testimonial">
       <SectionTitle title={"শিক্ষার্থীদের মতামত"} />
       <div className="mb-10 px-4">
         <GeneralParagraphText

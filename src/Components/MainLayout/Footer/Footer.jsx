@@ -93,10 +93,11 @@ const Footer = () => {
 
         {/* Social Media Section */}
         <div className="flex flex-col items-center w-full sm:w-auto">
-          <h3 className="text-xl font-semibold text-green-600 mb-5 border-b border-gray-700 pb-2 inline-block">
+          <h3 className="text-xl font-semibold text-green-600 mb-5 border-b
+           border-gray-700 pb-2 inline-block">
             Follow Us
           </h3>
-          <div className="flex flex-wrap gap-4 mt-4 text-lg text-green-400 hover:text-green-300 transition">
+          <div className="flex flex-wrap gap-3 mt-4 text-lg text-green-400 hover:text-green-300 transition">
             <SocialIcons />
           </div>
         </div>

@@ -1,9 +1,9 @@
 import React from "react";
 
-const SubTitle = ({ subTitle, color = "text-[#122436]", className = "text-lg " }) => {
+const SubTitle = ({ subTitle, color = "text-teal-950", className = "text-xl " }) => {
   return (
     <h3
-      className={`font-semibold ${color} ${className}`}
+      className={`font-semibold  ${color}  ${className}`}
     >
       {subTitle}
     </h3>

@@ -21,8 +21,8 @@ const DepartmentPage = () => {
       {/* Hero Section */}
       <section>
         <HeroSection
-          title="আমাদের ডিপার্টমেন্ট"
-          extraText="আমাদের ইন্সটিটিউটে বর্তমানে ৫টি বিভাগ চালু আছে। প্রতিটি বিভাগেই রয়েছে আধুনিক ল্যাব, দক্ষ শিক্ষক, এবং হাতে-কলমে শিক্ষা।"
+          title="আমাদের ডিপার্টমেন্ট সমূহ"
+          extraText="আমাদের ইন্সটিটিউটে বর্তমানে ৫টি বিভাগ রয়েছে। প্রতিটি বিভাগেই রয়েছে আধুনিক ল্যাব, দক্ষ শিক্ষক, এবং হাতে-কলমে শিক্ষার ব্যবস্থা।"
           bgImage={deptHero}
         />
       </section>
@@ -33,22 +33,20 @@ const DepartmentPage = () => {
       </SectionWrapper>
 
       {/* Lab Facilities */}
-      <section>
-        <div className="pt-16 mb-[-50px]">
+      <SectionWrapper>
+        <div className=" mb-[-10px]">
           <SectionTitle title="আমাদের ল্যাব ফেসিলিটি" />
         </div>
-        <LabInfoParents />
-      </section>
+        
+          <LabInfoParents />
+ 
+      </SectionWrapper>
 
       {/* Syllabus Section */}
-      <section>
-        <AboutSyllabus />
-      </section>
+      <AboutSyllabus />
 
       {/*Industrial Training Section */}
-      <SectionWrapper>
-        <IndustrialTraining />
-      </SectionWrapper>
+      <IndustrialTraining />
 
       {/*Career & Higher Study Section */}
       <CareerAndHigherStudy />

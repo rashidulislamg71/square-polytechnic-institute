@@ -25,6 +25,7 @@ const IndustrialTraining = () => {
       id="internship"
       itemScope
       itemType="https://schema.org/EducationalOrganization"
+      className="py-10 md:py-15 md:px-10 lg:px-20"
     >
       {/* Section Title */}
       <div className="text-center">
@@ -34,7 +35,7 @@ const IndustrialTraining = () => {
       {/* Flex Layout */}
       <div className="flex flex-col-reverse lg:flex-row items-start gap-10 md:gap-16">
         {/* Left - Text Content */}
-        <div className="flex-1" itemProp="description">
+        <div className="flex-1 px-4" itemProp="description">
           <PeragraphText peraText1={trainingData.mainText} />
 
           <ul className="my-3 space-y-3">
@@ -57,7 +58,7 @@ const IndustrialTraining = () => {
           <SingleBigImage
             image={imageLoadControl}
             alt="Industrial Training and Internship at Square Polytechnic Institute"
-            className="rounded w-full object-cover "
+            className="md:rounded w-full object-cover "
           />
         </div>
       </div>

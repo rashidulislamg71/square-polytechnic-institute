@@ -13,7 +13,7 @@ import WhySquarePolytechnicSection from "@components/SectionComponents/SingleDep
 import AdmissionInfo from "@components/Shared/AdmissionInfo/AdmissionInfo";
 import SectionWrapper from "@components/Shared/SectionWrapper/SectionWrapper";
 import DepartmentMenu from "@components/Shared/DepartmentMenu/DepartmentMenu";
-import ActionButton from "./../../../Components/UI/ActionButton/ActionButton";
+import ActionButton from "@components/UI/ActionButton/ActionButton";
 
 const CivilPage = () => {
   const {
@@ -50,16 +50,13 @@ const CivilPage = () => {
       </SectionWrapper>
 
       <SectionWrapper>
-        <section className="pb-20">
           <HigherStudySection data={higherStudy} />
-        </section>
       </SectionWrapper>
       <EntrepreneurshipSection data={entrepreneurship} />
 
-      <section className="pt-20">
+      <SectionWrapper>
         <WhySquarePolytechnicSection data={whySquarePolytechnic} />
-      </section>
-
+      </SectionWrapper>
       <div className="flex justify-center flex-col items-center mb-15">
         <AdmissionInfo />
         <ActionButton link={"/admission"} text={"Apply Now"} />

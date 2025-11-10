@@ -14,6 +14,7 @@ import HostelSection from "@components/SectionComponents/HomePageSections/Hostel
 import CampusGallerySection from "@components/SectionComponents/CampusPageSections/CampusGallerySection/CampusGallerySection";
 import StudentsLifeAndActivites from "@components/SectionComponents/CampusPageSections/StudentsLifeAndActivitesSection/StudentsLifeAndActivitesSection";
 import StudentsTestimonialSection from "@components/Widgets/StudentsTestimonial/StudentsTestimonialSection";
+import SectionWrapper from "../../Components/Shared/SectionWrapper/SectionWrapper";
 
 const heroSlidesData = [
   {
@@ -57,7 +58,7 @@ const heroSlidesData = [
 const CampusPage = () => {
   return (
     <div className="mt-[-25px]">
-      <HeroSlider slides={heroSlidesData} imagePosition = "bg-center" />
+      <HeroSlider slides={heroSlidesData} imagePosition="bg-center" />
       <CampusTourSection />
 
       <CampusFeaturesSection />
@@ -66,7 +67,9 @@ const CampusPage = () => {
 
       <StudentsLifeAndActivites />
 
-      <HostelSection />
+      <SectionWrapper>
+        <HostelSection />
+      </SectionWrapper>
 
       <StudentsTestimonialSection />
     </div>

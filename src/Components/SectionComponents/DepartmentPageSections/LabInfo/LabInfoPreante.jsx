@@ -19,11 +19,13 @@ const LabInfoParents = () => {
       {data.map((lab, index) => (
         <div
           key={lab.id}
-          className={`mt-[-30px] md:mt-0 flex flex-col md:flex-row items-center justify-center mb-12 gap-6 md:gap-10 lg:gap-15
+          className={` flex flex-col-reverse md:flex-row
+             items-center
+             justify-center mb-12 gap-0 md:gap-10 lg:gap-20
                       ${index % 2 !== 0 ? "md:flex-row-reverse" : ""}`}
         >
           {/* Image side */}
-          <div className="w-full md:w-5/12 lg:w-4/12">
+          <div className="mt-[-25px] md:mt-0 w-full md:w-5/12 lg:w-4/12">
             <DoubleMediumImage image1={lab.images[0]} image2={lab.images[1]} />
           </div>
 

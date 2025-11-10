@@ -11,7 +11,7 @@ import { SingleBigImage } from "@components/UI/GeneralImage/GeneralImage";
 const careerAndHigherStudyData = {
   sectionTitle: "ক্যারিয়ার ও উচ্চশিক্ষার সুযোগ",
   image: careerAndHigherEdu_img,
-  subTitle: "ডিপ্লোমা শেষে আপনার সাফল্যের নিশ্চিত পথ",
+  subTitle: "ডিপ্লোমা শেষে আপনার সাফল্যের পথ সুনিশ্চিত ",
   paragraph:
     "আমাদের ডিপ্লোমা কোর্স আপনাকে স্থানীয় ও আন্তর্জাতিক চাকরির বাজারে দ্রুত প্রবেশাধিকার দেয় এবং একইসাথে দেশের প্রথম সারির প্রকৌশল বিশ্ববিদ্যালয়গুলোতে উচ্চশিক্ষার দ্বার উন্মুক্ত করে।",
   careerList: [
@@ -35,7 +35,7 @@ const CareerAndHigherStudy = () => {
   const data = careerAndHigherStudyData;
 
   return (
-    <section className="bg-[#f8f7f3] py-15 px-4 md:px-10 lg:px-20">
+    <section className="bg-[#f8f7f3] mx-auto py-15 md:px-10 lg:px-20 mb-[-60px] ">
       {/* Section Title */}
       <SectionTitle title={data.sectionTitle} />
 
@@ -44,7 +44,7 @@ const CareerAndHigherStudy = () => {
         <SingleBigImage image={data.image} />
 
         {/* Section Text */}
-        <div className="flex-1 flex flex-col gap-4">
+        <div className="flex-1 flex flex-col gap-4 px-4 overflow-hidden">
           <div className="border-b-3 border-amber-400">
             <SubTitle subTitle={data.subTitle} />
           </div>
@@ -57,14 +57,14 @@ const CareerAndHigherStudy = () => {
               ডিপার্টমেন্ট অনুযায়ী ক্যারিয়ার ও উচ্চশিক্ষা সম্পর্কে বিস্তারিত
               জানুন
             </h4>
-            <ul className="flex items-center gap-3 text-green-600 bold">
+            <ul className="flex items-center gap-4 mt-2 text-green-600 bold">
               {data.departments.map((dept, idx) => (
                 <li key={idx}>
                   <Link to={dept.link} className="hover:underline">
                     {dept.name}
                   </Link>
                   {idx < data.departments.length - 1 && (
-                    <span className="ml-3 text-orange-500 samebold">|</span>
+                  <span className="hidden md:block ml-2 text-orange-500 samebold">|</span>
                   )}
                 </li>
               ))}

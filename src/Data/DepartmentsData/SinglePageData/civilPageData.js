@@ -1,7 +1,7 @@
 // civilDepartmentData_refined.js
 
 import React from "react";
-import civilBg from "@assets/images/Departments_img/department-banner/civil-banner.png";
+import civilBg from "@assets/images/Departments_img/department-banner/civil-banner-2.png";
 
 const civilDepartmentData = {
   id: "civil",
@@ -9,7 +9,8 @@ const civilDepartmentData = {
 
   //  Hero Section
   heroSection: {
-    title: "নির্মাণ শিল্পের ভবিষ্যৎ গড়ার লক্ষ্যে সিভিল ইঞ্জিনিয়ারিং",
+    title:
+      "সিভিল ইঞ্জিনিয়ারিং, নির্মাণ শিল্পে আধুনিকতার ছোয়া।",
     tagline:
       "আপনি কি স্বপ্ন দেখেন মেগা-প্রকল্পের অংশীদার হওয়ার? এখনই শুরু হোক আপনার প্রকৌশল যাত্রা!",
     background: civilBg,

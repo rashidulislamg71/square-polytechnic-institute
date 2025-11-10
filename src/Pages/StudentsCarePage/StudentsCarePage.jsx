@@ -3,9 +3,9 @@ import DataNotFound from "../../Components/Shared/DataNotFound/DataNotFound";
 
 const StudentsCarePage = () => {
   return (
-    <>
+    <div>
     <DataNotFound />
-    </>
+    </div>
   );
 };
 

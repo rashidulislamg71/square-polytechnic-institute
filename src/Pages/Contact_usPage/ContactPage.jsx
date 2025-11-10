@@ -37,18 +37,18 @@ const managementTeam = [
 
 const ContactPage = () => {
   return (
-    <main className="bg-gray-50">
+    <main >
       {/* Hero Section */}
       <HeroSection title="যোগাযোগ করুন" bgImage={heroImg} />
 
-      <div className="max-w-7xl mx-auto py-12 px-4 space-y-20">
+      <div className="max-w-7xl mx-auto pt-12 space-y-20">
         {/*Office Contact Section */}
         <section
-          className="text-center space-y-8"
+          className="text-center space-y-8 px-4 "
           aria-label="Office Contact Information"
         >
           <CoontentTitle title="অফিস যোগাযোগ" />
-          <p className="max-w-2xl mx-auto text-gray-600">
+          <p className="max-w-2xl mt-[-20px] mx-auto text-gray-700">
             আপনার জিজ্ঞাসা, মতামত বা ভর্তি সংক্রান্ত তথ্যের জন্য আমাদের সাথে
             যোগাযোগ করুন।
             <br />
@@ -79,7 +79,7 @@ const ContactPage = () => {
             </div>
 
             {/* Address */}
-            <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6 flex flex-col items-center gap-3 border border-red-100">
+            <div className="bg-white rounded-2xl  shadow-md hover:shadow-xl transition p-6 flex flex-col items-center gap-3 border border-red-100">
               <FaMapMarkerAlt className="text-red-500 text-3xl" />
               <h3 className="font-semibold text-gray-800">ঠিকানা</h3>
               <p className="text-gray-700 leading-relaxed">
@@ -89,9 +89,9 @@ const ContactPage = () => {
           </div>
 
           <div className="mt-6 text-gray-700">
-            <strong>অফিস সময়সূচি:</strong> রবি–বৃহস্পতি | সকাল ৯টা – বিকেল ৫টা{" "}
+            <strong>অফিস সময়সূচি:</strong> রবিবার – বৃহস্পতিবার, সকাল ৯টা – বিকেল ৫টা{" "}
             <br />
-            শুক্রবার ও সরকারি ছুটির দিন বন্ধ
+            শুক্রবার ও সরকারি ছুটির দিন বন্ধ।
           </div>
 
           {/*  Social Media */}
@@ -99,7 +99,7 @@ const ContactPage = () => {
             <h3 className="text-gray-800 font-semibold text-lg">
               আমাদের Social Media / Follow Us
             </h3>
-            <p className="text-gray-700 text-center text-base">
+            <p className="text-gray-700 text-center max-w-md">
               শিক্ষাবিষয়ক সকল খবর ও আপডেট পেতে আমাদের সোশ্যাল মিডিয়া ফলো করুন।
             </p>
             <div className="flex justify-center gap-6 pt-2">
@@ -109,12 +109,12 @@ const ContactPage = () => {
         </section>
 
         {/* Google Map */}
-        <section aria-label="Google Map Location">
-          <GoogleMap className="rounded-2xl shadow-lg border border-gray-200" />
+        <section  aria-label="Google Map Location">
+          <GoogleMap className=" border border-gray-200" />
         </section>
 
         {/*Management Team */}
-        <section aria-label="Management Team" className="text-center">
+        <section aria-label="Management Team" className="text-center px-4">
           <CoontentTitle title="প্রশাসনিক যোগাযোগ" />
           <div className="flex justify-center flex-wrap gap-10">
             {managementTeam.map((member, index) => (
@@ -123,8 +123,8 @@ const ContactPage = () => {
           </div>
         </section>
 
-        {/* ✅ Motivational Quote */}
-        <section className="text-center py-10 bg-gradient-to-r from-green-50 to-green-100 rounded-2xl shadow-inner">
+        {/* Motivational Quote */}
+        <section className="text-center px-4  py-10 bg-gradient-to-r from-green-50 to-green-100 rounded-2xl shadow-inner">
           <blockquote className="text-xl italic font-medium text-gray-700">
             “শিক্ষা শুধু ডিগ্রির জন্য নয়, বরং জীবন গড়ার সর্বশ্রেষ্ঠ হাতিয়ার।”
           </blockquote>

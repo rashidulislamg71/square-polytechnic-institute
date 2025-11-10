@@ -49,15 +49,13 @@ const MechanicalPage = () => {
         <IndustrialPartners data={industrialPartners} />
       </SectionWrapper>
       <SectionWrapper>
-        <section className="pb-20">
-          <HigherStudySection data={higherStudy} />
-        </section>
+        <HigherStudySection data={higherStudy} />
       </SectionWrapper>
       <EntrepreneurshipSection data={entrepreneurship} />
 
-      <section className="pt-20">
+      <SectionWrapper>
         <WhySquarePolytechnicSection data={whySquarePolytechnic} />
-      </section>
+      </SectionWrapper>
 
       <div className="flex justify-center flex-col items-center mb-15">
         <AdmissionInfo />

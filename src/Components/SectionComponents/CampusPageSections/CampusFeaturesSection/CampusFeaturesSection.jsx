@@ -23,14 +23,14 @@ const CampusFeaturesSection = () => {
       />
 
       {/* Campus Description */}
-      <div className="mt-[-30px] md:mt-[-0px] ">
+      <div className="mt-[-20px] ">
         {descriptionParagraphs.map((paragraph, idx) => (
           <GeneralParagraphText key={idx} text={paragraph} />
         ))}
       </div>
 
       {/* Features Cards */}
-      <div className="mt-[-30px] md:mt-[-0px] grid grid-cols-1 md:grid-cols-2 gap-3">
+      <div className="mt-4 md:mt-10 grid grid-cols-1 md:grid-cols-2 gap-3">
         {featuresList.map((feature, idx) => {
           const IconComponent = feature.icon;
           return (
@@ -50,7 +50,9 @@ const CampusFeaturesSection = () => {
               {/* Feature Text */}
               <div className="flex flex-col">
                 <SubTitle subTitle={feature.title} className="text-lg" />
-                <p className="text-gray-600 text-sm mt-1">{feature.details}</p>
+                <p className="text-gray-700 text-[16px] mt-1">
+                  {feature.details}
+                </p>
               </div>
             </article>
           );

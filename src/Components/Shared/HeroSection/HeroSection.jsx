@@ -10,7 +10,7 @@ const HeroSection = ({
   overlayColor = "bg-black/40",
   textColor = "text-white",
   align = "center",
-  height = "h-[60vh] md:min-h-[75vh] lg:min-h-[90vh]",
+  height = "h-[45vh] md:min-h-[70vh] lg:min-h-[90vh]",
   position = "bg-center",
   overlay = true,
   className = "",
@@ -41,10 +41,10 @@ const HeroSection = ({
       )}
 
       {/* Content */}
-      <div className="relative z-10 max-w-[900px] w-full mx-auto px-4 sm:px-6 lg:px-10 py-10 md:py-16 flex flex-col items-center justify-center">
+      <div className="relative z-10 md:max-w-4xl w-full mx-auto px-4 sm:px-6 lg:px-10 py-10 md:py-16 flex flex-col items-center justify-center">
         {/* Title */}
         {title && (
-          <h1 className="text-3xl md:text-4xl font-bold leading-snug drop-shadow-lg mb-4 md:mb-6">
+          <h1 className="text-2xl md:text-4xl font-bold leading-snug drop-shadow-lg mb-4 md:mb-6">
             {title}
           </h1>
         )}
@@ -61,13 +61,13 @@ const HeroSection = ({
 
         {/* Extra Text */}
         {extraText && (
-          <p className=" text-lg  max-w-[700px] leading-relaxed">{extraText}</p>
+          <p className=" text-lg leading-relaxed">{extraText}</p>
         )}
 
         {/* Buttons */}
         {buttons.length > 0 && (
           <div
-            className={`flex flex-wrap gap-3 md:gap-5 mt-10 ${
+            className={`flex  gap-3 md:gap-5 mt-8  ${
               align === "center"
                 ? "justify-center"
                 : align === "right"

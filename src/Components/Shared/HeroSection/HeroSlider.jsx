@@ -46,10 +46,12 @@ const HeroSlider = ({ slides, imagePosition = "bg-center", className = "" }) => 
             </div>
           </SwiperSlide>
         ))}
-        <div className="custom-prev absolute top-1/2 left-5 z-10 -translate-y-1/2 bg-black/40 text-white p-3 rounded-full cursor-pointer hover:bg-black/60 transition">
+        <div className="custom-prev absolute top-1/2 left-5 z-10 -translate-y-1/2
+         bg-black/20 text-white p-3 rounded-full cursor-pointer hover:bg-black/30 transition">
           ❮
         </div>
-        <div className="custom-next absolute top-1/2 right-5 z-10 -translate-y-1/2 bg-black/40 text-white p-3 rounded-full cursor-pointer hover:bg-black/60 transition">
+        <div className="custom-next absolute top-1/2 right-5 z-10 -translate-y-1/2
+         bg-black/20 text-white p-3 rounded-full cursor-pointer hover:bg-black/30 transition">
           ❯
         </div>
       </Swiper>

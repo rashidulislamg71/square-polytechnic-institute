@@ -20,17 +20,17 @@ const AllTestimonialPage = () => {
   if (error) return <Error message={error} />;
 
   return (
-    <div className="mt-[100px] py-10 px-5 md:px-10">
+    <div className="mt-[100px] py-10 px-4 md:px-10 overflow-hidden">
       {/* Page Title */}
       <SectionTitle title="আমাদের ছাত্র, অভিভাবক ও শিক্ষকদের মতামত" />
 
       {/* Filter Buttons */}
-      <div className="flex justify-center gap-4 my-8 flex-wrap">
+      <div className="flex justify-center gap-4 my-8 ">
         {buttons.map((btn) => (
           <button
             key={btn}
             onClick={() => setActive(btn)}
-            className={`px-6 py-2 rounded-full font-medium transition-all ${
+            className={`px-5 py-2 rounded-full font-medium transition-all ${
               active === btn
                 ? "bg-emerald-600 text-white shadow-lg"
                 : " bg-gray-300 text-gray-700 hover:bg-emerald-100"
@@ -42,7 +42,7 @@ const AllTestimonialPage = () => {
       </div>
 
       {/* Testimonials Grid */}
-      <div className="max-w-6xl mx-auto mt-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="max-w-6xl mx-auto mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {active === "Students" &&
           testimonials.map((item, index) =>
             item ? <TestimonialCard key={index} item={item} /> : null
@@ -60,7 +60,7 @@ const AllTestimonialPage = () => {
         )}
 
         {active === "Teachers" && (
-          <div className="col-span-full text-center">
+          <div className="col-span-full text-center ">
             <div className="flex flex-col items-center justify-center text-center">
               <FaExclamationTriangle className="text-yellow-500 text-4xl mb-4" />
               <h2 className="text-xl font-bold text-gray-800 mb-2">
@@ -72,7 +72,7 @@ const AllTestimonialPage = () => {
       </div>
 
       {/* Motivational Quote */}
-      <div className="text-center mt-16">
+      <div className="text-center mt-16 mb-[-40px] ">
         <p className="italic text-gray-600 text-lg">
           “ভালো শিক্ষা একজন মানুষের জীবনের সবচেয়ে বড় সম্পদ।”
         </p>

@@ -14,7 +14,8 @@ export const SingleBigImage = ({
         onClick={() => setSelectedImage(image)}
         src={image}
         alt={alt}
-        className={` w-full md:w-[450px] lg:w-[560px] h-[280px] md:h-[350px] lg:h-[370px]  rounded 
+        className={`w-full md:w-[450px] lg:w-[560px] h-[280px] md:h-[350px] lg:h-[370px] 
+          md:rounded 
          object-cover 
         ${className}`}
       />
@@ -28,7 +29,7 @@ export const SingleBigImage = ({
           <img
             src={selectedImage}
             alt="Enlarged Lab"
-            className="max-w-[800px] max-h-[600px] rounded shadow-2xl"
+            className="md:max-w-[800px] md:max-h-[600px] rounded shadow-2xl"
           />
         )}
       </ModalPopup>
@@ -45,7 +46,8 @@ export const DoubleMediumImage = ({ image1, image2 }) => {
         <div className="flex items-end">
           <img
             onClick={() => setSelectedImage(image1)}
-            className=" shadow-2xl cursor-pointer rounded-2xl w-[180px] h-[180px] md:w-[270px] md:h-[220px] transition-transform hover:scale-105"
+            className=" shadow-2xl cursor-pointer rounded-2xl w-[200px]
+             h-[180px] md:w-[280px] md:h-[230px] transition-transform hover:scale-105"
             src={image1}
             alt="Lab 1"
           />
@@ -53,7 +55,8 @@ export const DoubleMediumImage = ({ image1, image2 }) => {
         <div className="flex absolute top-16 right-0 ">
           <img
             onClick={() => setSelectedImage(image2)}
-            className=" cursor-pointer drop-shadow-2xl  rounded-2xl w-[200px] h-[180px] md:w-[280px] md:h-[240px]  transition-transform hover:scale-105"
+            className=" cursor-pointer drop-shadow-2xl rounded-2xl
+             w-[200px] h-[180px] md:w-[290px] md:h-[250px]  transition-transform hover:scale-105"
             src={image2}
             alt="Lab 2"
           />
@@ -69,7 +72,7 @@ export const DoubleMediumImage = ({ image1, image2 }) => {
           <img
             src={selectedImage}
             alt="Enlarged Lab"
-            className="max-w-[800px] max-h-[600px] rounded shadow-2xl"
+            className="md:max-w-[800px] md:max-h-[600px] md:rounded shadow-2xl"
           />
         )}
       </ModalPopup>

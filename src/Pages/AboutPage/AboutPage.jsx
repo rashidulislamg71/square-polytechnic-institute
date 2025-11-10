@@ -33,7 +33,7 @@ const AboutPage = () => {
           {/* Left Side: Mission & Vision + Features */}
           <div className="lg:col-span-2 space-y-16">
             <VisionMissionCard />
-          <div className="mt-[-80px] ">
+          <div className=" mt-[-20px]">
               <InstituteFeatures />
           </div>
           </div>

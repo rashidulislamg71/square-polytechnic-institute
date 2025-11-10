@@ -7,7 +7,7 @@ const SPILogo = () => {
     <Link to="/" className="flex items-center gap-1">
       <img
         className={`${styles.logo}`}
-        src="/images/SPI_Logo.png"
+        src="./images/SPI_Logo.png"
         alt="Square Polytechnic institute Logo"
       />
       <h3>

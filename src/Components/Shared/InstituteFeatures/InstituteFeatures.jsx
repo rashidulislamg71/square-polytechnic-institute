@@ -12,7 +12,7 @@ function InstituteFeatures() {
       <SectionTitle title={"বিশেষ সুবিধা ও বৈশিষ্ট্য"} />
 
       <div
-        className="grid grid-cols-1 sm:grid-cols-2 gap-0 justify-center 
+        className="mt-[-20px] md:mt-[-10px] grid grid-cols-1 sm:grid-cols-2 gap-0 justify-center 
       items-center"
       >
         {features &&

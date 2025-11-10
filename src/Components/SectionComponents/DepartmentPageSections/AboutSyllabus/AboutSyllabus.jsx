@@ -47,7 +47,7 @@ const AboutSyllabus = () => {
       <div className="max-w-3xl mx-auto">
         {/* Section Title */}
         <div className="text-center mb-10">
-          <SectionTitle title={"ডিপ্লোমা কোর্সের সিলেবাস বিবরণ"} />
+          <SectionTitle title={"ডিপ্লোমা কোর্স সিলেবাস"} />
         </div>
         <div className="max-w-3xl m-auto">
           {/* List Style Info */}
