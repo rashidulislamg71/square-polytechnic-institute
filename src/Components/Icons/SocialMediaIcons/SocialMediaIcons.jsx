@@ -68,7 +68,7 @@ export const SocialIcons = () => (
         </div>
 
         {/* icon name */}
-        <span className="text-sm text-gray-200 group-hover:underline">
+        <span className="text-sm ml-[-2px] text-gray-200 group-hover:underline">
           {social.name}
         </span>
       </Link>
