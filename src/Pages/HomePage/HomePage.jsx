@@ -35,8 +35,8 @@ const HomePage = () => {
         </section>
       </SectionWrapper>
 
-      {/* Institute Info & Map */}
 
+      {/* Institute Info & Map */}
       <SectionWrapper bg="bg-white">
         <section aria-label="Institute Info">
           <AboutInstituteAndMap />

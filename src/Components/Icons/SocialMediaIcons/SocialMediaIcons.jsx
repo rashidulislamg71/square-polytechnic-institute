@@ -50,7 +50,7 @@ const socialMediaData = [
 
 
 export const SocialIcons = () => (
-  <div className="flex md:flex-col flex-wrap justify-center gap-3">
+  <div className="flex md:flex-col flex-wrap justify-center md:gap-4 gap-2">
     {socialMediaData.map((social) => (
       <Link
         key={social.id}
