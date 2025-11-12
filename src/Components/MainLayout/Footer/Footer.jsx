@@ -12,13 +12,12 @@ const QUICK_LINKS = [
   { to: "/", label: "হোম" },
   { to: "/departments", label: "ডিপার্টমেন্টস্" },
   { to: "/campus", label: "ক্যাম্পাস" },
-  { to: "/events", label: "সাফল্য & ইভেন্ট" },
+  { to: "/galleryEvent", label: "সাফল্য & ইভেন্ট" },
   { to: "/about", label: "আমাদের সম্পর্কে" },
   { to: "/notice", label: "নোটিশ" },
-  { to: "/results", label: "রেজাল্ট" },
-  { to: "/contact", label: "যোগাযোগ" },
+  { to: "#", label: "রেজাল্ট" },
+  { to: "/contuctUs", label: "যোগাযোগ" },
   { to: "/student-care", label: "Students Care" },
-
 ];
 
 const EXTRA_LINKS = [
@@ -31,82 +30,124 @@ const EXTRA_LINKS = [
 const Footer = () => {
   return (
     <footer
-      className="bg-gray-900 text-gray-200 mt-16 rounded-t-3xl shadow-2xl"
-      aria-label="Footer"
+      className="bg-gray-900 text-gray-200 mt-16 rounded-t-4xl shadow-2xl"
+      aria-label="Square Polytechnic Institute Footer"
     >
-      {/* Main Content */}
-      <div className="px-6 sm:px-10 md:px-20 py-14 flex flex-col md:flex-row justify-between flex-wrap gap-10">
+      <meta
+        name="description"
+        content="Square Polytechnic Institute – modern technical education,
+         skilled teachers, and hands-on training to create skilled technologists of tomorrow."
+      />
+      <meta
+        name="keywords"
+        content="Polytechnic, Education, Technical Education, Square Polytechnic, Square Polytechnic Institute, Diploma, Bogura, Bangladesh"
+      />
+
+      {/* Main Footer Content */}
+      <section className="px-6 sm:px-10 md:px-20 py-14 flex flex-col md:flex-row justify-between flex-wrap gap-10">
         {/* About & Contact Section */}
-        <div className="flex flex-col items-start w-full md:w-auto">
+        <article
+          className="flex flex-col items-start w-full md:w-auto"
+          aria-labelledby="footer-about"
+        >
           <div className="mb-4 bg-green-600 p-2 rounded w-full max-w-[320px]">
             <Logo />
           </div>
-          <p className="text-sm leading-6 text-gray-400 mb-4 max-w-[320px]">
+          <p
+            id="footer-about"
+            className="text-sm leading-6 text-gray-300 mb-4 max-w-[320px]"
+          >
             আধুনিক কারিগরি শিক্ষা, দক্ষ শিক্ষক ও হাতে-কলমে প্রশিক্ষণের মাধ্যমে
             আমরা শিক্ষার্থীদের গড়ে তুলছি আগামী দিনের দক্ষ প্রযুক্তিবিদ হিসেবে।
           </p>
 
-          <h3 className="text-lg font-semibold text-orange-400 mb-2">
-            Contact Us
-          </h3>
-
-          <div className="flex flex-col gap-1">
-            <div className="flex gap-1 items-center ">
-            <FaLocationDot className="text-green-600 text-[17px]" />
-            <InstituteAddress className={"text-sm text-white"} />
-          </div>
-            <FixedNumbers iconClass="text-sm text-orange-400" />
-            <div className="flex items-center gap-2">
-      
-              <FixedEmail className="text-white" />
+          <address className="not-italic">
+            <h3 className="text-lg font-semibold text-orange-400 mb-2">
+              Contact Us
+            </h3>
+            <div className="flex flex-col gap-1">
+              <div className="flex gap-1 items-center">
+                <FaLocationDot
+                  className="text-green-600 text-[17px]"
+                  aria-hidden="true"
+                />
+                <InstituteAddress className="text-sm text-white" />
+              </div>
+              <FixedNumbers iconClass="text-sm text-orange-400" />
+              <div className="flex items-center gap-2">
+                <FixedEmail className="text-white" />
+              </div>
             </div>
-          </div>
-        </div>
+          </address>
+        </article>
 
-        {/* Quick Links Section */}
-        <div className="flex flex-col">
-          <h3 className="text-xl font-semibold text-green-600 mb-5 border-b border-gray-700 pb-2 inline-block">
+        {/* Quick Links */}
+        <nav aria-labelledby="footer-quick-links" className="flex flex-col">
+          <h3
+            id="footer-quick-links"
+            className="text-xl font-semibold text-green-600 mb-5 border-b border-gray-700 pb-2 inline-block"
+          >
             Quick Links
           </h3>
-          <ul className="space-y-2">
+          <ul className="space-y-2" role="list">
             {QUICK_LINKS.map((link, index) => (
-              <FooterLink key={index} to={link.to}>
-                {link.label}
-              </FooterLink>
+              <li key={index}>
+                <FooterLink to={link.to}>{link.label}</FooterLink>
+              </li>
             ))}
           </ul>
-        </div>
+        </nav>
 
-        {/* Extra Links Section */}
-        <div className="flex flex-col">
-          <h3 className="text-xl font-semibold text-green-600 mb-5 border-b border-gray-700 pb-2 inline-block">
+        {/* Extra Links */}
+        <nav aria-labelledby="footer-extra-links" className="flex flex-col">
+          <h3
+            id="footer-extra-links"
+            className="text-xl font-semibold text-green-600 mb-5 border-b border-gray-700 pb-2 inline-block"
+          >
             More Links
           </h3>
-          <ul className="space-y-2">
+          <ul className="space-y-2" role="list">
             {EXTRA_LINKS.map((link, index) => (
-              <FooterLink key={index} to={link.to}>
-                {link.label}
-              </FooterLink>
+              <li key={index}>
+                <FooterLink to={link.to}>{link.label}</FooterLink>
+              </li>
             ))}
           </ul>
-        </div>
+        </nav>
 
         {/* Social Media Section */}
-        <div className="flex flex-col items-center w-full sm:w-auto">
-          <h3 className="text-xl font-semibold text-green-600 mb-5 border-b
-           border-gray-700 pb-2 inline-block">
+        <section
+          aria-labelledby="footer-social-links"
+          className="flex flex-col items-center w-full sm:w-auto"
+        >
+          <h3
+            id="footer-social-links"
+            className="text-xl font-semibold text-green-600 mb-5 border-b border-gray-700 pb-2 inline-block"
+          >
             Follow Us
           </h3>
-          <div className="flex flex-wrap gap-3 mt-4 text-lg text-green-400 hover:text-green-300 transition">
+          <div className="flex flex-wrap md:gap-4 gap-2 mt-4 text-xl md:text-lg text-green-400 hover:text-green-300 transition">
             <SocialIcons />
           </div>
-        </div>
-      </div>
+        </section>
+      </section>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-700 py-4 text-center text-sm text-gray-400">
-        © {new Date().getFullYear()} Square Polytechnic Institute. All Rights
-        Reserved.
+      <div className="border-t border-gray-700 py-4 text-center text-sm text-gray-300">
+        <small>
+          © {new Date().getFullYear()}{" "}
+          <strong>Square Polytechnic Institute</strong>. All Rights Reserved.
+          [Developed by{" "}
+          <a
+            href="https://www.linkedin.com/in/rashidulislam71/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-green-500 hover:underline"
+          >
+            RASHIDUL ISLAM RASHED
+          </a>
+          ]
+        </small>
       </div>
     </footer>
   );

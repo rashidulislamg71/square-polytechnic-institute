@@ -36,12 +36,12 @@ const HomePage = () => {
       </SectionWrapper>
 
       {/* Institute Info & Map */}
-      <section
-        className="w-full mt-12 bg-white py-16"
-        aria-label="Institute Info"
-      >
-        <AboutInstituteAndMap />
-      </section>
+
+      <SectionWrapper bg="bg-white">
+        <section aria-label="Institute Info">
+          <AboutInstituteAndMap />
+        </section>
+      </SectionWrapper>
 
       {/* Institute Features */}
       <SectionWrapper bg="bg-gray-100">
@@ -79,9 +79,9 @@ const HomePage = () => {
       </SectionWrapper>
 
       {/* Industrial Training Section */}
-      <SectionWrapper bg="bg-white">
+      <section className="bg-white">
         <IndustrialTraining />
-      </SectionWrapper>
+      </section>
 
       {/* Student Testimonials */}
       <section aria-label="testimonial">

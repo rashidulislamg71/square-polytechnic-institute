@@ -37,9 +37,8 @@ const DepartmentPage = () => {
         <div className=" mb-[-10px]">
           <SectionTitle title="আমাদের ল্যাব ফেসিলিটি" />
         </div>
-        
-          <LabInfoParents />
- 
+
+        <LabInfoParents />
       </SectionWrapper>
 
       {/* Syllabus Section */}

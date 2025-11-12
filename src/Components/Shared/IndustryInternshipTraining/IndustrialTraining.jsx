@@ -4,6 +4,7 @@ import PeragraphText from "@components/Shared/PeragraphText/PeragraphText";
 import industrialTrainingImg from "@assets/images/Industral-training.png";
 import { SingleBigImage } from "@components/UI/GeneralImage/GeneralImage";
 import { FaCheckCircle } from "react-icons/fa";
+
 // Data array
 const trainingData = {
   mainText:
@@ -23,25 +24,33 @@ const IndustrialTraining = () => {
   return (
     <section
       id="internship"
+      aria-labelledby="industrial-training-title"
       itemScope
       itemType="https://schema.org/EducationalOrganization"
+      className="py-15 px-2 md:px-10 lg:px-20 bg-white"
     >
       {/* Section Title */}
-      <div className="text-center">
-        <SectionTitle title="শিল্প প্রশিক্ষণ ও ইন্টার্নশিপ" />
-      </div>
+      <header className="text-center mb-8">
+        <SectionTitle
+          title="শিল্প প্রশিক্ষণ ও ইন্টার্নশিপ"
+          id="industrial-training-title"
+        />
+      </header>
 
       {/* Flex Layout */}
-      <div className="flex flex-col-reverse lg:flex-row items-start gap-10 md:gap-16">
+      <div className="flex flex-col-reverse lg:flex-row items-start gap-10 md:gap-16 ">
         {/* Left - Text Content */}
-        <div className="flex-1 px-4" itemProp="description">
+        <article className="flex-1 px-4" itemProp="description">
           <PeragraphText peraText1={trainingData.mainText} />
 
-          <ul className="my-3 space-y-3">
+          <ul className="my-3 space-y-3" role="list">
             {trainingData.listItems.map((item, index) => (
               <li key={index} className="flex items-start gap-2 text-gray-700">
-                <FaCheckCircle className="mt-1 text-green-500" />
-                {item}
+                <FaCheckCircle
+                  className="mt-1 text-green-500"
+                  aria-hidden="true"
+                />
+                <span>{item}</span>
               </li>
             ))}
           </ul>
@@ -50,17 +59,31 @@ const IndustrialTraining = () => {
             peraText1={trainingData.closingText}
             className="mt-6"
           />
-        </div>
+        </article>
 
         {/* Right - Image */}
-        <div className="flex-1">
+        <figure className="flex-1">
           <SingleBigImage
             image={imageLoadControl}
             alt="Industrial Training and Internship at Square Polytechnic Institute"
-            className="md:rounded w-full object-cover "
+            className="md:rounded w-full object-cover"
+            itemProp="image"
           />
-        </div>
+          <figcaption className="sr-only">
+            Industrial Training & Internship at Square Polytechnic Institute
+          </figcaption>
+        </figure>
       </div>
+
+      {/* Optional SEO Meta */}
+      <meta
+        name="description"
+        content="Square Polytechnic Institute provides mandatory and well-structured industrial training and internship programs that equip students with practical skills and career readiness."
+      />
+      <meta
+        name="keywords"
+        content="Industrial Training, Internship, Diploma Engineering, Square Polytechnic, Hands-on Training, Career Preparation"
+      />
     </section>
   );
 };

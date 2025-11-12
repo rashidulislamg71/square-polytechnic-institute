@@ -1,11 +1,8 @@
 import React from "react";
 import ActionButton from "@components/UI/ActionButton/ActionButton";
-import {
-  FixedNumbers,
-} from "@components/UI/ContactNumber/ContactNumber";
+import { FixedNumbers } from "@components/UI/ContactNumber/ContactNumber";
 import PeragraphText from "@components/Shared/PeragraphText/PeragraphText";
 import SubTitle from "@components/Shared/Titles/SubTitle/SubTitle";
-
 
 const instituteInfo = {
   title: "ইন্সটিটিউট পরিচিতি",
@@ -16,7 +13,8 @@ const instituteInfo = {
     { label: "প্রতিষ্ঠিত", value: "2016" },
     {
       label: "অবস্থান",
-      value: "গাড়িদহ বাসস্ট্যান্ড, শেরপুর, বগুড়া (পল্লী উন্নয়ন একাডেমির দক্ষিণ পাশে (RDA))",
+      value:
+        "গাড়িদহ বাসস্ট্যান্ড, শেরপুর, বগুড়া (পল্লী উন্নয়ন একাডেমির দক্ষিণ পাশে (RDA))",
     },
     { label: "প্রতিষ্ঠান কোড", value: "20294" },
     { label: "EIIN নম্বর", value: "139309" },
@@ -40,9 +38,9 @@ const InstituteInfo = () => {
     // Wrapper section with flex layout and vertical gap
     <section className="flex flex-col gap-3">
       {/* Welcome message as subtitle */}
-     <div className="border-b-3 border-amber-500">
-       <SubTitle subTitle={instituteInfo.welcomeMessage} />
-     </div>
+      <div className="border-b-3 border-amber-500 text-left">
+        <SubTitle subTitle={instituteInfo.welcomeMessage} />
+      </div>
 
       {/* Description paragraph */}
       <PeragraphText
